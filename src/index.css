@@ -165,6 +165,43 @@ path.quilombo-marker-circle:hover {
   filter: drop-shadow(0 4px 8px rgba(168, 85, 247, 0.6)) !important;
 }
 
+/* Selected Marker Visual Highlight */
+path.uc-selected-marker,
+.leaflet-marker-pane path[stroke="#fbbf24"] {
+  transform: scale(1.4) !important;
+  stroke: #fbbf24 !important;
+  stroke-width: 4px !important;
+  stroke-opacity: 1 !important;
+  fill-opacity: 1 !important;
+  filter: drop-shadow(0 0 14px rgba(251, 191, 36, 0.95)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6)) !important;
+}
+
+/* Pulsing animated halo for selected marker */
+@keyframes haloPulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.45);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0.95;
+  }
+}
+
+path.uc-selection-halo,
+.leaflet-marker-pane path[stroke-dasharray="3, 3"] {
+  animation: haloPulse 2s ease-in-out infinite !important;
+  transform-origin: center center !important;
+  transform-box: fill-box !important;
+  pointer-events: none !important;
+}
+
+
+
 
 
 

@@ -71,6 +71,7 @@ export const MapaInterativo: React.FC = () => {
   const {
     filteredUcs,
     data,
+    selectedUc,
     setSelectedUc,
     setFilters,
     setActiveTab,
@@ -87,6 +88,7 @@ export const MapaInterativo: React.FC = () => {
   const [showQuilombos, setShowQuilombos] = useState<boolean>(true);
   const [showChoropleth, setShowChoropleth] = useState<boolean>(true);
   const [selectedMunInfo, setSelectedMunInfo] = useState<any | null>(null);
+  const [selectedMarkerId, setSelectedMarkerId] = useState<string | null>(null);
   const [mapTargetBounds, setMapTargetBounds] = useState<L.LatLngBoundsExpression | null>(null);
 
   const geoJsonLayerRef = useRef<L.GeoJSON | null>(null);
@@ -578,102 +580,135 @@ export const MapaInterativo: React.FC = () => {
             {/* UCs Markers */}
             {ucsWithCoords.map((u) => {
               const color = getColorByUc(u);
+              const isSelected = String(selectedMarkerId) === String(u.id) || (selectedUc && String(selectedUc.id) === String(u.id));
               const baseRadius = u.area_ha > 10000 ? 9 : u.area_ha > 1000 ? 7 : 5;
+              const radius = isSelected ? baseRadius + 4 : baseRadius;
+
               return (
-                <CircleMarker
-                  key={u.id}
-                  center={[u.lat!, u.lng!]}
-                  radius={baseRadius}
-                  pathOptions={{
-                    fillColor: color,
-                    color: '#ffffff',
-                    weight: 1.5,
-                    fillOpacity: 0.9,
-                    className: 'uc-marker-circle',
-                  }}
-                  eventHandlers={{
-                    mouseover: (e) => {
-                      const m = e.target;
-                      m.setRadius(baseRadius + 4);
-                      m.setStyle({
-                        weight: 3.5,
-                        color: '#ffffff',
-                        fillOpacity: 1,
-                      });
-                    },
-                    mouseout: (e) => {
-                      const m = e.target;
-                      m.setRadius(baseRadius);
-                      m.setStyle({
-                        weight: 1.5,
-                        color: '#ffffff',
-                        fillOpacity: 0.9,
-                      });
-                    },
-                  }}
-                >
-                  <Tooltip direction="top" offset={[0, -baseRadius - 2]} opacity={0.96}>
-                    <div style={{ fontFamily: 'inherit', padding: '1px' }}>
-                      <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{u.nome}</div>
-                      <div style={{ fontSize: '10px', color: '#059669', fontWeight: 600 }}>
-                        {u.categoria} • {u.esfera} ({u.area_ha.toLocaleString('pt-BR')} ha)
-                      </div>
-                    </div>
-                  </Tooltip>
+                <React.Fragment key={u.id}>
+                  {/* Pulsing selection halo when active */}
+                  {isSelected && (
+                    <CircleMarker
+                      center={[u.lat!, u.lng!]}
+                      radius={radius + 8}
+                      pane="markerPane"
+                      pathOptions={{
+                        fillColor: '#fbbf24',
+                        fillOpacity: 0.35,
+                        color: '#f59e0b',
+                        weight: 2.5,
+                        dashArray: '3, 3',
+                        className: 'uc-selection-halo',
+                      }}
+                    />
+                  )}
 
-                  <Popup className="custom-popup">
-                    <div className="p-1 space-y-2 max-w-xs">
-                      <div>
-                        <span
-                          className="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold text-white mb-1"
-                          style={{ backgroundColor: color }}
+                  <CircleMarker
+                    center={[u.lat!, u.lng!]}
+                    radius={radius}
+                    pane="markerPane"
+                    pathOptions={{
+                      fillColor: color,
+                      color: isSelected ? '#fbbf24' : '#ffffff',
+                      weight: isSelected ? 4 : 2,
+                      fillOpacity: 1,
+                      className: isSelected ? 'uc-selected-marker uc-marker-circle' : 'uc-marker-circle',
+                    }}
+                    eventHandlers={{
+                      click: () => {
+                        setSelectedMarkerId(String(u.id));
+                        setSelectedUc(u);
+                      },
+                      popupopen: () => {
+                        setSelectedMarkerId(String(u.id));
+                        setSelectedUc(u);
+                      },
+                      mouseover: (e) => {
+                        const m = e.target;
+                        m.setRadius(radius + 4);
+                        m.setStyle({
+                          weight: 4,
+                          color: '#ffffff',
+                          fillOpacity: 1,
+                        });
+                        if (typeof m.bringToFront === 'function') {
+                          m.bringToFront();
+                        }
+                      },
+                      mouseout: (e) => {
+                        const m = e.target;
+                        m.setRadius(radius);
+                        m.setStyle({
+                          weight: isSelected ? 4 : 2,
+                          color: isSelected ? '#fbbf24' : '#ffffff',
+                          fillOpacity: 1,
+                        });
+                      },
+                    }}
+                  >
+                    <Tooltip direction="top" offset={[0, -radius - 3]} opacity={0.96}>
+                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{u.nome}</div>
+                        <div style={{ fontSize: '10px', color: '#059669', fontWeight: 600 }}>
+                          {u.categoria} • {u.esfera} ({u.area_ha.toLocaleString('pt-BR')} ha)
+                        </div>
+                      </div>
+                    </Tooltip>
+
+                    <Popup className="custom-popup">
+                      <div className="p-1 space-y-2 max-w-xs">
+                        <div>
+                          <span
+                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold text-white mb-1"
+                            style={{ backgroundColor: color }}
+                          >
+                            {u.esfera} • {u.categoria}
+                          </span>
+                          <h4 className="font-bold text-xs text-slate-900 leading-tight">
+                            {u.nome}
+                          </h4>
+                          <p className="text-[11px] text-slate-500">
+                            {u.municipios} {u.mesorregiao ? `(${u.mesorregiao})` : ''}
+                          </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-1 text-[11px] bg-slate-50 p-1.5 rounded border border-slate-200">
+                          <div>
+                            <span className="text-slate-400 block text-[9px]">ÁREA</span>
+                            <strong>{u.area_ha.toLocaleString('pt-BR')} ha</strong>
+                          </div>
+                          <div>
+                            <span className="text-slate-400 block text-[9px]">CNUC</span>
+                            <strong className={u.cnuc ? 'text-emerald-600' : 'text-amber-600'}>
+                              {u.cnuc ? 'Cadastrada' : 'Fora/Pendente'}
+                            </strong>
+                          </div>
+                          <div>
+                            <span className="text-slate-400 block text-[9px]">PLANO MANEJO</span>
+                            <span>{u.plano_manejo ? 'Sim' : 'Não'}</span>
+                          </div>
+                          <div>
+                            <span className="text-slate-400 block text-[9px]">CONSELHO</span>
+                            <span>{u.conselho_gestor ? 'Sim' : 'Não'}</span>
+                          </div>
+                        </div>
+
+                        {u.ato_criacao && (
+                          <p className="text-[10px] text-slate-600 italic">
+                            Ato: {u.ato_criacao}
+                          </p>
+                        )}
+
+                        <button
+                          onClick={() => setSelectedUc(u)}
+                          className="w-full mt-2 py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] transition cursor-pointer"
                         >
-                          {u.esfera} • {u.categoria}
-                        </span>
-                        <h4 className="font-bold text-xs text-slate-900 leading-tight">
-                          {u.nome}
-                        </h4>
-                        <p className="text-[11px] text-slate-500">
-                          {u.municipios} {u.mesorregiao ? `(${u.mesorregiao})` : ''}
-                        </p>
+                          Ver Ficha Completa
+                        </button>
                       </div>
-
-                      <div className="grid grid-cols-2 gap-1 text-[11px] bg-slate-50 p-1.5 rounded border border-slate-200">
-                        <div>
-                          <span className="text-slate-400 block text-[9px]">ÁREA</span>
-                          <strong>{u.area_ha.toLocaleString('pt-BR')} ha</strong>
-                        </div>
-                        <div>
-                          <span className="text-slate-400 block text-[9px]">CNUC</span>
-                          <strong className={u.cnuc ? 'text-emerald-600' : 'text-amber-600'}>
-                            {u.cnuc ? 'Cadastrada' : 'Fora/Pendente'}
-                          </strong>
-                        </div>
-                        <div>
-                          <span className="text-slate-400 block text-[9px]">PLANO MANEJO</span>
-                          <span>{u.plano_manejo ? 'Sim' : 'Não'}</span>
-                        </div>
-                        <div>
-                          <span className="text-slate-400 block text-[9px]">CONSELHO</span>
-                          <span>{u.conselho_gestor ? 'Sim' : 'Não'}</span>
-                        </div>
-                      </div>
-
-                      {u.ato_criacao && (
-                        <p className="text-[10px] text-slate-600 italic">
-                          Ato: {u.ato_criacao}
-                        </p>
-                      )}
-
-                      <button
-                        onClick={() => setSelectedUc(u)}
-                        className="w-full mt-2 py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] transition cursor-pointer"
-                      >
-                        Ver Ficha Completa
-                      </button>
-                    </div>
-                  </Popup>
-                </CircleMarker>
+                    </Popup>
+                  </CircleMarker>
+                </React.Fragment>
               );
             })}
 
@@ -681,160 +716,244 @@ export const MapaInterativo: React.FC = () => {
             {showRppns &&
               data?.rppns
                 ?.filter((r) => r.lat && r.lng)
-                .map((r) => (
-                  <CircleMarker
-                    key={r.id}
-                    center={[r.lat!, r.lng!]}
-                    radius={5}
-                    pathOptions={{
-                      fillColor: '#14b8a6',
-                      color: '#ffffff',
-                      weight: 1.5,
-                      fillOpacity: 0.85,
-                      className: 'rppn-marker-circle',
-                    }}
-                    eventHandlers={{
-                      mouseover: (e) => {
-                        const m = e.target;
-                        m.setRadius(9);
-                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
-                      },
-                      mouseout: (e) => {
-                        const m = e.target;
-                        m.setRadius(5);
-                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.85 });
-                      },
-                    }}
-                  >
-                    <Tooltip direction="top" offset={[0, -7]} opacity={0.96}>
-                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
-                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{r.nome}</div>
-                        <div style={{ fontSize: '10px', color: '#0d9488', fontWeight: 600 }}>
-                          RPPN • {r.ente_federativo} ({r.area_ha.toLocaleString('pt-BR')} ha)
-                        </div>
-                      </div>
-                    </Tooltip>
-                    <Popup>
-                      <div className="p-1 text-xs">
-                        <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
-                          RPPN • {r.ente_federativo}
-                        </span>
-                        <h4 className="font-bold text-xs mt-1">{r.nome}</h4>
-                        <p className="text-slate-500 text-[11px]">{r.municipio} (SC)</p>
-                        <p className="text-[11px] mt-1">
-                          Área: <strong>{r.area_ha.toLocaleString('pt-BR')} ha</strong>
-                        </p>
-                      </div>
-                    </Popup>
-                  </CircleMarker>
-                ))}
+                .map((r) => {
+                  const isSelected = String(selectedMarkerId) === String(r.id);
+                  const radius = isSelected ? 9 : 5;
+                  return (
+                    <React.Fragment key={r.id}>
+                      {isSelected && (
+                        <CircleMarker
+                          center={[r.lat!, r.lng!]}
+                          radius={radius + 7}
+                          pane="markerPane"
+                          pathOptions={{
+                            fillColor: '#14b8a6',
+                            fillOpacity: 0.35,
+                            color: '#0d9488',
+                            weight: 2.5,
+                            dashArray: '3, 3',
+                            className: 'uc-selection-halo',
+                          }}
+                        />
+                      )}
+                      <CircleMarker
+                        center={[r.lat!, r.lng!]}
+                        radius={radius}
+                        pane="markerPane"
+                        pathOptions={{
+                          fillColor: '#14b8a6',
+                          color: isSelected ? '#fbbf24' : '#ffffff',
+                          weight: isSelected ? 3.5 : 1.5,
+                          fillOpacity: 0.9,
+                          className: isSelected ? 'uc-selected-marker rppn-marker-circle' : 'rppn-marker-circle',
+                        }}
+                        eventHandlers={{
+                          click: () => setSelectedMarkerId(String(r.id)),
+                          popupopen: () => setSelectedMarkerId(String(r.id)),
+                          mouseover: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius + 4);
+                            m.setStyle({ weight: 3.5, color: '#ffffff', fillOpacity: 1 });
+                            if (typeof m.bringToFront === 'function') m.bringToFront();
+                          },
+                          mouseout: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius);
+                            m.setStyle({
+                              weight: isSelected ? 3.5 : 1.5,
+                              color: isSelected ? '#fbbf24' : '#ffffff',
+                              fillOpacity: 0.9,
+                            });
+                          },
+                        }}
+                      >
+                        <Tooltip direction="top" offset={[0, -radius - 3]} opacity={0.96}>
+                          <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                            <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{r.nome}</div>
+                            <div style={{ fontSize: '10px', color: '#0d9488', fontWeight: 600 }}>
+                              RPPN • {r.ente_federativo} ({r.area_ha.toLocaleString('pt-BR')} ha)
+                            </div>
+                          </div>
+                        </Tooltip>
+                        <Popup>
+                          <div className="p-1 text-xs">
+                            <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                              RPPN • {r.ente_federativo}
+                            </span>
+                            <h4 className="font-bold text-xs mt-1">{r.nome}</h4>
+                            <p className="text-slate-500 text-[11px]">{r.municipio} (SC)</p>
+                            <p className="text-[11px] mt-1">
+                              Área: <strong>{r.area_ha.toLocaleString('pt-BR')} ha</strong>
+                            </p>
+                          </div>
+                        </Popup>
+                      </CircleMarker>
+                    </React.Fragment>
+                  );
+                })}
 
             {/* Terras Indígenas Markers */}
             {showTis &&
               data?.terrasIndigenas
                 ?.filter((t) => t.lat && t.lng)
-                .map((t) => (
-                  <CircleMarker
-                    key={t.id}
-                    center={[t.lat!, t.lng!]}
-                    radius={6}
-                    pathOptions={{
-                      fillColor: '#f97316',
-                      color: '#ffffff',
-                      weight: 1.5,
-                      fillOpacity: 0.9,
-                      className: 'ti-marker-circle',
-                    }}
-                    eventHandlers={{
-                      mouseover: (e) => {
-                        const m = e.target;
-                        m.setRadius(10);
-                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
-                      },
-                      mouseout: (e) => {
-                        const m = e.target;
-                        m.setRadius(6);
-                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.9 });
-                      },
-                    }}
-                  >
-                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96}>
-                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
-                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{t.nome}</div>
-                        <div style={{ fontSize: '10px', color: '#ea580c', fontWeight: 600 }}>
-                          Terra Indígena • {t.ato_criacao_status || 'Em processo'}
-                        </div>
-                      </div>
-                    </Tooltip>
-                    <Popup>
-                      <div className="p-1 text-xs">
-                        <span className="bg-orange-100 text-orange-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
-                          Terra Indígena
-                        </span>
-                        <h4 className="font-bold text-xs mt-1">{t.nome}</h4>
-                        <p className="text-slate-500 text-[11px]">{t.localizacao}</p>
-                        <p className="text-[11px]">
-                          Status: <strong>{t.ato_criacao_status || 'Em processo'}</strong>
-                        </p>
-                        <p className="text-[11px]">
-                          Área: <strong>{t.area_ha.toLocaleString('pt-BR')} ha</strong>
-                        </p>
-                      </div>
-                    </Popup>
-                  </CircleMarker>
-                ))}
+                .map((t) => {
+                  const isSelected = String(selectedMarkerId) === String(t.id);
+                  const radius = isSelected ? 10 : 6;
+                  return (
+                    <React.Fragment key={t.id}>
+                      {isSelected && (
+                        <CircleMarker
+                          center={[t.lat!, t.lng!]}
+                          radius={radius + 7}
+                          pane="markerPane"
+                          pathOptions={{
+                            fillColor: '#f97316',
+                            fillOpacity: 0.35,
+                            color: '#ea580c',
+                            weight: 2.5,
+                            dashArray: '3, 3',
+                            className: 'uc-selection-halo',
+                          }}
+                        />
+                      )}
+                      <CircleMarker
+                        center={[t.lat!, t.lng!]}
+                        radius={radius}
+                        pane="markerPane"
+                        pathOptions={{
+                          fillColor: '#f97316',
+                          color: isSelected ? '#fbbf24' : '#ffffff',
+                          weight: isSelected ? 3.5 : 1.5,
+                          fillOpacity: 0.95,
+                          className: isSelected ? 'uc-selected-marker ti-marker-circle' : 'ti-marker-circle',
+                        }}
+                        eventHandlers={{
+                          click: () => setSelectedMarkerId(String(t.id)),
+                          popupopen: () => setSelectedMarkerId(String(t.id)),
+                          mouseover: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius + 4);
+                            m.setStyle({ weight: 3.5, color: '#ffffff', fillOpacity: 1 });
+                            if (typeof m.bringToFront === 'function') m.bringToFront();
+                          },
+                          mouseout: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius);
+                            m.setStyle({
+                              weight: isSelected ? 3.5 : 1.5,
+                              color: isSelected ? '#fbbf24' : '#ffffff',
+                              fillOpacity: 0.95,
+                            });
+                          },
+                        }}
+                      >
+                        <Tooltip direction="top" offset={[0, -radius - 3]} opacity={0.96}>
+                          <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                            <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{t.nome}</div>
+                            <div style={{ fontSize: '10px', color: '#ea580c', fontWeight: 600 }}>
+                              Terra Indígena • {t.ato_criacao_status || 'Em processo'}
+                            </div>
+                          </div>
+                        </Tooltip>
+                        <Popup>
+                          <div className="p-1 text-xs">
+                            <span className="bg-orange-100 text-orange-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                              Terra Indígena
+                            </span>
+                            <h4 className="font-bold text-xs mt-1">{t.nome}</h4>
+                            <p className="text-slate-500 text-[11px]">{t.localizacao}</p>
+                            <p className="text-[11px]">
+                              Status: <strong>{t.ato_criacao_status || 'Em processo'}</strong>
+                            </p>
+                            <p className="text-[11px]">
+                              Área: <strong>{t.area_ha.toLocaleString('pt-BR')} ha</strong>
+                            </p>
+                          </div>
+                        </Popup>
+                      </CircleMarker>
+                    </React.Fragment>
+                  );
+                })}
 
             {/* Quilombolas Markers */}
             {showQuilombos &&
               data?.quilombolas
                 ?.filter((q) => q.lat && q.lng)
-                .map((q) => (
-                  <CircleMarker
-                    key={q.id}
-                    center={[q.lat!, q.lng!]}
-                    radius={6}
-                    pathOptions={{
-                      fillColor: '#a855f7',
-                      color: '#ffffff',
-                      weight: 1.5,
-                      fillOpacity: 0.9,
-                      className: 'quilombo-marker-circle',
-                    }}
-                    eventHandlers={{
-                      mouseover: (e) => {
-                        const m = e.target;
-                        m.setRadius(10);
-                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
-                      },
-                      mouseout: (e) => {
-                        const m = e.target;
-                        m.setRadius(6);
-                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.9 });
-                      },
-                    }}
-                  >
-                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96}>
-                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
-                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{q.comunidade}</div>
-                        <div style={{ fontSize: '10px', color: '#9333ea', fontWeight: 600 }}>
-                          Comunidade Quilombola ({q.area_ha.toLocaleString('pt-BR')} ha)
-                        </div>
-                      </div>
-                    </Tooltip>
-                    <Popup>
-                      <div className="p-1 text-xs">
-                        <span className="bg-purple-100 text-purple-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
-                          Comunidade Quilombola
-                        </span>
-                        <h4 className="font-bold text-xs mt-1">{q.comunidade}</h4>
-                        <p className="text-slate-500 text-[11px]">{q.localizacao}</p>
-                        <p className="text-[11px] mt-1">
-                          Área: <strong>{q.area_ha.toLocaleString('pt-BR')} ha</strong>
-                        </p>
-                      </div>
-                    </Popup>
-                  </CircleMarker>
-                ))}
+                .map((q) => {
+                  const isSelected = String(selectedMarkerId) === String(q.id);
+                  const radius = isSelected ? 10 : 6;
+                  return (
+                    <React.Fragment key={q.id}>
+                      {isSelected && (
+                        <CircleMarker
+                          center={[q.lat!, q.lng!]}
+                          radius={radius + 7}
+                          pane="markerPane"
+                          pathOptions={{
+                            fillColor: '#a855f7',
+                            fillOpacity: 0.35,
+                            color: '#9333ea',
+                            weight: 2.5,
+                            dashArray: '3, 3',
+                            className: 'uc-selection-halo',
+                          }}
+                        />
+                      )}
+                      <CircleMarker
+                        center={[q.lat!, q.lng!]}
+                        radius={radius}
+                        pane="markerPane"
+                        pathOptions={{
+                          fillColor: '#a855f7',
+                          color: isSelected ? '#fbbf24' : '#ffffff',
+                          weight: isSelected ? 3.5 : 1.5,
+                          fillOpacity: 0.95,
+                          className: isSelected ? 'uc-selected-marker quilombo-marker-circle' : 'quilombo-marker-circle',
+                        }}
+                        eventHandlers={{
+                          click: () => setSelectedMarkerId(String(q.id)),
+                          popupopen: () => setSelectedMarkerId(String(q.id)),
+                          mouseover: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius + 4);
+                            m.setStyle({ weight: 3.5, color: '#ffffff', fillOpacity: 1 });
+                            if (typeof m.bringToFront === 'function') m.bringToFront();
+                          },
+                          mouseout: (e) => {
+                            const m = e.target;
+                            m.setRadius(radius);
+                            m.setStyle({
+                              weight: isSelected ? 3.5 : 1.5,
+                              color: isSelected ? '#fbbf24' : '#ffffff',
+                              fillOpacity: 0.95,
+                            });
+                          },
+                        }}
+                      >
+                        <Tooltip direction="top" offset={[0, -radius - 3]} opacity={0.96}>
+                          <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                            <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{q.comunidade}</div>
+                            <div style={{ fontSize: '10px', color: '#9333ea', fontWeight: 600 }}>
+                              Comunidade Quilombola ({q.area_ha.toLocaleString('pt-BR')} ha)
+                            </div>
+                          </div>
+                        </Tooltip>
+                        <Popup>
+                          <div className="p-1 text-xs">
+                            <span className="bg-purple-100 text-purple-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
+                              Comunidade Quilombola
+                            </span>
+                            <h4 className="font-bold text-xs mt-1">{q.comunidade}</h4>
+                            <p className="text-slate-500 text-[11px]">{q.localizacao}</p>
+                            <p className="text-[11px] mt-1">
+                              Área: <strong>{q.area_ha.toLocaleString('pt-BR')} ha</strong>
+                            </p>
+                          </div>
+                        </Popup>
+                      </CircleMarker>
+                    </React.Fragment>
+                  );
+                })}
           </MapContainer>
 
           {/* Map Legend Overlay */}
