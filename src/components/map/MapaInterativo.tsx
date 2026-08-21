@@ -187,11 +187,13 @@ export const MapaInterativo: React.FC = () => {
     };
   };
 
+  const currentHoveredLayerRef = useRef<any>(null);
+
   // Dynamically update styles without re-creating the entire GeoJSON layer (avoids flickering)
   useEffect(() => {
     if (geoJsonLayerRef.current) {
       geoJsonLayerRef.current.eachLayer((layer: any) => {
-        if (layer.feature) {
+        if (layer.feature && layer !== currentHoveredLayerRef.current) {
           layer.setStyle(getMunStyle(layer.feature));
         }
       });
@@ -241,20 +243,24 @@ export const MapaInterativo: React.FC = () => {
     layer.on({
       mouseover: (e: any) => {
         const l = e.target;
+        if (currentHoveredLayerRef.current && currentHoveredLayerRef.current !== l) {
+          try {
+            currentHoveredLayerRef.current.setStyle(getMunStyle(currentHoveredLayerRef.current.feature));
+          } catch (err) {}
+        }
+        currentHoveredLayerRef.current = l;
         l.setStyle({
-          weight: 3.5,
+          weight: 3,
           color: '#fbbf24', // bright golden highlight
           fillOpacity: 0.85,
         });
-        if (typeof l.bringToFront === 'function') {
-          l.bringToFront();
-        }
-        setHoveredMunName(name);
       },
       mouseout: (e: any) => {
         const l = e.target;
-        l.setStyle(getMunStyle(feature));
-        setHoveredMunName('');
+        if (currentHoveredLayerRef.current === l) {
+          l.setStyle(getMunStyle(feature));
+          currentHoveredLayerRef.current = null;
+        }
       },
       click: (e: any) => {
         const l = e.target;
