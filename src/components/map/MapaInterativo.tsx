@@ -79,71 +79,10 @@ const MapController: React.FC<{ targetBounds: L.LatLngBoundsExpression | null }>
   return null;
 };
 
-// Map click, movement and popup close listener
+// Map click and popup close listener to clear marker selection
 const MapEventsHandler: React.FC<{ onClearSelection: () => void }> = ({ onClearSelection }) => {
-  const map = useMap();
-
-  useEffect(() => {
-    const container = map.getContainer();
-    if (!container) return;
-
-    const closeAllTooltips = () => {
-      map.closeTooltip();
-      map.eachLayer((layer: any) => {
-        if (typeof layer.closeTooltip === 'function') {
-          try {
-            layer.closeTooltip();
-          } catch (err) {}
-        }
-      });
-      const tooltips = container.querySelectorAll('.leaflet-tooltip');
-      tooltips.forEach((t: any) => {
-        try {
-          t.remove();
-        } catch (e) {}
-      });
-    };
-
-    container.addEventListener('mousedown', closeAllTooltips, true);
-    container.addEventListener('dragstart', closeAllTooltips, true);
-    container.addEventListener('touchstart', closeAllTooltips, { capture: true, passive: true });
-
-    return () => {
-      container.removeEventListener('mousedown', closeAllTooltips, true);
-      container.removeEventListener('dragstart', closeAllTooltips, true);
-      container.removeEventListener('touchstart', closeAllTooltips, true);
-    };
-  }, [map]);
-
   useMapEvents({
-    movestart: () => {
-      map.closeTooltip();
-      map.eachLayer((layer: any) => {
-        if (typeof layer.closeTooltip === 'function') {
-          try {
-            layer.closeTooltip();
-          } catch (err) {}
-        }
-      });
-    },
-    dragstart: () => {
-      map.closeTooltip();
-      map.eachLayer((layer: any) => {
-        if (typeof layer.closeTooltip === 'function') {
-          try {
-            layer.closeTooltip();
-          } catch (err) {}
-        }
-      });
-    },
-    zoomstart: () => {
-      map.closeTooltip();
-    },
-    mousedown: () => {
-      map.closeTooltip();
-    },
     click: () => {
-      map.closeTooltip();
       onClearSelection();
     },
     popupclose: () => {
@@ -378,7 +317,7 @@ export const MapaInterativo: React.FC = () => {
     const ucsCount = ucsCountByMun[name.toLowerCase()] || 0;
     const mesoColor = MESO_COLORS[meso] || '#10b981';
 
-    // Rich floating tooltip attached to polygon
+    // Floating tooltip attached to polygon
     (layer as L.Path).bindTooltip(
       `
       <div style="font-family: inherit; min-width: 150px; padding: 2px;">
@@ -401,8 +340,8 @@ export const MapaInterativo: React.FC = () => {
       </div>
       `,
       {
-        sticky: true,
-        direction: 'top',
+        sticky: false,
+        direction: 'center',
         opacity: 0.98,
         className: 'custom-leaflet-tooltip',
       }
@@ -414,7 +353,6 @@ export const MapaInterativo: React.FC = () => {
         if (currentHoveredLayerRef.current && currentHoveredLayerRef.current !== l) {
           try {
             currentHoveredLayerRef.current.setStyle(getMunStyle(currentHoveredLayerRef.current.feature));
-            currentHoveredLayerRef.current.closeTooltip();
           } catch (err) {}
         }
         currentHoveredLayerRef.current = l;
@@ -426,25 +364,13 @@ export const MapaInterativo: React.FC = () => {
       },
       mouseout: (e: any) => {
         const l = e.target;
-        try {
-          l.closeTooltip();
-        } catch (err) {}
         if (currentHoveredLayerRef.current === l) {
           l.setStyle(getMunStyle(feature));
           currentHoveredLayerRef.current = null;
         }
       },
-      mousedown: (e: any) => {
-        const l = e.target;
-        try {
-          l.closeTooltip();
-        } catch (err) {}
-      },
       click: (e: any) => {
         const l = e.target;
-        try {
-          l.closeTooltip();
-        } catch (err) {}
         if (typeof l.getBounds === 'function') {
           setMapTargetBounds(l.getBounds());
         }
