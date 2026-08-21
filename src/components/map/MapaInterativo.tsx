@@ -79,10 +79,71 @@ const MapController: React.FC<{ targetBounds: L.LatLngBoundsExpression | null }>
   return null;
 };
 
-// Map click and popup close listener to clear marker selection
+// Map click, movement and popup close listener
 const MapEventsHandler: React.FC<{ onClearSelection: () => void }> = ({ onClearSelection }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    const container = map.getContainer();
+    if (!container) return;
+
+    const closeAllTooltips = () => {
+      map.closeTooltip();
+      map.eachLayer((layer: any) => {
+        if (typeof layer.closeTooltip === 'function') {
+          try {
+            layer.closeTooltip();
+          } catch (err) {}
+        }
+      });
+      const tooltips = container.querySelectorAll('.leaflet-tooltip');
+      tooltips.forEach((t: any) => {
+        try {
+          t.remove();
+        } catch (e) {}
+      });
+    };
+
+    container.addEventListener('mousedown', closeAllTooltips, true);
+    container.addEventListener('dragstart', closeAllTooltips, true);
+    container.addEventListener('touchstart', closeAllTooltips, { capture: true, passive: true });
+
+    return () => {
+      container.removeEventListener('mousedown', closeAllTooltips, true);
+      container.removeEventListener('dragstart', closeAllTooltips, true);
+      container.removeEventListener('touchstart', closeAllTooltips, true);
+    };
+  }, [map]);
+
   useMapEvents({
+    movestart: () => {
+      map.closeTooltip();
+      map.eachLayer((layer: any) => {
+        if (typeof layer.closeTooltip === 'function') {
+          try {
+            layer.closeTooltip();
+          } catch (err) {}
+        }
+      });
+    },
+    dragstart: () => {
+      map.closeTooltip();
+      map.eachLayer((layer: any) => {
+        if (typeof layer.closeTooltip === 'function') {
+          try {
+            layer.closeTooltip();
+          } catch (err) {}
+        }
+      });
+    },
+    zoomstart: () => {
+      map.closeTooltip();
+    },
+    mousedown: () => {
+      map.closeTooltip();
+    },
     click: () => {
+      map.closeTooltip();
       onClearSelection();
     },
     popupclose: () => {
@@ -353,6 +414,7 @@ export const MapaInterativo: React.FC = () => {
         if (currentHoveredLayerRef.current && currentHoveredLayerRef.current !== l) {
           try {
             currentHoveredLayerRef.current.setStyle(getMunStyle(currentHoveredLayerRef.current.feature));
+            currentHoveredLayerRef.current.closeTooltip();
           } catch (err) {}
         }
         currentHoveredLayerRef.current = l;
@@ -364,13 +426,25 @@ export const MapaInterativo: React.FC = () => {
       },
       mouseout: (e: any) => {
         const l = e.target;
+        try {
+          l.closeTooltip();
+        } catch (err) {}
         if (currentHoveredLayerRef.current === l) {
           l.setStyle(getMunStyle(feature));
           currentHoveredLayerRef.current = null;
         }
       },
+      mousedown: (e: any) => {
+        const l = e.target;
+        try {
+          l.closeTooltip();
+        } catch (err) {}
+      },
       click: (e: any) => {
         const l = e.target;
+        try {
+          l.closeTooltip();
+        } catch (err) {}
         if (typeof l.getBounds === 'function') {
           setMapTargetBounds(l.getBounds());
         }
@@ -1074,11 +1148,16 @@ export const MapaInterativo: React.FC = () => {
                       className: isSelected ? 'uc-selected-marker uc-marker-circle' : 'uc-marker-circle',
                     }}
                     eventHandlers={{
-                      click: () => {
+                      click: (e) => {
+                        try { e.target.closeTooltip(); } catch (err) {}
                         setSelectedMarkerId(String(u.id));
                         setSelectedUc(u);
                       },
-                      popupopen: () => {
+                      mousedown: (e) => {
+                        try { e.target.closeTooltip(); } catch (err) {}
+                      },
+                      popupopen: (e) => {
+                        try { e.target.closeTooltip(); } catch (err) {}
                         setSelectedMarkerId(String(u.id));
                         setSelectedUc(u);
                       },
@@ -1096,6 +1175,7 @@ export const MapaInterativo: React.FC = () => {
                       },
                       mouseout: (e) => {
                         const m = e.target;
+                        try { m.closeTooltip(); } catch (err) {}
                         m.setRadius(radius);
                         m.setStyle({
                           weight: isSelected ? 4 : 2,
@@ -1123,47 +1203,26 @@ export const MapaInterativo: React.FC = () => {
                           >
                             {u.esfera} • {u.categoria}
                           </span>
-                          <h4 className="font-bold text-xs text-slate-900 leading-tight">
-                            {u.nome}
-                          </h4>
-                          <p className="text-[11px] text-slate-500">
-                            {u.municipios} {u.mesorregiao ? `(${u.mesorregiao})` : ''}
-                          </p>
+                          <h4 className="font-extrabold text-sm text-slate-900 leading-tight">{u.nome}</h4>
+                          <p className="text-xs text-slate-500 font-medium">{u.municipios} (SC)</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-1 text-[11px] bg-slate-50 p-1.5 rounded border border-slate-200">
-                          <div>
-                            <span className="text-slate-400 block text-[9px]">ÁREA</span>
-                            <strong>{u.area_ha.toLocaleString('pt-BR')} ha</strong>
-                          </div>
-                          <div>
-                            <span className="text-slate-400 block text-[9px]">CNUC</span>
-                            <strong className={u.cnuc ? 'text-emerald-600' : 'text-amber-600'}>
-                              {u.cnuc ? 'Cadastrada' : 'Fora/Pendente'}
-                            </strong>
-                          </div>
-                          <div>
-                            <span className="text-slate-400 block text-[9px]">PLANO MANEJO</span>
-                            <span>{u.plano_manejo ? 'Sim' : 'Não'}</span>
-                          </div>
-                          <div>
-                            <span className="text-slate-400 block text-[9px]">CONSELHO</span>
-                            <span>{u.conselho_gestor ? 'Sim' : 'Não'}</span>
-                          </div>
+                        <div className="text-xs space-y-1 bg-slate-50 p-2 rounded-lg border border-slate-100">
+                          <div>Área: <strong>{u.area_ha.toLocaleString('pt-BR')} ha</strong></div>
+                          <div>Grupo: <strong>{u.grupo}</strong></div>
+                          <div>Status CNUC: <strong className={u.cnuc ? 'text-emerald-600' : 'text-amber-600'}>
+                            {u.cnuc ? 'Cadastrada no CNUC' : 'Pendente / Não Cadastrada'}
+                          </strong></div>
                         </div>
 
-                        {u.ato_criacao && (
-                          <p className="text-[10px] text-slate-600 italic">
-                            Ato: {u.ato_criacao}
-                          </p>
-                        )}
-
-                        <button
-                          onClick={() => setSelectedUc(u)}
-                          className="w-full mt-2 py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] transition cursor-pointer"
-                        >
-                          Ver Ficha Completa
-                        </button>
+                        <div className="flex gap-2 pt-1 border-t border-slate-100">
+                          <button
+                            onClick={() => setSelectedUc(u)}
+                            className="flex-1 py-1 px-2 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition cursor-pointer text-center"
+                          >
+                            Ver Ficha Completa
+                          </button>
+                        </div>
                       </div>
                     </Popup>
                   </CircleMarker>
@@ -1207,8 +1266,17 @@ export const MapaInterativo: React.FC = () => {
                           className: isSelected ? 'uc-selected-marker rppn-marker-circle' : 'rppn-marker-circle',
                         }}
                         eventHandlers={{
-                          click: () => setSelectedMarkerId(String(r.id)),
-                          popupopen: () => setSelectedMarkerId(String(r.id)),
+                          click: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(r.id));
+                          },
+                          mousedown: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                          },
+                          popupopen: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(r.id));
+                          },
                           mouseover: (e) => {
                             const m = e.target;
                             m.setRadius(radius + 4);
@@ -1217,6 +1285,7 @@ export const MapaInterativo: React.FC = () => {
                           },
                           mouseout: (e) => {
                             const m = e.target;
+                            try { m.closeTooltip(); } catch (err) {}
                             m.setRadius(radius);
                             m.setStyle({
                               weight: isSelected ? 3.5 : 1.5,
@@ -1287,8 +1356,17 @@ export const MapaInterativo: React.FC = () => {
                           className: isSelected ? 'uc-selected-marker ti-marker-circle' : 'ti-marker-circle',
                         }}
                         eventHandlers={{
-                          click: () => setSelectedMarkerId(String(t.id)),
-                          popupopen: () => setSelectedMarkerId(String(t.id)),
+                          click: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(t.id));
+                          },
+                          mousedown: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                          },
+                          popupopen: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(t.id));
+                          },
                           mouseover: (e) => {
                             const m = e.target;
                             m.setRadius(radius + 4);
@@ -1297,6 +1375,7 @@ export const MapaInterativo: React.FC = () => {
                           },
                           mouseout: (e) => {
                             const m = e.target;
+                            try { m.closeTooltip(); } catch (err) {}
                             m.setRadius(radius);
                             m.setStyle({
                               weight: isSelected ? 3.5 : 1.5,
@@ -1370,8 +1449,17 @@ export const MapaInterativo: React.FC = () => {
                           className: isSelected ? 'uc-selected-marker quilombo-marker-circle' : 'quilombo-marker-circle',
                         }}
                         eventHandlers={{
-                          click: () => setSelectedMarkerId(String(q.id)),
-                          popupopen: () => setSelectedMarkerId(String(q.id)),
+                          click: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(q.id));
+                          },
+                          mousedown: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                          },
+                          popupopen: (e) => {
+                            try { e.target.closeTooltip(); } catch (err) {}
+                            setSelectedMarkerId(String(q.id));
+                          },
                           mouseover: (e) => {
                             const m = e.target;
                             m.setRadius(radius + 4);
@@ -1380,6 +1468,7 @@ export const MapaInterativo: React.FC = () => {
                           },
                           mouseout: (e) => {
                             const m = e.target;
+                            try { m.closeTooltip(); } catch (err) {}
                             m.setRadius(radius);
                             m.setStyle({
                               weight: isSelected ? 3.5 : 1.5,
