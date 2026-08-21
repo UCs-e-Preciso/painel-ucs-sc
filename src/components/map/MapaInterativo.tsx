@@ -28,6 +28,12 @@ import {
   Building,
   CheckCircle2,
   Sparkles,
+  X,
+  SlidersHorizontal,
+  Check,
+  Layers2,
+  Eye,
+  RotateCcw,
 } from 'lucide-react';
 
 // Fix Leaflet marker icons
@@ -70,10 +76,15 @@ const MapController: React.FC<{ targetBounds: L.LatLngBoundsExpression | null }>
 export const MapaInterativo: React.FC = () => {
   const {
     filteredUcs,
+    filteredRppns,
+    filteredTerrasIndigenas,
+    filteredQuilombolas,
     data,
     selectedUc,
     setSelectedUc,
+    filters,
     setFilters,
+    resetFilters,
     setActiveTab,
     darkMode,
   } = useData();
@@ -82,11 +93,22 @@ export const MapaInterativo: React.FC = () => {
   const [selectedTerritorio, setSelectedTerritorio] = useState<string>('');
   const [hoveredTerritorio, setHoveredTerritorio] = useState<string>('');
   const [hoveredMunName, setHoveredMunName] = useState<string>('');
-  const [showMesoLayer, setShowMesoLayer] = useState<boolean>(true);
+
+  // Granular layer toggles
+  const [showFederal, setShowFederal] = useState<boolean>(true);
+  const [showEstadual, setShowEstadual] = useState<boolean>(true);
+  const [showMunicipal, setShowMunicipal] = useState<boolean>(true);
+  const [showProtecaoIntegral, setShowProtecaoIntegral] = useState<boolean>(true);
+  const [showUsoSustentavel, setShowUsoSustentavel] = useState<boolean>(true);
+  const [showCnucCadastradas, setShowCnucCadastradas] = useState<boolean>(true);
+  const [showCnucPendentes, setShowCnucPendentes] = useState<boolean>(true);
   const [showRppns, setShowRppns] = useState<boolean>(true);
   const [showTis, setShowTis] = useState<boolean>(true);
   const [showQuilombos, setShowQuilombos] = useState<boolean>(true);
   const [showChoropleth, setShowChoropleth] = useState<boolean>(true);
+  const [showMesoLayer, setShowMesoLayer] = useState<boolean>(true);
+  const [showLayersDrawer, setShowLayersDrawer] = useState<boolean>(false);
+
   const [selectedMunInfo, setSelectedMunInfo] = useState<any | null>(null);
   const [selectedMarkerId, setSelectedMarkerId] = useState<string | null>(null);
   const [mapTargetBounds, setMapTargetBounds] = useState<L.LatLngBoundsExpression | null>(null);
@@ -94,18 +116,65 @@ export const MapaInterativo: React.FC = () => {
   const geoJsonLayerRef = useRef<L.GeoJSON | null>(null);
   const mesoLayerRef = useRef<L.GeoJSON | null>(null);
 
-  // UCs count per municipality
+  // UCs with coordinates after applying all filters and layer toggles
+  const ucsWithCoords = useMemo(() => {
+    return filteredUcs.filter((u) => {
+      if (!u.lat || !u.lng) return false;
+      if (selectedTerritorio && u.mesorregiao !== selectedTerritorio) return false;
+      if (!showFederal && u.esfera === 'Federal') return false;
+      if (!showEstadual && u.esfera === 'Estadual') return false;
+      if (!showMunicipal && u.esfera === 'Municipal') return false;
+      if (!showProtecaoIntegral && u.grupo === 'Proteção Integral') return false;
+      if (!showUsoSustentavel && u.grupo === 'Uso Sustentável') return false;
+      if (!showCnucCadastradas && u.cnuc) return false;
+      if (!showCnucPendentes && !u.cnuc) return false;
+      return true;
+    });
+  }, [
+    filteredUcs,
+    selectedTerritorio,
+    showFederal,
+    showEstadual,
+    showMunicipal,
+    showProtecaoIntegral,
+    showUsoSustentavel,
+    showCnucCadastradas,
+    showCnucPendentes,
+  ]);
+
+  // Dynamic UCs count per municipality based on active filtered UCs
   const ucsCountByMun = useMemo(() => {
     const map: Record<string, number> = {};
-    if (!data) return map;
-    data.ucs.forEach((u) => {
+    ucsWithCoords.forEach((u) => {
       const m = u.municipio_principal || u.municipios;
       if (m) {
-        map[m.toLowerCase()] = (map[m.toLowerCase()] || 0) + 1;
+        m.split(',').forEach((city) => {
+          const clean = city.trim().toLowerCase();
+          if (clean) {
+            map[clean] = (map[clean] || 0) + 1;
+          }
+        });
       }
     });
     return map;
-  }, [data]);
+  }, [ucsWithCoords]);
+
+  // Layer statistics counts
+  const layerStats = useMemo(() => {
+    const totalUcs = data?.ucs.length || 0;
+    const fed = data?.ucs.filter((u) => u.esfera === 'Federal').length || 0;
+    const est = data?.ucs.filter((u) => u.esfera === 'Estadual').length || 0;
+    const mun = data?.ucs.filter((u) => u.esfera === 'Municipal').length || 0;
+    const pi = data?.ucs.filter((u) => u.grupo === 'Proteção Integral').length || 0;
+    const us = data?.ucs.filter((u) => u.grupo === 'Uso Sustentável').length || 0;
+    const cnucYes = data?.ucs.filter((u) => u.cnuc).length || 0;
+    const cnucNo = data?.ucs.filter((u) => !u.cnuc).length || 0;
+    const rppns = filteredRppns.filter((r) => r.lat && r.lng).length;
+    const tis = filteredTerrasIndigenas.filter((t) => t.lat && t.lng).length;
+    const quilombos = filteredQuilombolas.filter((q) => q.lat && q.lng).length;
+
+    return { totalUcs, fed, est, mun, pi, us, cnucYes, cnucNo, rppns, tis, quilombos };
+  }, [data, filteredRppns, filteredTerrasIndigenas, filteredQuilombolas]);
 
   // Lookup map: municipality code/name -> mesorregiao
   const munToMesoMap = useMemo(() => {
@@ -120,13 +189,26 @@ export const MapaInterativo: React.FC = () => {
     return map;
   }, [data]);
 
-  const ucsWithCoords = useMemo(() => {
-    return filteredUcs.filter((u) => {
-      if (!u.lat || !u.lng) return false;
-      if (selectedTerritorio && u.mesorregiao !== selectedTerritorio) return false;
-      return true;
-    });
-  }, [filteredUcs, selectedTerritorio]);
+  // Auto-focus map if search query matches a municipality
+  useEffect(() => {
+    if (filters.searchQuery && data?.geoJsonSc) {
+      const q = filters.searchQuery.toLowerCase().trim();
+      if (q.length >= 3) {
+        const matched = data.geoJsonSc.features?.find(
+          (f: any) => f.properties?.nome?.toLowerCase() === q || f.properties?.nome?.toLowerCase().startsWith(q)
+        );
+        if (matched && geoJsonLayerRef.current) {
+          geoJsonLayerRef.current.eachLayer((l: any) => {
+            if (l.feature?.properties?.nome?.toLowerCase() === matched.properties?.nome?.toLowerCase()) {
+              if (typeof l.getBounds === 'function') {
+                setMapTargetBounds(l.getBounds());
+              }
+            }
+          });
+        }
+      }
+    }
+  }, [filters.searchQuery, data]);
 
   const getColorByUc = (u: UC): string => {
     if (colorMode === 'territorio') {
@@ -204,7 +286,7 @@ export const MapaInterativo: React.FC = () => {
         }
       });
     }
-  }, [colorMode, selectedTerritorio, hoveredTerritorio, darkMode, showChoropleth]);
+  }, [colorMode, selectedTerritorio, hoveredTerritorio, darkMode, showChoropleth, ucsCountByMun]);
 
   const onEachFeature = (feature: any, layer: L.Layer) => {
     const cod = feature?.properties?.code || feature?.properties?.codarea;
@@ -431,106 +513,371 @@ export const MapaInterativo: React.FC = () => {
         </div>
       </div>
 
-      {/* Map Control Bar */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <Layers className="w-5 h-5 text-emerald-600" />
-          <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
-            Camadas do Mapa
-          </span>
-          <span className="text-xs text-slate-500">
-            ({ucsWithCoords.length} UCs ativas no mapa)
+      {/* Live Search & Quick Filter Bar on Map */}
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+          {/* Search Input */}
+          <div className="relative flex-1">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={filters.searchQuery}
+              onChange={(e) => setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))}
+              placeholder="Buscar UC por nome, município, categoria ou ato no mapa..."
+              className="w-full pl-10 pr-9 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+            />
+            {filters.searchQuery && (
+              <button
+                onClick={() => setFilters((prev) => ({ ...prev, searchQuery: '' }))}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-0.5 rounded-full"
+                title="Limpar busca"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+
+          {/* Quick Select Filter Badges & Toggle Layers Button */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setShowLayersDrawer(!showLayersDrawer)}
+              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer ${
+                showLayersDrawer
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
+              }`}
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span>{showLayersDrawer ? 'Ocultar Camadas' : 'Painel de Camadas'}</span>
+            </button>
+
+            {(filters.searchQuery || filters.esfera || filters.grupo || filters.statusCnuc || selectedTerritorio) && (
+              <button
+                onClick={() => {
+                  resetFilters();
+                  setSelectedTerritorio('');
+                  setShowFederal(true);
+                  setShowEstadual(true);
+                  setShowMunicipal(true);
+                  setShowProtecaoIntegral(true);
+                  setShowUsoSustentavel(true);
+                  setShowCnucCadastradas(true);
+                  setShowCnucPendentes(true);
+                  setShowRppns(true);
+                  setShowTis(true);
+                  setShowQuilombos(true);
+                  setMapTargetBounds([[-29.4, -53.9], [-25.9, -48.3]]);
+                }}
+                className="inline-flex items-center gap-1 px-2.5 py-2 rounded-xl text-xs font-bold bg-amber-50 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 hover:bg-amber-100 transition shadow-xs cursor-pointer"
+                title="Limpar todos os filtros e restaurar mapa"
+              >
+                <RotateCcw className="w-3 h-3" />
+                <span className="hidden sm:inline">Restaurar</span>
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Counter of active matching UCs and color selector */}
+        <div className="flex flex-wrap items-center justify-between gap-2 text-xs pt-1 border-t border-slate-100 dark:border-slate-800/80">
+          <div className="flex flex-wrap items-center gap-2 text-slate-600 dark:text-slate-400">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>
+              Exibindo <strong className="text-emerald-600 dark:text-emerald-400">{ucsWithCoords.length}</strong> de {data?.ucs.length || 0} UCs georreferenciadas
+            </span>
+            {selectedTerritorio && (
+              <span className="px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-semibold text-[10px]">
+                {selectedTerritorio}
+              </span>
+            )}
+            {filters.searchQuery && (
+              <span className="px-2 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-semibold text-[10px]">
+                Busca: "{filters.searchQuery}"
+              </span>
+            )}
+          </div>
+
+          {/* Marker Color Mode Selector */}
+          <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+            <span className="text-[10px] uppercase font-bold text-slate-400 px-2">Cor:</span>
+            {(['territorio', 'esfera', 'grupo', 'cnuc'] as const).map((mode) => (
+              <button
+                key={mode}
+                onClick={() => setColorMode(mode)}
+                className={`px-2 py-0.5 rounded text-[11px] capitalize font-medium transition ${
+                  colorMode === mode
+                    ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs font-bold'
+                    : 'text-slate-600 dark:text-slate-400'
+                }`}
+              >
+                {mode === 'cnuc' ? 'CNUC' : mode === 'territorio' ? 'Território' : mode}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Expanded Multi-Layer Toggle Drawer */}
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Layers2 className="w-5 h-5 text-emerald-600" />
+            <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+              Camadas e Filtros do Mapa
+            </h4>
+          </div>
+          <span className="text-[11px] text-slate-500">
+            Marque ou desmarque para personalizar a visualização espacial
           </span>
         </div>
 
-        {/* Layer & Color Toggles */}
-        <div className="flex flex-wrap items-center gap-2 text-xs">
-          {/* Color Mode */}
-          <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
-            <span className="text-[10px] uppercase font-bold text-slate-400 px-2">Cor:</span>
-            <button
-              onClick={() => setColorMode('territorio')}
-              className={`px-2 py-1 rounded font-medium transition ${
-                colorMode === 'territorio'
-                  ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs font-bold'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-            >
-              Território
-            </button>
-            <button
-              onClick={() => setColorMode('esfera')}
-              className={`px-2 py-1 rounded font-medium transition ${
-                colorMode === 'esfera'
-                  ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs font-bold'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-            >
-              Esfera
-            </button>
-            <button
-              onClick={() => setColorMode('grupo')}
-              className={`px-2 py-1 rounded font-medium transition ${
-                colorMode === 'grupo'
-                  ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs font-bold'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-            >
-              Grupo
-            </button>
-            <button
-              onClick={() => setColorMode('cnuc')}
-              className={`px-2 py-1 rounded font-medium transition ${
-                colorMode === 'cnuc'
-                  ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs font-bold'
-                  : 'text-slate-600 dark:text-slate-400'
-              }`}
-            >
-              CNUC
-            </button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          {/* Column 1: Esferas */}
+          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+              <span>Esfera da UC</span>
+              <span className="text-slate-400 font-normal text-[10px]">({layerStats.fed + layerStats.est + layerStats.mun})</span>
+            </div>
+            <div className="space-y-1.5 pt-1">
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showFederal}
+                    onChange={(e) => setShowFederal(e.target.checked)}
+                    className="rounded text-purple-600 focus:ring-purple-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#8b5cf6]"></span>
+                    Federal
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                  {layerStats.fed}
+                </span>
+              </label>
+
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showEstadual}
+                    onChange={(e) => setShowEstadual(e.target.checked)}
+                    className="rounded text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#0284c7]"></span>
+                    Estadual
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                  {layerStats.est}
+                </span>
+              </label>
+
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showMunicipal}
+                    onChange={(e) => setShowMunicipal(e.target.checked)}
+                    className="rounded text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]"></span>
+                    Municipal
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                  {layerStats.mun}
+                </span>
+              </label>
+            </div>
           </div>
 
-          {/* Toggle Mesoregions Contour */}
-          <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-            <input
-              type="checkbox"
-              checked={showMesoLayer}
-              onChange={(e) => setShowMesoLayer(e.target.checked)}
-              className="rounded text-emerald-600 focus:ring-emerald-500"
-            />
-            <span>Contornos Regionais</span>
-          </label>
+          {/* Column 2: Grupos SNUC */}
+          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+              <span>Grupo do SNUC</span>
+              <span className="text-slate-400 font-normal text-[10px]">({layerStats.pi + layerStats.us})</span>
+            </div>
+            <div className="space-y-1.5 pt-1">
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showProtecaoIntegral}
+                    onChange={(e) => setShowProtecaoIntegral(e.target.checked)}
+                    className="rounded text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
+                    Proteção Integral
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                  {layerStats.pi}
+                </span>
+              </label>
 
-          {/* Additional Layers */}
-          <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-            <input
-              type="checkbox"
-              checked={showRppns}
-              onChange={(e) => setShowRppns(e.target.checked)}
-              className="rounded text-emerald-600 focus:ring-emerald-500"
-            />
-            <span>RPPNs ({data?.rppns.length || 0})</span>
-          </label>
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showUsoSustentavel}
+                    onChange={(e) => setShowUsoSustentavel(e.target.checked)}
+                    className="rounded text-sky-600 focus:ring-sky-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#0ea5e9]"></span>
+                    Uso Sustentável
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
+                  {layerStats.us}
+                </span>
+              </label>
 
-          <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-            <input
-              type="checkbox"
-              checked={showTis}
-              onChange={(e) => setShowTis(e.target.checked)}
-              className="rounded text-emerald-600 focus:ring-emerald-500"
-            />
-            <span>Terras Indígenas ({data?.terrasIndigenas.length || 0})</span>
-          </label>
+              {/* CNUC Status Subgroup */}
+              <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-1">
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showCnucCadastradas}
+                      onChange={(e) => setShowCnucCadastradas(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                    />
+                    <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
+                      Cadastradas CNUC
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
+                    {layerStats.cnucYes}
+                  </span>
+                </label>
 
-          <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
-            <input
-              type="checkbox"
-              checked={showQuilombos}
-              onChange={(e) => setShowQuilombos(e.target.checked)}
-              className="rounded text-emerald-600 focus:ring-emerald-500"
-            />
-            <span>Quilombolas ({data?.quilombolas.length || 0})</span>
-          </label>
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showCnucPendentes}
+                      onChange={(e) => setShowCnucPendentes(e.target.checked)}
+                      className="rounded text-amber-600 focus:ring-amber-500"
+                    />
+                    <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
+                      Pendentes / Fora
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400">
+                    {layerStats.cnucNo}
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: Mosaico Socioambiental */}
+          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+              <span>Socioambiental</span>
+              <span className="text-slate-400 font-normal text-[10px]">({layerStats.rppns + layerStats.tis + layerStats.quilombos})</span>
+            </div>
+            <div className="space-y-1.5 pt-1">
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showRppns}
+                    onChange={(e) => setShowRppns(e.target.checked)}
+                    className="rounded text-teal-600 focus:ring-teal-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#14b8a6]"></span>
+                    RPPNs
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">
+                  {layerStats.rppns}
+                </span>
+              </label>
+
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showTis}
+                    onChange={(e) => setShowTis(e.target.checked)}
+                    className="rounded text-orange-600 focus:ring-orange-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#f97316]"></span>
+                    Terras Indígenas
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300">
+                  {layerStats.tis}
+                </span>
+              </label>
+
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showQuilombos}
+                    onChange={(e) => setShowQuilombos(e.target.checked)}
+                    className="rounded text-purple-600 focus:ring-purple-500"
+                  />
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#a855f7]"></span>
+                    Quilombolas
+                  </span>
+                </div>
+                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                  {layerStats.quilombos}
+                </span>
+              </label>
+            </div>
+          </div>
+
+          {/* Column 4: Cartografia & Polígonos */}
+          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+              <span>Cartografia Base</span>
+              <span className="text-slate-400 font-normal text-[10px]">IBGE SC</span>
+            </div>
+            <div className="space-y-1.5 pt-1">
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showChoropleth}
+                    onChange={(e) => setShowChoropleth(e.target.checked)}
+                    className="rounded text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <span className="font-medium text-slate-700 dark:text-slate-300">
+                    Colorir Cidades por UCs
+                  </span>
+                </div>
+                <span className="text-[10px] font-semibold text-slate-400">295 Mun.</span>
+              </label>
+
+              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showMesoLayer}
+                    onChange={(e) => setShowMesoLayer(e.target.checked)}
+                    className="rounded text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <span className="font-medium text-slate-700 dark:text-slate-300">
+                    Contornos Regionais
+                  </span>
+                </div>
+                <span className="text-[10px] font-semibold text-slate-400">6 Regiões</span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -714,7 +1061,7 @@ export const MapaInterativo: React.FC = () => {
 
             {/* RPPNs Layer Markers */}
             {showRppns &&
-              data?.rppns
+              filteredRppns
                 ?.filter((r) => r.lat && r.lng)
                 .map((r) => {
                   const isSelected = String(selectedMarkerId) === String(r.id);
@@ -794,7 +1141,7 @@ export const MapaInterativo: React.FC = () => {
 
             {/* Terras Indígenas Markers */}
             {showTis &&
-              data?.terrasIndigenas
+              filteredTerrasIndigenas
                 ?.filter((t) => t.lat && t.lng)
                 .map((t) => {
                   const isSelected = String(selectedMarkerId) === String(t.id);
@@ -877,7 +1224,7 @@ export const MapaInterativo: React.FC = () => {
 
             {/* Quilombolas Markers */}
             {showQuilombos &&
-              data?.quilombolas
+              filteredQuilombolas
                 ?.filter((q) => q.lat && q.lng)
                 .map((q) => {
                   const isSelected = String(selectedMarkerId) === String(q.id);
