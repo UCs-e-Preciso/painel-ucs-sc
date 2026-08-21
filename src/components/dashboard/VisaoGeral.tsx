@@ -274,8 +274,8 @@ export const VisaoGeral: React.FC = () => {
       {/* Charts Grid Row 1: Esferas & Grupos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Esfera Administrativa */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
-          <div className="flex items-center justify-between mb-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
               <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <Building className="w-4 h-4 text-emerald-600" />
@@ -284,19 +284,20 @@ export const VisaoGeral: React.FC = () => {
               <p className="text-xs text-slate-500">Distribuição entre Municipal, Estadual e Federal</p>
             </div>
           </div>
-          <div className="h-56">
+          <div className="h-60 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
+              <PieChart margin={{ top: 0, bottom: 0, left: 0, right: 0 }}>
                 <Pie
                   data={esferaData}
                   dataKey="count"
                   nameKey="name"
                   cx="50%"
                   cy="50%"
-                  innerRadius={50}
+                  innerRadius={45}
                   outerRadius={75}
                   paddingAngle={4}
-                  label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                  labelLine={false}
+                  label={({ percent }) => (percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : '')}
                 >
                   {esferaData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS_ESFERA[index % COLORS_ESFERA.length]} />
@@ -304,26 +305,40 @@ export const VisaoGeral: React.FC = () => {
                 </Pie>
                 <Tooltip
                   formatter={(value: any, name: any, item: any) => [
-                    `${value} UCs (${item.payload.area_km2.toLocaleString('pt-BR')} km²)`,
+                    `${value} UCs (${item.payload.area_km2.toLocaleString('pt-BR')} km²) - ${((Number(value) / (stats.total || 1)) * 100).toFixed(1)}%`,
                     name,
                   ]}
                 />
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-3 text-center text-xs">
-            {esferaData.map((e, idx) => (
-              <div key={e.name}>
-                <span className="text-slate-400 text-[10px] block">{e.name}</span>
-                <span className="font-extrabold text-slate-800 dark:text-slate-200">{e.count} UCs</span>
-              </div>
-            ))}
+          <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-3 gap-2 text-center text-xs">
+            {esferaData.map((e, idx) => {
+              const pct = stats.total ? Math.round((e.count / stats.total) * 100) : 0;
+              return (
+                <div key={e.name} className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80">
+                  <div className="flex items-center justify-center gap-1.5 mb-1">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full shrink-0"
+                      style={{ backgroundColor: COLORS_ESFERA[idx % COLORS_ESFERA.length] }}
+                    />
+                    <span className="text-slate-700 dark:text-slate-200 font-bold text-xs truncate">
+                      {e.name}
+                    </span>
+                  </div>
+                  <div className="font-extrabold text-slate-900 dark:text-white text-sm">
+                    {e.count} <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">({pct}%)</span>
+                  </div>
+                  <span className="text-[10px] text-slate-400 block mt-0.5">{e.area_km2.toLocaleString('pt-BR')} km²</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Grupo SNUC: PI vs US */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
-          <div className="flex items-center justify-between mb-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-2">
             <div>
               <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <Landmark className="w-4 h-4 text-blue-600" />
@@ -332,19 +347,20 @@ export const VisaoGeral: React.FC = () => {
               <p className="text-xs text-slate-500">Proteção Integral vs Uso Sustentável</p>
             </div>
           </div>
-          <div className="h-56">
+          <div className="h-60 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
+              <PieChart margin={{ top: 0, bottom: 0, left: 0, right: 0 }}>
                 <Pie
                   data={grupoData}
                   dataKey="count"
                   nameKey="name"
                   cx="50%"
                   cy="50%"
-                  innerRadius={50}
+                  innerRadius={45}
                   outerRadius={75}
                   paddingAngle={4}
-                  label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+                  labelLine={false}
+                  label={({ percent }) => (percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : '')}
                 >
                   {grupoData.map((entry, index) => (
                     <Cell key={`cell-grp-${index}`} fill={COLORS_GRUPO[index % COLORS_GRUPO.length]} />
@@ -352,26 +368,40 @@ export const VisaoGeral: React.FC = () => {
                 </Pie>
                 <Tooltip
                   formatter={(value: any, name: any, item: any) => [
-                    `${value} UCs (${item.payload.area_km2.toLocaleString('pt-BR')} km²)`,
+                    `${value} UCs (${item.payload.area_km2.toLocaleString('pt-BR')} km²) - ${((Number(value) / (stats.total || 1)) * 100).toFixed(1)}%`,
                     name,
                   ]}
                 />
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 text-center text-xs">
-            {grupoData.map((g) => (
-              <div key={g.name}>
-                <span className="text-slate-400 text-[10px] block">{g.name}</span>
-                <span className="font-extrabold text-slate-800 dark:text-slate-200">{g.count} UCs</span>
-              </div>
-            ))}
+          <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-2 text-center text-xs">
+            {grupoData.map((g, idx) => {
+              const pct = stats.total ? Math.round((g.count / stats.total) * 100) : 0;
+              return (
+                <div key={g.name} className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80">
+                  <div className="flex items-center justify-center gap-1.5 mb-1">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full shrink-0"
+                      style={{ backgroundColor: COLORS_GRUPO[idx % COLORS_GRUPO.length] }}
+                    />
+                    <span className="text-slate-700 dark:text-slate-200 font-bold text-xs truncate">
+                      {g.name}
+                    </span>
+                  </div>
+                  <div className="font-extrabold text-slate-900 dark:text-white text-sm">
+                    {g.count} <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">({pct}%)</span>
+                  </div>
+                  <span className="text-[10px] text-slate-400 block mt-0.5">{g.area_km2.toLocaleString('pt-BR')} km²</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Evolução Histórica / Linha do Tempo */}
-        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:col-span-2 lg:col-span-1">
-          <div className="flex items-center justify-between mb-4">
+        <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between md:col-span-2 lg:col-span-1">
+          <div className="flex items-center justify-between mb-2">
             <div>
               <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-emerald-600" />
@@ -380,9 +410,9 @@ export const VisaoGeral: React.FC = () => {
               <p className="text-xs text-slate-500">Histórico de instituição legal em SC</p>
             </div>
           </div>
-          <div className="h-56">
+          <div className="h-60 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={timelineData}>
+              <AreaChart data={timelineData} margin={{ top: 10, right: 15, left: -15, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorDecada" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#10b981" stopOpacity={0.4} />
@@ -390,13 +420,13 @@ export const VisaoGeral: React.FC = () => {
                   </linearGradient>
                 </defs>
                 <XAxis dataKey="decada" tick={{ fontSize: 11 }} />
-                <YAxis tick={{ fontSize: 11 }} />
+                <YAxis tick={{ fontSize: 11 }} width={35} />
                 <Tooltip />
                 <Area type="monotone" dataKey="ucs" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#colorDecada)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-500">
+          <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-500">
             Forte expansão registrada a partir dos anos 2000 (Lei do SNUC nº 9.985/2000)
           </div>
         </div>
@@ -417,7 +447,7 @@ export const VisaoGeral: React.FC = () => {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={categoriaData} layout="vertical" margin={{ left: 10, right: 30, top: 10, bottom: 10 }}>
               <XAxis type="number" tick={{ fontSize: 12 }} />
-              <YAxis dataKey="name" type="category" width={180} tick={{ fontSize: 12 }} />
+              <YAxis dataKey="name" type="category" width={190} tick={{ fontSize: 12 }} />
               <Tooltip
                 formatter={(val: any, name: any, item: any) => [
                   `${val} unidades (${item.payload.area_ha.toLocaleString('pt-BR')} ha)`,
