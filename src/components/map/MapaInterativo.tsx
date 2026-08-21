@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useData } from '../../context/DataContext';
 import { UC, MunicipioLegislacao } from '../../types';
 import {
@@ -25,6 +25,8 @@ import {
   ArrowRight,
   Search,
   Building,
+  CheckCircle2,
+  Sparkles,
 } from 'lucide-react';
 
 // Fix Leaflet marker icons
@@ -41,7 +43,7 @@ const MESO_COLORS: Record<string, string> = {
   'Norte Catarinense': '#0284c7',
   'Vale do Itajaí': '#8b5cf6',
   'Sul Catarinense': '#ec4899',
-  'Serrana': '#15803d',
+  'Serrana': '#16a34a',
 };
 
 const MESO_CODES: Record<string, string> = {
@@ -53,12 +55,12 @@ const MESO_CODES: Record<string, string> = {
   '4206': 'Sul Catarinense',
 };
 
-// Map controller for smooth animated zoom
+// Map controller for animated zooming/fitting bounds
 const MapController: React.FC<{ targetBounds: L.LatLngBoundsExpression | null }> = ({ targetBounds }) => {
   const map = useMap();
   useEffect(() => {
     if (targetBounds) {
-      map.flyToBounds(targetBounds, { padding: [50, 50], maxZoom: 10, duration: 0.8 });
+      map.flyToBounds(targetBounds, { padding: [40, 40], maxZoom: 10, duration: 0.8 });
     }
   }, [targetBounds, map]);
   return null;
@@ -74,10 +76,10 @@ export const MapaInterativo: React.FC = () => {
     darkMode,
   } = useData();
 
-  const [colorMode, setColorMode] = useState<'esfera' | 'grupo' | 'cnuc' | 'territorio'>('territorio');
+  const [colorMode, setColorMode] = useState<'territorio' | 'esfera' | 'grupo' | 'cnuc'>('territorio');
   const [selectedTerritorio, setSelectedTerritorio] = useState<string>('');
   const [hoveredTerritorio, setHoveredTerritorio] = useState<string>('');
-  const [hoveredMunInfo, setHoveredMunInfo] = useState<{ name: string; mesorregiao: string; ucsCount: number } | null>(null);
+  const [hoveredMunName, setHoveredMunName] = useState<string>('');
   const [showMesoLayer, setShowMesoLayer] = useState<boolean>(true);
   const [showRppns, setShowRppns] = useState<boolean>(true);
   const [showTis, setShowTis] = useState<boolean>(true);
@@ -86,15 +88,10 @@ export const MapaInterativo: React.FC = () => {
   const [selectedMunInfo, setSelectedMunInfo] = useState<any | null>(null);
   const [mapTargetBounds, setMapTargetBounds] = useState<L.LatLngBoundsExpression | null>(null);
 
-  const ucsWithCoords = useMemo(() => {
-    return filteredUcs.filter((u) => {
-      if (!u.lat || !u.lng) return false;
-      if (selectedTerritorio && u.mesorregiao !== selectedTerritorio) return false;
-      return true;
-    });
-  }, [filteredUcs, selectedTerritorio]);
+  const geoJsonLayerRef = useRef<L.GeoJSON | null>(null);
+  const mesoLayerRef = useRef<L.GeoJSON | null>(null);
 
-  // Aggregate UCs count by municipality name
+  // UCs count per municipality
   const ucsCountByMun = useMemo(() => {
     const map: Record<string, number> = {};
     if (!data) return map;
@@ -107,7 +104,7 @@ export const MapaInterativo: React.FC = () => {
     return map;
   }, [data]);
 
-  // Lookup municipality code to mesorregiao
+  // Lookup map: municipality code/name -> mesorregiao
   const munToMesoMap = useMemo(() => {
     const map: Record<string, string> = {};
     if (!data?.municipios) return map;
@@ -119,6 +116,14 @@ export const MapaInterativo: React.FC = () => {
     });
     return map;
   }, [data]);
+
+  const ucsWithCoords = useMemo(() => {
+    return filteredUcs.filter((u) => {
+      if (!u.lat || !u.lng) return false;
+      if (selectedTerritorio && u.mesorregiao !== selectedTerritorio) return false;
+      return true;
+    });
+  }, [filteredUcs, selectedTerritorio]);
 
   const getColorByUc = (u: UC): string => {
     if (colorMode === 'territorio') {
@@ -135,6 +140,7 @@ export const MapaInterativo: React.FC = () => {
     return u.cnuc ? '#10b981' : '#f59e0b';
   };
 
+  // Base styling for each municipality polygon
   const getMunStyle = (feature: any) => {
     const cod = feature?.properties?.codarea;
     const meso = munToMesoMap[cod] || '';
@@ -146,20 +152,20 @@ export const MapaInterativo: React.FC = () => {
       const mesoColor = MESO_COLORS[meso] || '#94a3b8';
       return {
         fillColor: mesoColor,
-        weight: isMesoHovered ? 2 : isMesoSelected ? 1.2 : 0.5,
-        opacity: isMesoSelected || isMesoHovered ? 0.9 : 0.25,
+        weight: isMesoHovered ? 2.5 : isMesoSelected ? 1.2 : 0.6,
+        opacity: isMesoHovered ? 1 : isMesoSelected ? 0.85 : 0.25,
         color: isMesoHovered ? '#ffffff' : darkMode ? '#1e293b' : '#ffffff',
-        fillOpacity: isMesoHovered ? 0.65 : isMesoSelected ? 0.38 : 0.08,
+        fillOpacity: isMesoHovered ? 0.75 : isMesoSelected ? 0.42 : 0.08,
       };
     }
 
     if (!showChoropleth) {
       return {
-        fillColor: '#cbd5e1',
-        weight: 1,
-        opacity: 0.7,
-        color: darkMode ? '#475569' : '#94a3b8',
-        fillOpacity: 0.15,
+        fillColor: '#94a3b8',
+        weight: isMesoHovered ? 2.5 : 1,
+        opacity: 0.8,
+        color: isMesoHovered ? '#10b981' : darkMode ? '#334155' : '#cbd5e1',
+        fillOpacity: isMesoHovered ? 0.6 : 0.15,
       };
     }
 
@@ -180,12 +186,23 @@ export const MapaInterativo: React.FC = () => {
 
     return {
       fillColor,
-      weight: isMesoHovered ? 2 : 1,
+      weight: isMesoHovered ? 2.5 : 1,
       opacity: 0.8,
       color: isMesoHovered ? '#10b981' : darkMode ? '#334155' : '#cbd5e1',
-      fillOpacity: isMesoHovered ? 0.8 : count > 0 ? 0.6 : 0.2,
+      fillOpacity: isMesoHovered ? 0.85 : count > 0 ? 0.65 : 0.2,
     };
   };
+
+  // Dynamically update styles without re-creating the entire GeoJSON layer (avoids flickering)
+  useEffect(() => {
+    if (geoJsonLayerRef.current) {
+      geoJsonLayerRef.current.eachLayer((layer: any) => {
+        if (layer.feature) {
+          layer.setStyle(getMunStyle(layer.feature));
+        }
+      });
+    }
+  }, [colorMode, selectedTerritorio, hoveredTerritorio, darkMode, showChoropleth]);
 
   const onEachFeature = (feature: any, layer: L.Layer) => {
     const cod = feature?.properties?.codarea;
@@ -195,15 +212,15 @@ export const MapaInterativo: React.FC = () => {
     const ucsCount = ucsCountByMun[name.toLowerCase()] || 0;
     const mesoColor = MESO_COLORS[meso] || '#10b981';
 
-    // Bind rich tooltip that appears on hover
+    // Rich floating tooltip attached to polygon
     (layer as L.Path).bindTooltip(
       `
-      <div style="font-family: inherit; min-width: 140px;">
+      <div style="font-family: inherit; min-width: 150px; padding: 2px;">
         <div style="font-weight: 800; font-size: 13px; color: ${darkMode ? '#f8fafc' : '#0f172a'}; margin-bottom: 2px;">
           ${name}
         </div>
-        <div style="display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; color: ${mesoColor}; margin-bottom: 4px;">
-          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: ${mesoColor};"></span>
+        <div style="display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; color: ${mesoColor}; margin-bottom: 5px;">
+          <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background-color: ${mesoColor};"></span>
           ${meso}
         </div>
         <div style="font-size: 11px; color: ${darkMode ? '#cbd5e1' : '#334155'}; border-top: 1px solid ${darkMode ? '#334155' : '#e2e8f0'}; padding-top: 4px; display: flex; justify-content: space-between;">
@@ -211,7 +228,7 @@ export const MapaInterativo: React.FC = () => {
           <strong style="color: #10b981; margin-left: 8px;">${ucsCount}</strong>
         </div>
         ${mun?.indice_governanca !== undefined ? `
-        <div style="font-size: 11px; color: ${darkMode ? '#cbd5e1' : '#334155'}; display: flex; justify-content: space-between;">
+        <div style="font-size: 11px; color: ${darkMode ? '#cbd5e1' : '#334155'}; display: flex; justify-content: space-between; margin-top: 2px;">
           <span>Índice Governança:</span>
           <strong style="color: #0284c7; margin-left: 8px;">${mun.indice_governanca}/10</strong>
         </div>` : ''}
@@ -229,23 +246,19 @@ export const MapaInterativo: React.FC = () => {
       mouseover: (e: any) => {
         const l = e.target;
         l.setStyle({
-          weight: 3,
-          color: '#fbbf24', // golden highlight border
-          fillOpacity: 0.8,
+          weight: 3.5,
+          color: '#fbbf24', // bright golden highlight
+          fillOpacity: 0.85,
         });
         if (typeof l.bringToFront === 'function') {
           l.bringToFront();
         }
-        setHoveredMunInfo({
-          name,
-          mesorregiao: meso,
-          ucsCount,
-        });
+        setHoveredMunName(name);
       },
       mouseout: (e: any) => {
         const l = e.target;
         l.setStyle(getMunStyle(feature));
-        setHoveredMunInfo(null);
+        setHoveredMunName('');
       },
       click: (e: any) => {
         const l = e.target;
@@ -276,7 +289,7 @@ export const MapaInterativo: React.FC = () => {
       weight: isHovered || isSelected ? 3.5 : 2,
       opacity: isHovered || isSelected ? 1 : 0.7,
       color: color,
-      fillOpacity: isHovered ? 0.15 : 0.03,
+      fillOpacity: isHovered ? 0.2 : 0.03,
       dashArray: isHovered || isSelected ? undefined : '5, 5',
     };
   };
@@ -316,41 +329,57 @@ export const MapaInterativo: React.FC = () => {
     setActiveTab('explorador-ucs');
   };
 
+  const handleSelectTerritorio = (nome: string) => {
+    if (selectedTerritorio === nome) {
+      setSelectedTerritorio('');
+      setMapTargetBounds([[-29.4, -53.9], [-25.9, -48.3]]);
+    } else {
+      setSelectedTerritorio(nome);
+      // Zoom into selected territory
+      if (data?.geoJsonMesorregioes && mesoLayerRef.current) {
+        mesoLayerRef.current.eachLayer((l: any) => {
+          if (l.feature?.properties?.nome === nome && typeof l.getBounds === 'function') {
+            setMapTargetBounds(l.getBounds());
+          }
+        });
+      }
+    }
+  };
+
   return (
     <div className="space-y-4">
       {/* Territórios / Mesorregiões Quick Filter Bar */}
       <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <Compass className="w-5 h-5 text-emerald-600" />
+            <Compass className="w-5 h-5 text-emerald-600 animate-spin-slow" />
             <div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                Mesorregiões & Territórios de Santa Catarina
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <span>Territórios & Mesorregiões de Santa Catarina</span>
+                <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-semibold">
+                  Interativo
+                </span>
               </h3>
               <p className="text-[11px] text-slate-500">
-                Passe o mouse para destacar ou clique para filtrar os municípios e UCs da região
+                Passe o mouse sobre um território para iluminar todos os seus municípios no mapa ou clique para aproximar
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
-            {hoveredMunInfo && (
-              <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold animate-fadeIn">
-                <MapPin className="w-3.5 h-3.5 text-amber-500" />
-                <span>{hoveredMunInfo.name}</span>
-                <span className="text-slate-400">({hoveredMunInfo.mesorregiao})</span>
-                <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 text-[10px]">
-                  {hoveredMunInfo.ucsCount} UCs
-                </span>
+            {hoveredMunName && (
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800/60 text-xs font-bold text-amber-900 dark:text-amber-200 shadow-xs animate-fadeIn">
+                <MapPin className="w-3.5 h-3.5 text-amber-600" />
+                <span>{hoveredMunName}</span>
               </div>
             )}
 
             {selectedTerritorio && (
               <button
-                onClick={() => setSelectedTerritorio('')}
-                className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 underline"
+                onClick={() => handleSelectTerritorio(selectedTerritorio)}
+                className="text-xs font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800 transition"
               >
-                Ver Todo o Estado
+                ✕ Limpar Filtro ({selectedTerritorio})
               </button>
             )}
           </div>
@@ -364,20 +393,20 @@ export const MapaInterativo: React.FC = () => {
             return (
               <button
                 key={t.nome}
-                onClick={() => setSelectedTerritorio(isSelected ? '' : t.nome)}
+                onClick={() => handleSelectTerritorio(t.nome)}
                 onMouseEnter={() => setHoveredTerritorio(t.nome)}
                 onMouseLeave={() => setHoveredTerritorio('')}
-                className={`p-2.5 rounded-xl border text-left transition-all relative overflow-hidden group ${
+                className={`p-2.5 rounded-xl border text-left transition-all relative overflow-hidden group cursor-pointer ${
                   isSelected
-                    ? 'ring-2 ring-emerald-500 shadow-md bg-emerald-50/70 dark:bg-emerald-950/50 border-emerald-400'
+                    ? 'ring-2 ring-emerald-500 shadow-md bg-emerald-50 dark:bg-emerald-950/60 border-emerald-400'
                     : isHovered
-                    ? 'shadow-md border-amber-400 bg-amber-50/40 dark:bg-amber-950/20'
-                    : 'bg-slate-50/60 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-slate-300'
+                    ? 'shadow-md border-amber-400 bg-amber-50/50 dark:bg-amber-950/30 -translate-y-0.5'
+                    : 'bg-slate-50/70 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-slate-300'
                 }`}
               >
                 <div className="flex items-center gap-1.5 mb-1">
                   <span
-                    className="w-2.5 h-2.5 rounded-full inline-block shrink-0 transition-transform group-hover:scale-125"
+                    className="w-2.5 h-2.5 rounded-full inline-block shrink-0 transition-transform group-hover:scale-125 shadow-xs"
                     style={{ backgroundColor: t.color }}
                   ></span>
                   <span className="font-bold text-xs text-slate-900 dark:text-slate-100 truncate">
@@ -399,10 +428,10 @@ export const MapaInterativo: React.FC = () => {
         <div className="flex items-center gap-2">
           <Layers className="w-5 h-5 text-emerald-600" />
           <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
-            Controle de Camadas & Cores
+            Camadas do Mapa
           </span>
           <span className="text-xs text-slate-500">
-            ({ucsWithCoords.length} UCs ativas)
+            ({ucsWithCoords.length} UCs ativas no mapa)
           </span>
         </div>
 
@@ -461,7 +490,7 @@ export const MapaInterativo: React.FC = () => {
               onChange={(e) => setShowMesoLayer(e.target.checked)}
               className="rounded text-emerald-600 focus:ring-emerald-500"
             />
-            <span>Limites Territoriais</span>
+            <span>Contornos Regionais</span>
           </label>
 
           {/* Additional Layers */}
@@ -521,7 +550,8 @@ export const MapaInterativo: React.FC = () => {
             {/* Municipalities GeoJSON Layer */}
             {data?.geoJsonSc && (
               <GeoJSON
-                key={`mun-layer-${colorMode}-${selectedTerritorio}-${hoveredTerritorio}`}
+                key="sc-municipios-geojson-layer"
+                ref={geoJsonLayerRef}
                 data={data.geoJsonSc}
                 style={getMunStyle}
                 onEachFeature={onEachFeature}
@@ -531,7 +561,8 @@ export const MapaInterativo: React.FC = () => {
             {/* Mesorregiões Outline Layer */}
             {showMesoLayer && data?.geoJsonMesorregioes && (
               <GeoJSON
-                key={`meso-outline-layer-${hoveredTerritorio}-${selectedTerritorio}`}
+                key="sc-mesorregioes-geojson-layer"
+                ref={mesoLayerRef}
                 data={data.geoJsonMesorregioes}
                 style={getMesoOutlineStyle}
               />
@@ -544,7 +575,7 @@ export const MapaInterativo: React.FC = () => {
                 <CircleMarker
                   key={u.id}
                   center={[u.lat!, u.lng!]}
-                  radius={u.area_ha > 10000 ? 10 : u.area_ha > 1000 ? 8 : 6}
+                  radius={u.area_ha > 10000 ? 9 : u.area_ha > 1000 ? 7 : 5}
                   pathOptions={{
                     fillColor: color,
                     color: '#ffffff',
@@ -556,7 +587,7 @@ export const MapaInterativo: React.FC = () => {
                     <div className="p-1 space-y-2 max-w-xs">
                       <div>
                         <span
-                          className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold text-white mb-1`}
+                          className="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold text-white mb-1"
                           style={{ backgroundColor: color }}
                         >
                           {u.esfera} • {u.categoria}
@@ -598,7 +629,7 @@ export const MapaInterativo: React.FC = () => {
 
                       <button
                         onClick={() => setSelectedUc(u)}
-                        className="w-full mt-2 py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] transition"
+                        className="w-full mt-2 py-1 px-2 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] transition cursor-pointer"
                       >
                         Ver Ficha Completa
                       </button>
@@ -724,7 +755,7 @@ export const MapaInterativo: React.FC = () => {
                     key={nome}
                     onMouseEnter={() => setHoveredTerritorio(nome)}
                     onMouseLeave={() => setHoveredTerritorio('')}
-                    onClick={() => setSelectedTerritorio(selectedTerritorio === nome ? '' : nome)}
+                    onClick={() => handleSelectTerritorio(nome)}
                     className="flex items-center gap-1.5 cursor-pointer hover:font-bold transition"
                   >
                     <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }}></span>
@@ -795,7 +826,7 @@ export const MapaInterativo: React.FC = () => {
                 {/* Quick Action to Filter whole Dashboard */}
                 <button
                   onClick={() => handleFilterByCity(selectedMunInfo.name)}
-                  className="mt-2.5 w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-200 dark:border-emerald-800 transition"
+                  className="mt-2.5 w-full flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-200 dark:border-emerald-800 transition cursor-pointer"
                 >
                   <Search className="w-3.5 h-3.5" />
                   <span>Explorar UCs de {selectedMunInfo.name}</span>
