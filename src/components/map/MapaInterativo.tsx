@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useData } from '../../context/DataContext';
 import { UC, MunicipioLegislacao } from '../../types';
 import {
   MapContainer,
   TileLayer,
   GeoJSON,
-  Marker,
-  Popup,
   CircleMarker,
-  LayersControl,
+  Popup,
 } from 'react-leaflet';
 import L from 'leaflet';
 import {
@@ -21,15 +19,35 @@ import {
   ExternalLink,
   ShieldCheck,
   Filter,
+  MapPin,
+  Compass,
 } from 'lucide-react';
 
-// Fix Leaflet marker icons in React
+// Fix Leaflet marker icons
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
+
+const MESO_COLORS: Record<string, string> = {
+  'Oeste Catarinense': '#f59e0b',
+  'Grande Florianópolis': '#10b981',
+  'Norte Catarinense': '#0284c7',
+  'Vale do Itajaí': '#8b5cf6',
+  'Sul Catarinense': '#ec4899',
+  'Serrana': '#15803d',
+};
+
+const MESO_CODES: Record<string, string> = {
+  '4201': 'Oeste Catarinense',
+  '4202': 'Norte Catarinense',
+  '4203': 'Serrana',
+  '4204': 'Vale do Itajaí',
+  '4205': 'Grande Florianópolis',
+  '4206': 'Sul Catarinense',
+};
 
 export const MapaInterativo: React.FC = () => {
   const {
@@ -39,7 +57,9 @@ export const MapaInterativo: React.FC = () => {
     darkMode,
   } = useData();
 
-  const [colorMode, setColorMode] = useState<'esfera' | 'grupo' | 'cnuc'>('esfera');
+  const [colorMode, setColorMode] = useState<'esfera' | 'grupo' | 'cnuc' | 'territorio'>('territorio');
+  const [selectedTerritorio, setSelectedTerritorio] = useState<string>('');
+  const [showMesoLayer, setShowMesoLayer] = useState<boolean>(true);
   const [showRppns, setShowRppns] = useState<boolean>(true);
   const [showTis, setShowTis] = useState<boolean>(true);
   const [showQuilombos, setShowQuilombos] = useState<boolean>(true);
@@ -47,10 +67,14 @@ export const MapaInterativo: React.FC = () => {
   const [selectedMunInfo, setSelectedMunInfo] = useState<any | null>(null);
 
   const ucsWithCoords = useMemo(() => {
-    return filteredUcs.filter((u) => u.lat && u.lng);
-  }, [filteredUcs]);
+    return filteredUcs.filter((u) => {
+      if (!u.lat || !u.lng) return false;
+      if (selectedTerritorio && u.mesorregiao !== selectedTerritorio) return false;
+      return true;
+    });
+  }, [filteredUcs, selectedTerritorio]);
 
-  // Aggregate UCs count by municipality name for Choropleth
+  // Aggregate UCs count by municipality name
   const ucsCountByMun = useMemo(() => {
     const map: Record<string, number> = {};
     if (!data) return map;
@@ -63,7 +87,23 @@ export const MapaInterativo: React.FC = () => {
     return map;
   }, [data]);
 
+  // Lookup municipality code to mesorregiao
+  const munToMesoMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    if (!data?.municipios) return map;
+    data.municipios.forEach((m) => {
+      if (m.mesorregiao) {
+        map[m.id] = m.mesorregiao;
+        map[m.municipio.toLowerCase()] = m.mesorregiao;
+      }
+    });
+    return map;
+  }, [data]);
+
   const getColorByUc = (u: UC): string => {
+    if (colorMode === 'territorio') {
+      return MESO_COLORS[u.mesorregiao || ''] || '#10b981';
+    }
     if (colorMode === 'esfera') {
       if (u.esfera === 'Federal') return '#8b5cf6';
       if (u.esfera === 'Estadual') return '#0284c7';
@@ -77,6 +117,23 @@ export const MapaInterativo: React.FC = () => {
   };
 
   const getMunStyle = (feature: any) => {
+    const cod = feature?.properties?.codarea;
+    const meso = munToMesoMap[cod] || '';
+
+    // If a specific territory is filtered, dim others
+    const isMesoActive = !selectedTerritorio || meso === selectedTerritorio;
+
+    if (colorMode === 'territorio') {
+      const mesoColor = MESO_COLORS[meso] || '#94a3b8';
+      return {
+        fillColor: mesoColor,
+        weight: isMesoActive ? 1.2 : 0.5,
+        opacity: isMesoActive ? 0.9 : 0.3,
+        color: darkMode ? '#1e293b' : '#ffffff',
+        fillOpacity: isMesoActive ? 0.35 : 0.08,
+      };
+    }
+
     if (!showChoropleth) {
       return {
         fillColor: '#cbd5e1',
@@ -87,7 +144,6 @@ export const MapaInterativo: React.FC = () => {
       };
     }
 
-    const cod = feature?.properties?.codarea;
     // Count of UCs in this municipality
     let count = 0;
     if (data?.municipios) {
@@ -116,14 +172,15 @@ export const MapaInterativo: React.FC = () => {
     const cod = feature?.properties?.codarea;
     const mun = data?.municipios?.find((m) => m.id === cod);
     const name = mun ? mun.municipio : `Município (${cod})`;
+    const meso = mun?.mesorregiao || munToMesoMap[cod] || 'Santa Catarina';
 
     layer.on({
       mouseover: (e: any) => {
         const l = e.target;
         l.setStyle({
-          weight: 2,
+          weight: 2.5,
           color: '#10b981',
-          fillOpacity: 0.8,
+          fillOpacity: 0.75,
         });
       },
       mouseout: (e: any) => {
@@ -134,6 +191,7 @@ export const MapaInterativo: React.FC = () => {
         setSelectedMunInfo({
           code: cod,
           name,
+          mesorregiao: meso,
           mun,
           ucsInMun: data?.ucs.filter((u) => u.municipios.toLowerCase().includes(name.toLowerCase())) || [],
         });
@@ -141,17 +199,121 @@ export const MapaInterativo: React.FC = () => {
     });
   };
 
+  // Mesorregioes layer style
+  const getMesoOutlineStyle = (feature: any) => {
+    const code = feature?.properties?.codarea;
+    const name = feature?.properties?.nome || MESO_CODES[code] || '';
+    const color = MESO_COLORS[name] || '#10b981';
+
+    return {
+      fillColor: color,
+      weight: 2.5,
+      opacity: 0.9,
+      color: color,
+      fillOpacity: 0.05,
+      dashArray: '4, 4',
+    };
+  };
+
+  // Territory stats summary
+  const territorioSummary = useMemo(() => {
+    if (!data) return [];
+    const map: Record<string, { ucs: number; area: number; munCount: number }> = {};
+    Object.keys(MESO_COLORS).forEach((m) => {
+      map[m] = { ucs: 0, area: 0, munCount: 0 };
+    });
+
+    data.municipios.forEach((m) => {
+      if (m.mesorregiao && map[m.mesorregiao]) {
+        map[m.mesorregiao].munCount += 1;
+      }
+    });
+
+    data.ucs.forEach((u) => {
+      if (u.mesorregiao && map[u.mesorregiao]) {
+        map[u.mesorregiao].ucs += 1;
+        map[u.mesorregiao].area += u.area_ha;
+      }
+    });
+
+    return Object.entries(map).map(([nome, val]) => ({
+      nome,
+      ucs: val.ucs,
+      area_km2: Math.round(val.area / 100),
+      munCount: val.munCount,
+      color: MESO_COLORS[nome],
+    }));
+  }, [data]);
+
   return (
     <div className="space-y-4">
+      {/* Territórios / Mesorregiões Quick Filter Bar */}
+      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <Compass className="w-5 h-5 text-emerald-600" />
+            <div>
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white">
+                Mesorregiões & Territórios de Santa Catarina
+              </h3>
+              <p className="text-[11px] text-slate-500">
+                Selecione um território para filtrar UCs, municípios e visualizar estatísticas regionais
+              </p>
+            </div>
+          </div>
+
+          {selectedTerritorio && (
+            <button
+              onClick={() => setSelectedTerritorio('')}
+              className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 underline"
+            >
+              Ver Todo o Estado
+            </button>
+          )}
+        </div>
+
+        {/* 6 Territory Pills */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 pt-1">
+          {territorioSummary.map((t) => {
+            const isSelected = selectedTerritorio === t.nome;
+            return (
+              <button
+                key={t.nome}
+                onClick={() => setSelectedTerritorio(isSelected ? '' : t.nome)}
+                className={`p-2.5 rounded-xl border text-left transition-all relative overflow-hidden ${
+                  isSelected
+                    ? 'ring-2 ring-emerald-500 shadow-md bg-emerald-50/50 dark:bg-emerald-950/40 border-emerald-300'
+                    : 'bg-slate-50/60 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:border-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span
+                    className="w-2.5 h-2.5 rounded-full inline-block shrink-0"
+                    style={{ backgroundColor: t.color }}
+                  ></span>
+                  <span className="font-bold text-xs text-slate-900 dark:text-slate-100 truncate">
+                    {t.nome}
+                  </span>
+                </div>
+                <div className="text-[10px] text-slate-500 flex justify-between">
+                  <span>{t.ucs} UCs</span>
+                  <span>{t.munCount} Cidades</span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Map Control Bar */}
       <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Layers className="w-5 h-5 text-emerald-600" />
-          <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-            Distribuição Geoespacial das UCs de Santa Catarina
-          </h3>
-          <span className="text-xs text-slate-500 hidden sm:inline">
-            ({ucsWithCoords.length} pontos mapeados)
+          <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
+            Camadas do Mapa
+          </span>
+          <span className="text-xs text-slate-500">
+            ({ucsWithCoords.length} UCs exibidas)
           </span>
         </div>
 
@@ -160,6 +322,16 @@ export const MapaInterativo: React.FC = () => {
           {/* Color Mode */}
           <div className="flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
             <span className="text-[10px] uppercase font-bold text-slate-400 px-2">Cor:</span>
+            <button
+              onClick={() => setColorMode('territorio')}
+              className={`px-2 py-1 rounded font-medium ${
+                colorMode === 'territorio'
+                  ? 'bg-white dark:bg-slate-700 text-emerald-700 dark:text-emerald-300 shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400'
+              }`}
+            >
+              Território
+            </button>
             <button
               onClick={() => setColorMode('esfera')}
               className={`px-2 py-1 rounded font-medium ${
@@ -192,17 +364,18 @@ export const MapaInterativo: React.FC = () => {
             </button>
           </div>
 
-          {/* Additional Layers */}
+          {/* Toggle Mesoregions Contour */}
           <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
             <input
               type="checkbox"
-              checked={showChoropleth}
-              onChange={(e) => setShowChoropleth(e.target.checked)}
+              checked={showMesoLayer}
+              onChange={(e) => setShowMesoLayer(e.target.checked)}
               className="rounded text-emerald-600 focus:ring-emerald-500"
             />
-            <span>Densidade UCs</span>
+            <span>Contorno Territórios</span>
           </label>
 
+          {/* Additional Layers */}
           <label className="flex items-center gap-1.5 cursor-pointer px-2.5 py-1.5 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300">
             <input
               type="checkbox"
@@ -257,9 +430,19 @@ export const MapaInterativo: React.FC = () => {
             {/* Municipalities GeoJSON Layer */}
             {data?.geoJsonSc && (
               <GeoJSON
+                key={`mun-layer-${colorMode}-${selectedTerritorio}`}
                 data={data.geoJsonSc}
                 style={getMunStyle}
                 onEachFeature={onEachFeature}
+              />
+            )}
+
+            {/* Mesorregiões Outline Layer */}
+            {showMesoLayer && data?.geoJsonMesorregioes && (
+              <GeoJSON
+                key="meso-outline-layer"
+                data={data.geoJsonMesorregioes}
+                style={getMesoOutlineStyle}
               />
             )}
 
@@ -275,7 +458,7 @@ export const MapaInterativo: React.FC = () => {
                     fillColor: color,
                     color: '#ffffff',
                     weight: 1.5,
-                    fillOpacity: 0.85,
+                    fillOpacity: 0.9,
                   }}
                 >
                   <Popup className="custom-popup">
@@ -291,7 +474,7 @@ export const MapaInterativo: React.FC = () => {
                           {u.nome}
                         </h4>
                         <p className="text-[11px] text-slate-500">
-                          {u.municipios}
+                          {u.municipios} {u.mesorregiao ? `(${u.mesorregiao})` : ''}
                         </p>
                       </div>
 
@@ -347,7 +530,7 @@ export const MapaInterativo: React.FC = () => {
                       fillColor: '#14b8a6',
                       color: '#ffffff',
                       weight: 1,
-                      fillOpacity: 0.7,
+                      fillOpacity: 0.75,
                     }}
                   >
                     <Popup>
@@ -378,7 +561,7 @@ export const MapaInterativo: React.FC = () => {
                       fillColor: '#f97316',
                       color: '#ffffff',
                       weight: 1,
-                      fillOpacity: 0.8,
+                      fillOpacity: 0.85,
                     }}
                   >
                     <Popup>
@@ -412,7 +595,7 @@ export const MapaInterativo: React.FC = () => {
                       fillColor: '#a855f7',
                       color: '#ffffff',
                       weight: 1,
-                      fillOpacity: 0.8,
+                      fillOpacity: 0.85,
                     }}
                   >
                     <Popup>
@@ -434,9 +617,25 @@ export const MapaInterativo: React.FC = () => {
           {/* Map Legend Overlay */}
           <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-slate-900/95 p-3 rounded-xl border border-slate-200 dark:border-slate-800 shadow-lg text-[11px] z-[1000] backdrop-blur-xs space-y-1.5 max-w-xs">
             <span className="font-bold text-slate-800 dark:text-slate-200 block text-[10px] uppercase tracking-wider">
-              Legenda do Mapa
+              {colorMode === 'territorio'
+                ? 'Legenda: Territórios / Mesorregiões'
+                : colorMode === 'esfera'
+                ? 'Legenda: Esfera Administrativa'
+                : colorMode === 'grupo'
+                ? 'Legenda: Grupo SNUC'
+                : 'Legenda: Status CNUC'}
             </span>
-            {colorMode === 'esfera' ? (
+
+            {colorMode === 'territorio' ? (
+              <div className="grid grid-cols-2 gap-x-2 gap-y-1">
+                {Object.entries(MESO_COLORS).map(([nome, color]) => (
+                  <div key={nome} className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }}></span>
+                    <span className="truncate">{nome}</span>
+                  </div>
+                ))}
+              </div>
+            ) : colorMode === 'esfera' ? (
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
@@ -488,8 +687,12 @@ export const MapaInterativo: React.FC = () => {
                 <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">
                   {selectedMunInfo.name}
                 </h3>
-                <p className="text-xs text-slate-500">
-                  {selectedMunInfo.mun?.mesorregiao || 'Santa Catarina'}
+                <p className="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5">
+                  <span
+                    className="w-2 h-2 rounded-full inline-block"
+                    style={{ backgroundColor: MESO_COLORS[selectedMunInfo.mesorregiao] || '#10b981' }}
+                  ></span>
+                  Território: <strong>{selectedMunInfo.mesorregiao}</strong>
                 </p>
               </div>
 
@@ -545,13 +748,13 @@ export const MapaInterativo: React.FC = () => {
             <div className="flex flex-col items-center justify-center text-center p-6 space-y-3 h-full my-auto text-slate-400">
               <Info className="w-8 h-8 text-emerald-500 opacity-60" />
               <p className="text-xs">
-                Clique em qualquer <strong>município</strong> ou <strong>marcador de UC</strong> no mapa para visualizar suas informações detalhadas, governança e lista de unidades.
+                Clique em qualquer <strong>município</strong>, <strong>território</strong> ou <strong>marcador de UC</strong> no mapa para visualizar suas informações detalhadas e UCs locais.
               </p>
             </div>
           )}
 
           <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400">
-            Fonte Cartográfica: Malha Municipal IBGE / Dados CNUC & IMA-SC
+            Fonte Cartográfica: Malha Municipal & Mesorregional IBGE
           </div>
         </div>
       </div>

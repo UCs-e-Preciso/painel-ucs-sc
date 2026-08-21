@@ -30,6 +30,7 @@ export interface AppData {
   populacao: PopulacaoMesorregiao[];
   summary: SummaryData;
   geoJsonSc?: any;
+  geoJsonMesorregioes?: any;
   source: 'local' | 'online-sync' | 'custom-upload';
   lastUpdated: string;
 }
@@ -52,6 +53,7 @@ export const loadInitialData = async (): Promise<AppData> => {
       popRes,
       sumRes,
       geoRes,
+      geoMesoRes,
     ] = await Promise.all([
       fetch(`${base}data/ucs.json`),
       fetch(`${base}data/roteiro.json`),
@@ -64,6 +66,7 @@ export const loadInitialData = async (): Promise<AppData> => {
       fetch(`${base}data/populacao_mesorregiao.json`),
       fetch(`${base}data/summary.json`),
       fetch(`${base}data/sc_municipios.geojson`).catch(() => null),
+      fetch(`${base}data/sc_mesorregioes.geojson`).catch(() => null),
     ]);
 
     const ucs: UC[] = await ucsRes.json();
@@ -77,6 +80,7 @@ export const loadInitialData = async (): Promise<AppData> => {
     const populacao: PopulacaoMesorregiao[] = await popRes.json();
     const summary: SummaryData = await sumRes.json();
     const geoJsonSc = geoRes ? await geoRes.json() : undefined;
+    const geoJsonMesorregioes = geoMesoRes ? await geoMesoRes.json() : undefined;
 
     return {
       ucs,
@@ -90,6 +94,7 @@ export const loadInitialData = async (): Promise<AppData> => {
       populacao,
       summary,
       geoJsonSc,
+      geoJsonMesorregioes,
       source: 'local',
       lastUpdated: new Date().toISOString(),
     };
