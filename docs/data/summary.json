@@ -1,0 +1,70 @@
+{
+  "total_ucs": 288,
+  "total_area_ha": 1976680.53,
+  "total_area_km2": 19766.81,
+  "sc_area_total_km2": 95730.0,
+  "pct_cobertura_sc": 20.65,
+  "ucs_no_cnuc": 190,
+  "ucs_fora_cnuc": 98,
+  "ucs_com_plano_manejo": 40,
+  "pct_plano_manejo": 13.9,
+  "ucs_com_conselho_gestor": 40,
+  "pct_conselho_gestor": 13.9,
+  "total_terras_indigenas": 43,
+  "area_ti_ha": 124401.0,
+  "total_quilombolas": 9,
+  "area_quilombolas_ha": 14156.46,
+  "total_rppns": 135,
+  "area_rppns_ha": 45312.09,
+  "total_municipios_sc": 294,
+  "esferas": {
+    "Federal": {
+      "count": 94,
+      "area_ha": 391966.85000000003
+    },
+    "Municipal": {
+      "count": 139,
+      "area_ha": 285347.62999999995
+    },
+    "Estadual": {
+      "count": 55,
+      "area_ha": 1299366.0500000007
+    }
+  },
+  "grupos": {
+    "Proteção Integral": {
+      "count": 92,
+      "area_ha": 450345.4900000001
+    },
+    "Uso Sustentável": {
+      "count": 196,
+      "area_ha": 1526335.040000001
+    }
+  },
+  "categorias": {
+    "Parque": 66,
+    "Floresta Nacional": 4,
+    "Reserva Biológica": 11,
+    "Corredor Ecológico": 3,
+    "Área de Proteção Ambiental": 55,
+    "Estação Ecológica": 3,
+    "Reserva Extrativista": 2,
+    "Monumento Natural": 7,
+    "Reserva de Desenvolvimento Sustentável": 1,
+    "Área de Relevante Interesse Ecológico": 9,
+    "Reserva Particular do Patrimônio Natural": 121,
+    "Refúgio da Vida Silvestre": 5,
+    "Outra": 1
+  },
+  "decadas": {
+    "1950s": 1,
+    "1960s": 5,
+    "1970s": 3,
+    "2010s": 77,
+    "1980s": 10,
+    "2000s": 70,
+    "1990s": 48,
+    "2020s": 61
+  },
+  "ultima_atualizacao": "2026-08-21T09:45:00"
+}

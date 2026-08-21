@@ -1,0 +1,152 @@
+[
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "São Miguel do Oeste",
+    "total_municipios": 21,
+    "populacao_2022": 185173
+  },
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "Chapecó",
+    "total_municipios": 38,
+    "populacao_2022": 505792
+  },
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "Xanxerê",
+    "total_municipios": 17,
+    "populacao_2022": 173462
+  },
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "Joaçaba",
+    "total_municipios": 27,
+    "populacao_2022": 345980
+  },
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "Concódia",
+    "total_municipios": 15,
+    "populacao_2022": 159245
+  },
+  {
+    "mesorregiao": "Oeste",
+    "microrregiao": "5 microrregiões",
+    "total_municipios": 118,
+    "populacao_2022": 1369652
+  },
+  {
+    "mesorregiao": "Serrana",
+    "microrregiao": "Curitibanos",
+    "total_municipios": 12,
+    "populacao_2022": 89381
+  },
+  {
+    "mesorregiao": "Serrana",
+    "microrregiao": "Campos de Lages",
+    "total_municipios": 18,
+    "populacao_2022": 293578
+  },
+  {
+    "mesorregiao": "Serrana",
+    "microrregiao": "2 microrregiões",
+    "total_municipios": 30,
+    "populacao_2022": 382959
+  },
+  {
+    "mesorregiao": "Norte",
+    "microrregiao": "Canoinhas",
+    "total_municipios": 12,
+    "populacao_2022": 250945
+  },
+  {
+    "mesorregiao": "Norte",
+    "microrregiao": "São Bento do Sul",
+    "total_municipios": 3,
+    "populacao_2022": 135034
+  },
+  {
+    "mesorregiao": "Norte",
+    "microrregiao": "Joinville",
+    "total_municipios": 11,
+    "populacao_2022": 1060023
+  },
+  {
+    "mesorregiao": "Norte",
+    "microrregiao": "3 microrregiões",
+    "total_municipios": 26,
+    "populacao_2022": 1446002
+  },
+  {
+    "mesorregiao": "Vale Do Itajaí",
+    "microrregiao": "Rio do Sul",
+    "total_municipios": 20,
+    "populacao_2022": 239160
+  },
+  {
+    "mesorregiao": "Vale Do Itajaí",
+    "microrregiao": "Blumenau",
+    "total_municipios": 15,
+    "populacao_2022": 824626
+  },
+  {
+    "mesorregiao": "Vale Do Itajaí",
+    "microrregiao": "Itajaí",
+    "total_municipios": 12,
+    "populacao_2022": 848040
+  },
+  {
+    "mesorregiao": "Vale Do Itajaí",
+    "microrregiao": "Ituporanga",
+    "total_municipios": 7,
+    "populacao_2022": 62579
+  },
+  {
+    "mesorregiao": "Vale Do Itajaí",
+    "microrregiao": "4 microrregiões",
+    "total_municipios": 54,
+    "populacao_2022": 1974405
+  },
+  {
+    "mesorregiao": "Grande Florianópolis",
+    "microrregiao": "Tijucas",
+    "total_municipios": 7,
+    "populacao_2022": 122729
+  },
+  {
+    "mesorregiao": "Grande Florianópolis",
+    "microrregiao": "Florinópolis",
+    "total_municipios": 8,
+    "populacao_2022": 1171356
+  },
+  {
+    "mesorregiao": "Grande Florianópolis",
+    "microrregiao": "Tabuleiro",
+    "total_municipios": 5,
+    "populacao_2022": 27042
+  },
+  {
+    "mesorregiao": "Grande Florianópolis",
+    "microrregiao": "3 microrregiões",
+    "total_municipios": 20,
+    "populacao_2022": 1321127
+  },
+  {
+    "mesorregiao": "Sul",
+    "microrregiao": "Tubarão",
+    "total_municipios": 20,
+    "populacao_2022": 444950
+  },
+  {
+    "mesorregiao": "Sul",
+    "microrregiao": "Criciúma",
+    "total_municipios": 11,
+    "populacao_2022": 423084
+  },
+  {
+    "mesorregiao": "Sul",
+    "microrregiao": "Araranguá",
+    "total_municipios": 15,
+    "populacao_2022": 222182
+  }
+]
