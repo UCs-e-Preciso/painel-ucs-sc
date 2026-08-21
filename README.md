@@ -76,7 +76,7 @@ O sistema reúne dados de esferas **Federal**, **Estadual** e **Municipal**, cru
 * **Gráficos**: [Recharts](https://recharts.org/)
 * **Mapas**: [Leaflet](https://leafletjs.com/) + [React-Leaflet](https://react-leaflet.js.org/) + GeoJSON IBGE Santa Catarina
 * **Processamento de Planilhas**: [SheetJS (xlsx)](https://sheetjs.com/) + [PapaParse](https://www.papaparse.com/)
-* **Pipeline ETL**: Python 3.13 (`scripts_process_data.py`)
+* **Pipeline ETL**: Python 3.13 (`scripts/process_data.py`)
 
 ---
 
@@ -85,6 +85,7 @@ O sistema reúne dados de esferas **Federal**, **Estadual** e **Municipal**, cru
 ### Pré-requisitos
 * [Node.js](https://nodejs.org/) (versão 18 ou superior)
 * [npm](https://www.npmjs.com/) ou [pnpm](https://pnpm.io/)
+* [Python](https://www.python.org/) 3.10+ (opcional, para reprocessamento de dados)
 
 ### Passo a Passo
 
@@ -112,10 +113,11 @@ Abra no navegador: `http://localhost:3000` (ou `http://localhost:4173`).
 
 ## 📊 Pipeline de Dados (ETL)
 
-Para reprocessar a planilha local `UCs de SC-completo.xlsx` ou os dados baixados do Google Sheets e atualizar todos os arquivos JSON:
+Para reprocessar a planilha local em `data_raw/UCs de SC-completo.xlsx` ou os dados baixados do Google Sheets e atualizar todos os arquivos JSON:
 
 ```bash
-python scripts_process_data.py
+npm run sync-data
+# ou: python scripts/process_data.py
 ```
 
 Os arquivos JSON normalizados são gravados em `public/data/` e `data_processed/`.

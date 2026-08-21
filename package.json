@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "build:docs": "npm run build && node -e \"const fs=require('fs'); fs.cpSync('dist', 'docs', {recursive: true}); fs.writeFileSync('docs/.nojekyll', ''); fs.writeFileSync('dist/.nojekyll', '');\"",
     "preview": "vite preview",
-    "sync-data": "python scripts_process_data.py"
+    "sync-data": "python scripts/process_data.py",
+    "test:e2e": "node tests/test_full_suite.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

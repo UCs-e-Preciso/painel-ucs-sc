@@ -1,6 +1,6 @@
 # 📖 Dicionário de Dados: Unidades de Conservação de Santa Catarina
 
-Este documento descreve detalhadamente a estrutura, os campos, tipos de dados, regras de normalização e significado de todas as **13 abas** presentes na planilha oficial do projeto (`UCs de SC-completo.xlsx` e Google Sheets).
+Este documento descreve detalhadamente a estrutura, os campos, tipos de dados, regras de normalização e significado de todas as **13 abas** presentes na planilha oficial do projeto (`data_raw/UCs de SC-completo.xlsx` e Google Sheets).
 
 ---
 

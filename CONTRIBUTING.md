@@ -37,11 +37,12 @@ O servidor iniciará em `http://localhost:3000`.
 
 ## 🔄 Como Atualizar ou Adicionar Dados
 
-Se você adicionar novas linhas na planilha do Excel (`UCs de SC-completo.xlsx`):
+Se você adicionar novas linhas na planilha do Excel (`data_raw/UCs de SC-completo.xlsx`):
 
 1. Execute o script de extração e normalização:
    ```bash
-   python scripts_process_data.py
+   npm run sync-data
+   # ou: python scripts/process_data.py
    ```
 2. O script atualizará os arquivos em `public/data/` e `data_processed/`.
 3. Verifique se a aplicação carrega os novos dados corretamente com `npm run dev`.

@@ -85,9 +85,18 @@ def process_all_data(xlsx_path, output_dir):
     
     # Load centroids
     centroids = {}
-    if os.path.exists('sc_municipios_centroids.json'):
-        with open('sc_municipios_centroids.json', encoding='utf-8') as f:
-            centroids = json.load(f)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    centroid_paths = [
+        os.path.join(base_dir, 'data_raw', 'sc_municipios_centroids.json'),
+        os.path.join(base_dir, 'sc_municipios_centroids.json'),
+        'sc_municipios_centroids.json',
+        os.path.join('data_raw', 'sc_municipios_centroids.json')
+    ]
+    for cp in centroid_paths:
+        if os.path.exists(cp):
+            with open(cp, encoding='utf-8') as f:
+                centroids = json.load(f)
+            break
             
     def name_key(n):
         if not n:
@@ -616,8 +625,29 @@ def process_all_data(xlsx_path, output_dir):
         print("Saved summary.json successfully!")
 
 if __name__ == '__main__':
-    source_file = 'UCs de SC-completo.xlsx'
-    if not os.path.exists(source_file):
-        source_file = 'downloaded_from_gsheets.xlsx'
-    process_all_data(source_file, 'public/data')
-    process_all_data(source_file, 'data_processed')
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    candidates = [
+        os.path.join(BASE_DIR, 'data_raw', 'UCs de SC-completo.xlsx'),
+        os.path.join(BASE_DIR, 'UCs de SC-completo.xlsx'),
+        os.path.join(BASE_DIR, 'data_raw', 'downloaded_from_gsheets.xlsx'),
+        os.path.join(BASE_DIR, 'downloaded_from_gsheets.xlsx'),
+        'data_raw/UCs de SC-completo.xlsx',
+        'UCs de SC-completo.xlsx'
+    ]
+    
+    source_file = None
+    for cand in candidates:
+        if os.path.exists(cand):
+            source_file = cand
+            break
+            
+    if not source_file:
+        raise FileNotFoundError(f"Planilha de dados não encontrada em nenhuma das localizações: {candidates}")
+        
+    print(f"Processando planilha: {source_file}")
+    public_data_dir = os.path.join(BASE_DIR, 'public', 'data')
+    data_processed_dir = os.path.join(BASE_DIR, 'data_processed')
+    
+    process_all_data(source_file, public_data_dir)
+    process_all_data(source_file, data_processed_dir)

@@ -14,7 +14,7 @@ flowchart TD
     end
 
     subgraph ETL_Pipeline [Pipeline de Processamento]
-        PY[Python ETL: scripts_process_data.py]
+        PY[Python ETL: scripts/process_data.py]
         TS_Parser[Parser TypeScript: dataService.ts]
     end
 
@@ -52,11 +52,17 @@ flowchart TD
 
 ```
 d:/Projetos/UCs
-├── 📁 .github/workflows/          # CI/CD: Deploy automático no GitHub Pages
+├── 📁 data_processed/            # Datasets JSON gerados pelo pipeline ETL (backup)
+├── 📁 data_raw/                  # Arquivos brutos de entrada (Excel, IBGE, GeoJSON base)
+│   ├── UCs de SC-completo.xlsx
+│   ├── downloaded_from_gsheets.xlsx
+│   ├── ibge_municipios_sc.json
+│   ├── sc_municipios.geojson
+│   └── sc_municipios_centroids.json
 ├── 📁 docs/                      # Build estático puro servido pelo GitHub Pages
 ├── 📁 dist/                      # Pasta de build de produção gerada pelo Vite
 ├── 📁 public/
-│   ├── 📁 data/                  # Datasets JSON e GeoJSON embutidos
+│   ├── 📁 data/                  # Datasets JSON e GeoJSON embutidos consumidos pela SPA
 │   │   ├── ucs.json
 │   │   ├── roteiro.json
 │   │   ├── nao_snuc.json
@@ -67,12 +73,15 @@ d:/Projetos/UCs
 │   │   ├── legislacao_estadual.json
 │   │   ├── populacao_mesorregiao.json
 │   │   ├── summary.json
+│   │   ├── sc_mesorregioes.geojson
 │   │   └── sc_municipios.geojson
 │   └── favicon.svg
+├── 📁 scripts/
+│   └── process_data.py           # Script ETL Python para geração e normalização dos JSONs
 ├── 📁 src/
 │   ├── 📁 components/
 │   │   ├── 📁 dashboard/         # 🌲 Painel de Visão Geral (CNUC style)
-│   │   ├── 📁 map/               # 🗺️ Mapa Leaflet com limites municipais
+│   │   ├── 📁 map/               # 🗺️ Mapa Leaflet com limites municipais e clusters
 │   │   ├── 📁 diagnostico/       # 📋 Diagnóstico de regularização
 │   │   ├── 📁 governanca/        # 🏛️ Matriz legislativa dos 295 municípios
 │   │   ├── 📁 mosaico/           # 🌿 TIs, Quilombos e RPPNs
@@ -86,7 +95,7 @@ d:/Projetos/UCs
 │   ├── App.tsx                   # Componente raiz e roteamento de abas
 │   ├── main.tsx                  # Ponto de entrada do React
 │   └── index.css                 # Configurações de Tailwind e animações
-├── 📄 scripts_process_data.py    # Script ETL Python para geração dos JSONs
+├── 📁 tests/                     # Testes automatizados de interface E2E (Playwright)
 ├── 📄 vite.config.ts             # Configuração do Vite com base relativa
 ├── 📄 tailwind.config.js         # Tema de cores institucional floresta/oceano
 └── 📄 package.json               # Dependências e scripts do projeto

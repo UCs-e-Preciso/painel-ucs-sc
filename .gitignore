@@ -22,8 +22,13 @@ dist
 *.sln
 *.sw?
 
-# Temporary files
+# Temporary & Generated files
 scratch
+*.png
+data_raw/excel_summary.json
+data_raw/sc_municipios_centroids.json
+data_raw/ibge_municipios_sc.json
+data_raw/downloaded_from_gsheets.xlsx
 excel_summary.json
 sc_municipios_centroids.json
 ibge_municipios_sc.json
