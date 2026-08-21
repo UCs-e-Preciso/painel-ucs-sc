@@ -112,10 +112,59 @@ svg.leaflet-zoom-animated:focus-visible,
 .leaflet-pane:focus,
 .leaflet-pane:focus-visible,
 path.sc-municipality-polygon:focus,
-path.sc-municipality-polygon:focus-visible {
+path.sc-municipality-polygon:focus-visible,
+path.uc-marker-circle:focus,
+path.uc-marker-circle:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* UC and socioenvironmental markers interactive hover animations */
+path.leaflet-interactive:not(.sc-municipality-polygon),
+path.uc-marker-circle,
+path.rppn-marker-circle,
+path.ti-marker-circle,
+path.quilombo-marker-circle {
+  cursor: pointer !important;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), stroke-width 0.15s ease, fill-opacity 0.15s ease, filter 0.15s ease;
+}
+
+path.leaflet-interactive:not(.sc-municipality-polygon):hover,
+path.uc-marker-circle:hover {
+  transform: scale(1.65) !important;
+  stroke: #ffffff !important;
+  stroke-width: 3.5px !important;
+  stroke-opacity: 1 !important;
+  fill-opacity: 1 !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.95)) !important;
+}
+
+path.rppn-marker-circle:hover {
+  transform: scale(1.65) !important;
+  stroke: #ffffff !important;
+  stroke-width: 2.5px !important;
+  fill-opacity: 1 !important;
+  filter: drop-shadow(0 4px 8px rgba(20, 184, 166, 0.6)) !important;
+}
+
+path.ti-marker-circle:hover {
+  transform: scale(1.65) !important;
+  stroke: #ffffff !important;
+  stroke-width: 2.5px !important;
+  fill-opacity: 1 !important;
+  filter: drop-shadow(0 4px 8px rgba(249, 115, 22, 0.6)) !important;
+}
+
+path.quilombo-marker-circle:hover {
+  transform: scale(1.65) !important;
+  stroke: #ffffff !important;
+  stroke-width: 2.5px !important;
+  fill-opacity: 1 !important;
+  filter: drop-shadow(0 4px 8px rgba(168, 85, 247, 0.6)) !important;
+}
+
 
 
 

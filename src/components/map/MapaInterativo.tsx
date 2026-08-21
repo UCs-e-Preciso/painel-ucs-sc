@@ -7,6 +7,7 @@ import {
   GeoJSON,
   CircleMarker,
   Popup,
+  Tooltip,
   useMap,
 } from 'react-leaflet';
 import L from 'leaflet';
@@ -577,18 +578,49 @@ export const MapaInterativo: React.FC = () => {
             {/* UCs Markers */}
             {ucsWithCoords.map((u) => {
               const color = getColorByUc(u);
+              const baseRadius = u.area_ha > 10000 ? 9 : u.area_ha > 1000 ? 7 : 5;
               return (
                 <CircleMarker
                   key={u.id}
                   center={[u.lat!, u.lng!]}
-                  radius={u.area_ha > 10000 ? 9 : u.area_ha > 1000 ? 7 : 5}
+                  radius={baseRadius}
                   pathOptions={{
                     fillColor: color,
                     color: '#ffffff',
                     weight: 1.5,
                     fillOpacity: 0.9,
+                    className: 'uc-marker-circle',
+                  }}
+                  eventHandlers={{
+                    mouseover: (e) => {
+                      const m = e.target;
+                      m.setRadius(baseRadius + 4);
+                      m.setStyle({
+                        weight: 3.5,
+                        color: '#ffffff',
+                        fillOpacity: 1,
+                      });
+                    },
+                    mouseout: (e) => {
+                      const m = e.target;
+                      m.setRadius(baseRadius);
+                      m.setStyle({
+                        weight: 1.5,
+                        color: '#ffffff',
+                        fillOpacity: 0.9,
+                      });
+                    },
                   }}
                 >
+                  <Tooltip direction="top" offset={[0, -baseRadius - 2]} opacity={0.96}>
+                    <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                      <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{u.nome}</div>
+                      <div style={{ fontSize: '10px', color: '#059669', fontWeight: 600 }}>
+                        {u.categoria} • {u.esfera} ({u.area_ha.toLocaleString('pt-BR')} ha)
+                      </div>
+                    </div>
+                  </Tooltip>
+
                   <Popup className="custom-popup">
                     <div className="p-1 space-y-2 max-w-xs">
                       <div>
@@ -653,14 +685,35 @@ export const MapaInterativo: React.FC = () => {
                   <CircleMarker
                     key={r.id}
                     center={[r.lat!, r.lng!]}
-                    radius={4}
+                    radius={5}
                     pathOptions={{
                       fillColor: '#14b8a6',
                       color: '#ffffff',
-                      weight: 1,
-                      fillOpacity: 0.75,
+                      weight: 1.5,
+                      fillOpacity: 0.85,
+                      className: 'rppn-marker-circle',
+                    }}
+                    eventHandlers={{
+                      mouseover: (e) => {
+                        const m = e.target;
+                        m.setRadius(9);
+                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
+                      },
+                      mouseout: (e) => {
+                        const m = e.target;
+                        m.setRadius(5);
+                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.85 });
+                      },
                     }}
                   >
+                    <Tooltip direction="top" offset={[0, -7]} opacity={0.96}>
+                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{r.nome}</div>
+                        <div style={{ fontSize: '10px', color: '#0d9488', fontWeight: 600 }}>
+                          RPPN • {r.ente_federativo} ({r.area_ha.toLocaleString('pt-BR')} ha)
+                        </div>
+                      </div>
+                    </Tooltip>
                     <Popup>
                       <div className="p-1 text-xs">
                         <span className="bg-teal-100 text-teal-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
@@ -684,14 +737,35 @@ export const MapaInterativo: React.FC = () => {
                   <CircleMarker
                     key={t.id}
                     center={[t.lat!, t.lng!]}
-                    radius={5}
+                    radius={6}
                     pathOptions={{
                       fillColor: '#f97316',
                       color: '#ffffff',
-                      weight: 1,
-                      fillOpacity: 0.85,
+                      weight: 1.5,
+                      fillOpacity: 0.9,
+                      className: 'ti-marker-circle',
+                    }}
+                    eventHandlers={{
+                      mouseover: (e) => {
+                        const m = e.target;
+                        m.setRadius(10);
+                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
+                      },
+                      mouseout: (e) => {
+                        const m = e.target;
+                        m.setRadius(6);
+                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.9 });
+                      },
                     }}
                   >
+                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96}>
+                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{t.nome}</div>
+                        <div style={{ fontSize: '10px', color: '#ea580c', fontWeight: 600 }}>
+                          Terra Indígena • {t.ato_criacao_status || 'Em processo'}
+                        </div>
+                      </div>
+                    </Tooltip>
                     <Popup>
                       <div className="p-1 text-xs">
                         <span className="bg-orange-100 text-orange-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
@@ -718,14 +792,35 @@ export const MapaInterativo: React.FC = () => {
                   <CircleMarker
                     key={q.id}
                     center={[q.lat!, q.lng!]}
-                    radius={5}
+                    radius={6}
                     pathOptions={{
                       fillColor: '#a855f7',
                       color: '#ffffff',
-                      weight: 1,
-                      fillOpacity: 0.85,
+                      weight: 1.5,
+                      fillOpacity: 0.9,
+                      className: 'quilombo-marker-circle',
+                    }}
+                    eventHandlers={{
+                      mouseover: (e) => {
+                        const m = e.target;
+                        m.setRadius(10);
+                        m.setStyle({ weight: 3, color: '#ffffff', fillOpacity: 1 });
+                      },
+                      mouseout: (e) => {
+                        const m = e.target;
+                        m.setRadius(6);
+                        m.setStyle({ weight: 1.5, color: '#ffffff', fillOpacity: 0.9 });
+                      },
                     }}
                   >
+                    <Tooltip direction="top" offset={[0, -8]} opacity={0.96}>
+                      <div style={{ fontFamily: 'inherit', padding: '1px' }}>
+                        <div style={{ fontWeight: 800, fontSize: '12px', color: '#0f172a' }}>{q.comunidade}</div>
+                        <div style={{ fontSize: '10px', color: '#9333ea', fontWeight: 600 }}>
+                          Comunidade Quilombola ({q.area_ha.toLocaleString('pt-BR')} ha)
+                        </div>
+                      </div>
+                    </Tooltip>
                     <Popup>
                       <div className="p-1 text-xs">
                         <span className="bg-purple-100 text-purple-800 text-[10px] font-bold px-1.5 py-0.5 rounded">
