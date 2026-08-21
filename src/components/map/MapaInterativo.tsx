@@ -107,7 +107,7 @@ export const MapaInterativo: React.FC = () => {
   const [showQuilombos, setShowQuilombos] = useState<boolean>(true);
   const [showChoropleth, setShowChoropleth] = useState<boolean>(true);
   const [showMesoLayer, setShowMesoLayer] = useState<boolean>(true);
-  const [showLayersDrawer, setShowLayersDrawer] = useState<boolean>(false);
+  const [showLayersDrawer, setShowLayersDrawer] = useState<boolean>(true);
 
   const [selectedMunInfo, setSelectedMunInfo] = useState<any | null>(null);
   const [selectedMarkerId, setSelectedMarkerId] = useState<string | null>(null);
@@ -618,142 +618,43 @@ export const MapaInterativo: React.FC = () => {
       </div>
 
       {/* Expanded Multi-Layer Toggle Drawer */}
-      <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Layers2 className="w-5 h-5 text-emerald-600" />
-            <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-              Camadas e Filtros do Mapa
-            </h4>
-          </div>
-          <span className="text-[11px] text-slate-500">
-            Marque ou desmarque para personalizar a visualização espacial
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-          {/* Column 1: Esferas */}
-          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
-              <span>Esfera da UC</span>
-              <span className="text-slate-400 font-normal text-[10px]">({layerStats.fed + layerStats.est + layerStats.mun})</span>
+      {showLayersDrawer && (
+        <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 animate-fadeIn">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Layers2 className="w-5 h-5 text-emerald-600" />
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                Camadas e Filtros do Mapa
+              </h4>
             </div>
-            <div className="space-y-1.5 pt-1">
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showFederal}
-                    onChange={(e) => setShowFederal(e.target.checked)}
-                    className="rounded text-purple-600 focus:ring-purple-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#8b5cf6]"></span>
-                    Federal
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
-                  {layerStats.fed}
-                </span>
-              </label>
-
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showEstadual}
-                    onChange={(e) => setShowEstadual(e.target.checked)}
-                    className="rounded text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#0284c7]"></span>
-                    Estadual
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
-                  {layerStats.est}
-                </span>
-              </label>
-
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showMunicipal}
-                    onChange={(e) => setShowMunicipal(e.target.checked)}
-                    className="rounded text-emerald-600 focus:ring-emerald-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]"></span>
-                    Municipal
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
-                  {layerStats.mun}
-                </span>
-              </label>
-            </div>
+            <span className="text-[11px] text-slate-500">
+              Marque ou desmarque para personalizar a visualização espacial
+            </span>
           </div>
 
-          {/* Column 2: Grupos SNUC */}
-          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
-              <span>Grupo do SNUC</span>
-              <span className="text-slate-400 font-normal text-[10px]">({layerStats.pi + layerStats.us})</span>
-            </div>
-            <div className="space-y-1.5 pt-1">
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showProtecaoIntegral}
-                    onChange={(e) => setShowProtecaoIntegral(e.target.checked)}
-                    className="rounded text-emerald-600 focus:ring-emerald-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
-                    Proteção Integral
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
-                  {layerStats.pi}
-                </span>
-              </label>
-
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showUsoSustentavel}
-                    onChange={(e) => setShowUsoSustentavel(e.target.checked)}
-                    className="rounded text-sky-600 focus:ring-sky-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#0ea5e9]"></span>
-                    Uso Sustentável
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
-                  {layerStats.us}
-                </span>
-              </label>
-
-              {/* CNUC Status Subgroup */}
-              <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            {/* Column 1: Esferas */}
+            <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+              <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+                <span>Esfera da UC</span>
+                <span className="text-slate-400 font-normal text-[10px]">({layerStats.fed + layerStats.est + layerStats.mun})</span>
+              </div>
+              <div className="space-y-1.5 pt-1">
                 <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
                   <div className="flex items-center gap-2">
                     <input
                       type="checkbox"
-                      checked={showCnucCadastradas}
-                      onChange={(e) => setShowCnucCadastradas(e.target.checked)}
-                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                      checked={showFederal}
+                      onChange={(e) => setShowFederal(e.target.checked)}
+                      className="rounded text-purple-600 focus:ring-purple-500"
                     />
-                    <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
-                      Cadastradas CNUC
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#8b5cf6]"></span>
+                      Federal
                     </span>
                   </div>
-                  <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
-                    {layerStats.cnucYes}
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                    {layerStats.fed}
                   </span>
                 </label>
 
@@ -761,125 +662,226 @@ export const MapaInterativo: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <input
                       type="checkbox"
-                      checked={showCnucPendentes}
-                      onChange={(e) => setShowCnucPendentes(e.target.checked)}
-                      className="rounded text-amber-600 focus:ring-amber-500"
+                      checked={showEstadual}
+                      onChange={(e) => setShowEstadual(e.target.checked)}
+                      className="rounded text-blue-600 focus:ring-blue-500"
                     />
-                    <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
-                      Pendentes / Fora
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#0284c7]"></span>
+                      Estadual
                     </span>
                   </div>
-                  <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400">
-                    {layerStats.cnucNo}
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                    {layerStats.est}
+                  </span>
+                </label>
+
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showMunicipal}
+                      onChange={(e) => setShowMunicipal(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]"></span>
+                      Municipal
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                    {layerStats.mun}
                   </span>
                 </label>
               </div>
             </div>
-          </div>
 
-          {/* Column 3: Mosaico Socioambiental */}
-          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
-              <span>Socioambiental</span>
-              <span className="text-slate-400 font-normal text-[10px]">({layerStats.rppns + layerStats.tis + layerStats.quilombos})</span>
+            {/* Column 2: Grupos SNUC */}
+            <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+              <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+                <span>Grupo do SNUC</span>
+                <span className="text-slate-400 font-normal text-[10px]">({layerStats.pi + layerStats.us})</span>
+              </div>
+              <div className="space-y-1.5 pt-1">
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showProtecaoIntegral}
+                      onChange={(e) => setShowProtecaoIntegral(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
+                      Proteção Integral
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                    {layerStats.pi}
+                  </span>
+                </label>
+
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showUsoSustentavel}
+                      onChange={(e) => setShowUsoSustentavel(e.target.checked)}
+                      className="rounded text-sky-600 focus:ring-sky-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#0ea5e9]"></span>
+                      Uso Sustentável
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
+                    {layerStats.us}
+                  </span>
+                </label>
+
+                {/* CNUC Status Subgroup */}
+                <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-1">
+                  <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={showCnucCadastradas}
+                        onChange={(e) => setShowCnucCadastradas(e.target.checked)}
+                        className="rounded text-emerald-600 focus:ring-emerald-500"
+                      />
+                      <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
+                        Cadastradas CNUC
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
+                      {layerStats.cnucYes}
+                    </span>
+                  </label>
+
+                  <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={showCnucPendentes}
+                        onChange={(e) => setShowCnucPendentes(e.target.checked)}
+                        className="rounded text-amber-600 focus:ring-amber-500"
+                      />
+                      <span className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
+                        Pendentes / Fora
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400">
+                      {layerStats.cnucNo}
+                    </span>
+                  </label>
+                </div>
+              </div>
             </div>
-            <div className="space-y-1.5 pt-1">
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showRppns}
-                    onChange={(e) => setShowRppns(e.target.checked)}
-                    className="rounded text-teal-600 focus:ring-teal-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#14b8a6]"></span>
-                    RPPNs
-                  </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">
-                  {layerStats.rppns}
-                </span>
-              </label>
 
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showTis}
-                    onChange={(e) => setShowTis(e.target.checked)}
-                    className="rounded text-orange-600 focus:ring-orange-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#f97316]"></span>
-                    Terras Indígenas
+            {/* Column 3: Mosaico Socioambiental */}
+            <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+              <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+                <span>Socioambiental</span>
+                <span className="text-slate-400 font-normal text-[10px]">({layerStats.rppns + layerStats.tis + layerStats.quilombos})</span>
+              </div>
+              <div className="space-y-1.5 pt-1">
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showRppns}
+                      onChange={(e) => setShowRppns(e.target.checked)}
+                      className="rounded text-teal-600 focus:ring-teal-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#14b8a6]"></span>
+                      RPPNs
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">
+                    {layerStats.rppns}
                   </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300">
-                  {layerStats.tis}
-                </span>
-              </label>
+                </label>
 
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showQuilombos}
-                    onChange={(e) => setShowQuilombos(e.target.checked)}
-                    className="rounded text-purple-600 focus:ring-purple-500"
-                  />
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#a855f7]"></span>
-                    Quilombolas
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showTis}
+                      onChange={(e) => setShowTis(e.target.checked)}
+                      className="rounded text-orange-600 focus:ring-orange-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#f97316]"></span>
+                      Terras Indígenas
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300">
+                    {layerStats.tis}
                   </span>
-                </div>
-                <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
-                  {layerStats.quilombos}
-                </span>
-              </label>
+                </label>
+
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showQuilombos}
+                      onChange={(e) => setShowQuilombos(e.target.checked)}
+                      className="rounded text-purple-600 focus:ring-purple-500"
+                    />
+                    <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#a855f7]"></span>
+                      Quilombolas
+                    </span>
+                  </div>
+                  <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                    {layerStats.quilombos}
+                  </span>
+                </label>
+              </div>
             </div>
-          </div>
 
-          {/* Column 4: Cartografia & Polígonos */}
-          <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
-            <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
-              <span>Cartografia Base</span>
-              <span className="text-slate-400 font-normal text-[10px]">IBGE SC</span>
-            </div>
-            <div className="space-y-1.5 pt-1">
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showChoropleth}
-                    onChange={(e) => setShowChoropleth(e.target.checked)}
-                    className="rounded text-emerald-600 focus:ring-emerald-500"
-                  />
-                  <span className="font-medium text-slate-700 dark:text-slate-300">
-                    Colorir Cidades por UCs
-                  </span>
-                </div>
-                <span className="text-[10px] font-semibold text-slate-400">295 Mun.</span>
-              </label>
+            {/* Column 4: Cartografia & Polígonos */}
+            <div className="p-3 rounded-xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-2">
+              <div className="font-bold text-slate-700 dark:text-slate-300 flex items-center justify-between text-[11px] uppercase tracking-wider">
+                <span>Cartografia Base</span>
+                <span className="text-slate-400 font-normal text-[10px]">IBGE SC</span>
+              </div>
+              <div className="space-y-1.5 pt-1">
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showChoropleth}
+                      onChange={(e) => setShowChoropleth(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                    />
+                    <span className="font-medium text-slate-700 dark:text-slate-300">
+                      Colorir Cidades por UCs
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-semibold text-slate-400">295 Mun.</span>
+                </label>
 
-              <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    checked={showMesoLayer}
-                    onChange={(e) => setShowMesoLayer(e.target.checked)}
-                    className="rounded text-emerald-600 focus:ring-emerald-500"
-                  />
-                  <span className="font-medium text-slate-700 dark:text-slate-300">
-                    Contornos Regionais
-                  </span>
-                </div>
-                <span className="text-[10px] font-semibold text-slate-400">6 Regiões</span>
-              </label>
+                <label className="flex items-center justify-between gap-2 cursor-pointer p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={showMesoLayer}
+                      onChange={(e) => setShowMesoLayer(e.target.checked)}
+                      className="rounded text-emerald-600 focus:ring-emerald-500"
+                    />
+                    <span className="font-medium text-slate-700 dark:text-slate-300">
+                      Contornos Regionais
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-semibold text-slate-400">6 Regiões</span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Map + Detail Sidebar */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
