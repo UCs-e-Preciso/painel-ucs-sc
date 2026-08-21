@@ -10,7 +10,6 @@ import {
   Calendar,
   FileCheck,
   Users,
-  Map,
   FileText,
   AlertCircle,
 } from 'lucide-react';
@@ -221,17 +220,6 @@ export const UcDetailModal: React.FC = () => {
                 >
                   <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
                   Abrir Ato de Criação Oficial
-                </a>
-              )}
-              {selectedUc.link_mapa && (
-                <a
-                  href={selectedUc.link_mapa}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 text-slate-800 dark:text-slate-200 font-semibold text-xs transition"
-                >
-                  <Map className="w-3.5 h-3.5 mr-1.5" />
-                  Abrir Mapa Anexo
                 </a>
               )}
             </div>
