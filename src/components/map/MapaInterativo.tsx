@@ -142,8 +142,8 @@ export const MapaInterativo: React.FC = () => {
 
   // Base styling for each municipality polygon
   const getMunStyle = (feature: any) => {
-    const cod = feature?.properties?.codarea;
-    const meso = munToMesoMap[cod] || '';
+    const meso = feature?.properties?.mesorregiao || '';
+    const name = feature?.properties?.nome || '';
 
     const isMesoSelected = !selectedTerritorio || meso === selectedTerritorio;
     const isMesoHovered = hoveredTerritorio && meso === hoveredTerritorio;
@@ -170,13 +170,7 @@ export const MapaInterativo: React.FC = () => {
     }
 
     // Count of UCs in this municipality
-    let count = 0;
-    if (data?.municipios) {
-      const found = data.municipios.find((m) => m.id === cod || feature.properties?.nome === m.municipio);
-      if (found) {
-        count = ucsCountByMun[found.municipio.toLowerCase()] || 0;
-      }
-    }
+    const count = ucsCountByMun[name.toLowerCase()] || 0;
 
     let fillColor = '#f8fafc';
     if (count > 5) fillColor = '#047857';
@@ -205,10 +199,12 @@ export const MapaInterativo: React.FC = () => {
   }, [colorMode, selectedTerritorio, hoveredTerritorio, darkMode, showChoropleth]);
 
   const onEachFeature = (feature: any, layer: L.Layer) => {
-    const cod = feature?.properties?.codarea;
-    const mun = data?.municipios?.find((m) => m.id === cod);
-    const name = mun ? mun.municipio : `Município (${cod})`;
-    const meso = mun?.mesorregiao || munToMesoMap[cod] || 'Santa Catarina';
+    const cod = feature?.properties?.code || feature?.properties?.codarea;
+    const name = feature?.properties?.nome || `Município (${cod})`;
+    const meso = feature?.properties?.mesorregiao || 'Santa Catarina';
+    const mun = data?.municipios?.find(
+      (m) => m.municipio.toLowerCase() === name.toLowerCase() || m.id === cod
+    );
     const ucsCount = ucsCountByMun[name.toLowerCase()] || 0;
     const mesoColor = MESO_COLORS[meso] || '#10b981';
 
@@ -558,13 +554,14 @@ export const MapaInterativo: React.FC = () => {
               />
             )}
 
-            {/* Mesorregiões Outline Layer */}
+            {/* Mesorregiões Outline Layer (visual only, allows pointer events to pass through) */}
             {showMesoLayer && data?.geoJsonMesorregioes && (
               <GeoJSON
                 key="sc-mesorregioes-geojson-layer"
                 ref={mesoLayerRef}
                 data={data.geoJsonMesorregioes}
                 style={getMesoOutlineStyle}
+                interactive={false}
               />
             )}
 
