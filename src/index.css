@@ -100,4 +100,22 @@ path.sc-municipality-polygon:hover {
   fill-opacity: 0.85 !important;
 }
 
+/* Remove default browser focus outline on click */
+.leaflet-container:focus,
+.leaflet-container:focus-visible,
+.leaflet-interactive:focus,
+.leaflet-interactive:focus-visible,
+path.leaflet-interactive:focus,
+path.leaflet-interactive:focus-visible,
+svg.leaflet-zoom-animated:focus,
+svg.leaflet-zoom-animated:focus-visible,
+.leaflet-pane:focus,
+.leaflet-pane:focus-visible,
+path.sc-municipality-polygon:focus,
+path.sc-municipality-polygon:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
 
