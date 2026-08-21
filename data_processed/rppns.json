@@ -8,8 +8,8 @@
     "municipio": "Água Doce",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 60.0,
-    "lat": -26.80383,
-    "lng": -51.625416
+    "lat": -26.792837,
+    "lng": -51.616981
   },
   {
     "id": "RPPN-2",
@@ -20,8 +20,8 @@
     "municipio": "Água Doce",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 49.0,
-    "lat": -26.80383,
-    "lng": -51.625416
+    "lat": -26.806608,
+    "lng": -51.641173
   },
   {
     "id": "RPPN-3",
@@ -32,8 +32,8 @@
     "municipio": "Águas Mornas",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 13.5,
-    "lat": -27.745795,
-    "lng": -48.932467
+    "lat": -27.734802,
+    "lng": -48.924032
   },
   {
     "id": "RPPN-4",
@@ -44,8 +44,8 @@
     "municipio": "Alfredo Wagner",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 10.0,
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.719828,
+    "lng": -49.332451
   },
   {
     "id": "RPPN-5",
@@ -56,8 +56,8 @@
     "municipio": "Alfredo Wagner",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 43.5,
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.671595,
+    "lng": -49.335163
   },
   {
     "id": "RPPN-6",
@@ -68,8 +68,8 @@
     "municipio": "Alfredo Wagner",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 33.58,
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.710756,
+    "lng": -49.367142
   },
   {
     "id": "RPPN-7",
@@ -80,8 +80,8 @@
     "municipio": "Antônio Carlos",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 1854.0,
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.4993,
+    "lng": -48.842195
   },
   {
     "id": "RPPN-8",
@@ -92,8 +92,8 @@
     "municipio": "Antônio Carlos",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 900.39,
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.506134,
+    "lng": -48.811351
   },
   {
     "id": "RPPN-9",
@@ -104,8 +104,8 @@
     "municipio": "Antônio Carlos",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 558.86,
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.477594,
+    "lng": -48.83151
   },
   {
     "id": "RPPN-10",
@@ -116,8 +116,8 @@
     "municipio": "Atalanta",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 3.0,
-    "lat": -27.440604,
-    "lng": -49.756826
+    "lat": -27.451875,
+    "lng": -49.75584
   },
   {
     "id": "RPPN-11",
@@ -140,8 +140,8 @@
     "municipio": "Balneário Camboriú",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 38.2,
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -27.009309,
+    "lng": -48.610951
   },
   {
     "id": "RPPN-13",
@@ -152,8 +152,8 @@
     "municipio": "Bela Vista do Toldo",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 316.05,
-    "lat": -26.441602,
-    "lng": -50.48063
+    "lat": -26.430609,
+    "lng": -50.472195
   },
   {
     "id": "RPPN-14",
@@ -164,8 +164,8 @@
     "municipio": "Blumenau",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 5296.16,
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.857386,
+    "lng": -49.07408
   },
   {
     "id": "RPPN-15",
@@ -176,8 +176,8 @@
     "municipio": "Blumenau",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 82.7,
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.876516,
+    "lng": -49.131546
   },
   {
     "id": "RPPN-16",
@@ -188,8 +188,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 45.5,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.79661,
+    "lng": -49.600193
   },
   {
     "id": "RPPN-17",
@@ -200,8 +200,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 32.08,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.770097,
+    "lng": -49.569157
   },
   {
     "id": "RPPN-18",
@@ -212,8 +212,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 24.44,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.768652,
+    "lng": -49.612593
   },
   {
     "id": "RPPN-19",
@@ -224,8 +224,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 78.6,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.800764,
+    "lng": -49.579729
   },
   {
     "id": "RPPN-20",
@@ -236,8 +236,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 59.46,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.752531,
+    "lng": -49.582441
   },
   {
     "id": "RPPN-21",
@@ -248,8 +248,8 @@
     "municipio": "Bom Retiro",
     "mesorregiao": "Serrana",
     "area_ha": 4018.77,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.791692,
+    "lng": -49.61442
   },
   {
     "id": "RPPN-22",
@@ -260,8 +260,8 @@
     "municipio": "Botuverá",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 45.0,
-    "lat": -27.211993,
-    "lng": -49.118388
+    "lat": -27.193065,
+    "lng": -49.12346
   },
   {
     "id": "RPPN-23",
@@ -272,8 +272,8 @@
     "municipio": "Brusque",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 102.96,
-    "lat": -27.124354,
-    "lng": -48.917244
+    "lat": -27.105426,
+    "lng": -48.922316
   },
   {
     "id": "RPPN-24",
@@ -284,8 +284,8 @@
     "municipio": "Brusque",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 415.79,
-    "lat": -27.124354,
-    "lng": -48.917244
+    "lat": -27.143128,
+    "lng": -48.927017
   },
   {
     "id": "RPPN-25",
@@ -296,8 +296,8 @@
     "municipio": "Campo Alegre",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 85.2,
-    "lat": -26.100127,
-    "lng": -49.174831
+    "lat": -26.102905,
+    "lng": -49.190588
   },
   {
     "id": "RPPN-26",
@@ -308,8 +308,8 @@
     "municipio": "Campo Belo do Sul",
     "mesorregiao": "Serrana",
     "area_ha": 6328.6,
-    "lat": -27.836607,
-    "lng": -50.779166
+    "lat": -27.847878,
+    "lng": -50.77818
   },
   {
     "id": "RPPN-27",
@@ -320,8 +320,8 @@
     "municipio": "Corupá",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 1156.33,
-    "lat": -26.417575,
-    "lng": -49.306519
+    "lat": -26.428846,
+    "lng": -49.305533
   },
   {
     "id": "RPPN-28",
@@ -332,8 +332,8 @@
     "municipio": "Curitibanos",
     "mesorregiao": "Serrana",
     "area_ha": 10.64,
-    "lat": -27.279534,
-    "lng": -50.630908
+    "lat": -27.290805,
+    "lng": -50.629922
   },
   {
     "id": "RPPN-29",
@@ -344,8 +344,8 @@
     "municipio": "Florianópolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 441.6,
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.600668,
+    "lng": -48.450774
   },
   {
     "id": "RPPN-30",
@@ -356,8 +356,8 @@
     "municipio": "Florianópolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 17.0,
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.561708,
+    "lng": -48.529219
   },
   {
     "id": "RPPN-31",
@@ -368,7 +368,7 @@
     "municipio": "Florianópolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 44.16,
-    "lat": -27.596602,
+    "lat": -27.644602,
     "lng": -48.497244
   },
   {
@@ -380,8 +380,8 @@
     "municipio": "Florianópolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 16.0,
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.560725,
+    "lng": -48.464368
   },
   {
     "id": "RPPN-33",
@@ -392,8 +392,8 @@
     "municipio": "Florianópolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 74.05,
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.6009,
+    "lng": -48.546372
   },
   {
     "id": "RPPN-34",
@@ -404,8 +404,8 @@
     "municipio": "Guabiruba",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 102.96,
-    "lat": -27.107478,
-    "lng": -49.031629
+    "lat": -27.118749,
+    "lng": -49.030643
   },
   {
     "id": "RPPN-35",
@@ -416,8 +416,8 @@
     "municipio": "Guaramirim",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 1.89,
-    "lat": -26.478493,
-    "lng": -48.933138
+    "lat": -26.4675,
+    "lng": -48.924703
   },
   {
     "id": "RPPN-36",
@@ -428,8 +428,8 @@
     "municipio": "Guaramirim",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 2.75,
-    "lat": -26.478493,
-    "lng": -48.933138
+    "lat": -26.481271,
+    "lng": -48.948895
   },
   {
     "id": "RPPN-37",
@@ -440,8 +440,8 @@
     "municipio": "Guarujá do Sul",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 4.6,
-    "lat": -26.411264,
-    "lng": -53.475448
+    "lat": -26.422535,
+    "lng": -53.474462
   },
   {
     "id": "RPPN-38",
@@ -452,8 +452,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 332.92,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.512887,
+    "lng": -49.911475
   },
   {
     "id": "RPPN-39",
@@ -464,8 +464,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 79.05,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.505274,
+    "lng": -49.859314
   },
   {
     "id": "RPPN-40",
@@ -476,8 +476,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 55.73,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.474511,
+    "lng": -49.904644
   },
   {
     "id": "RPPN-41",
@@ -488,8 +488,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 212.07,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.52975,
+    "lng": -49.891519
   },
   {
     "id": "RPPN-42",
@@ -500,8 +500,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 54.34,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.478462,
+    "lng": -49.862962
   },
   {
     "id": "RPPN-43",
@@ -512,8 +512,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 28.64,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.497592,
+    "lng": -49.920428
   },
   {
     "id": "RPPN-44",
@@ -524,8 +524,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 28.64,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.523031,
+    "lng": -49.863475
   },
   {
     "id": "RPPN-45",
@@ -536,8 +536,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 31.86,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.464193,
+    "lng": -49.888996
   },
   {
     "id": "RPPN-46",
@@ -548,8 +548,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 23.12,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.526438,
+    "lng": -49.910472
   },
   {
     "id": "RPPN-47",
@@ -560,8 +560,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 36.3,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.494246,
+    "lng": -49.851128
   },
   {
     "id": "RPPN-48",
@@ -572,8 +572,8 @@
     "municipio": "Itaiópolis",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 98.83,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.477509,
+    "lng": -49.918212
   },
   {
     "id": "RPPN-49",
@@ -584,8 +584,8 @@
     "municipio": "Itajaí",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 5.2,
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.935588,
+    "lng": -48.73319
   },
   {
     "id": "RPPN-50",
@@ -596,8 +596,8 @@
     "municipio": "Itapoá",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 590.6,
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.046514,
+    "lng": -48.639118
   },
   {
     "id": "RPPN-51",
@@ -608,8 +608,8 @@
     "municipio": "Itapoá",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 285.23,
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.045069,
+    "lng": -48.682554
   },
   {
     "id": "RPPN-52",
@@ -620,8 +620,8 @@
     "municipio": "Ituporanga",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 3.0,
-    "lat": -27.477034,
-    "lng": -49.516588
+    "lat": -27.466041,
+    "lng": -49.508153
   },
   {
     "id": "RPPN-53",
@@ -632,8 +632,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 4613.8,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.249987,
+    "lng": -49.005809
   },
   {
     "id": "RPPN-54",
@@ -644,8 +644,8 @@
     "municipio": "Laguna",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 14.25,
-    "lat": -28.47636,
-    "lng": -48.827147
+    "lat": -28.479138,
+    "lng": -48.842904
   },
   {
     "id": "RPPN-55",
@@ -656,8 +656,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 5.99,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.33062,
+    "lng": -49.062002
   },
   {
     "id": "RPPN-56",
@@ -668,8 +668,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 1.79,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.304107,
+    "lng": -49.030966
   },
   {
     "id": "RPPN-57",
@@ -680,8 +680,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 100.0,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.302662,
+    "lng": -49.074402
   },
   {
     "id": "RPPN-58",
@@ -692,8 +692,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 70.0,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.334774,
+    "lng": -49.041538
   },
   {
     "id": "RPPN-59",
@@ -704,8 +704,8 @@
     "municipio": "Paulo Lopes",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 6.14,
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.956434,
+    "lng": -48.78115
   },
   {
     "id": "RPPN-60",
@@ -716,8 +716,8 @@
     "municipio": "Paulo Lopes",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 226.47,
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.963268,
+    "lng": -48.750306
   },
   {
     "id": "RPPN-61",
@@ -728,8 +728,8 @@
     "municipio": "Paulo Lopes",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 66.7,
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.934728,
+    "lng": -48.770465
   },
   {
     "id": "RPPN-62",
@@ -740,8 +740,8 @@
     "municipio": "Pedras Grandes",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 8.74,
-    "lat": -28.477511,
-    "lng": -49.212392
+    "lat": -28.488782,
+    "lng": -49.211406
   },
   {
     "id": "RPPN-63",
@@ -752,8 +752,8 @@
     "municipio": "Porto Belo",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 45.9,
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.175612,
+    "lng": -48.615435
   },
   {
     "id": "RPPN-64",
@@ -764,8 +764,8 @@
     "municipio": "Porto União",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 67.33,
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.384848,
+    "lng": -51.014546
   },
   {
     "id": "RPPN-65",
@@ -776,8 +776,8 @@
     "municipio": "Rancho Queimado",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 4.95,
-    "lat": -27.685436,
-    "lng": -49.087466
+    "lat": -27.674443,
+    "lng": -49.079031
   },
   {
     "id": "RPPN-66",
@@ -788,8 +788,8 @@
     "municipio": "Rio Negrinho",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 9.05,
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.457023,
+    "lng": -49.605942
   },
   {
     "id": "RPPN-67",
@@ -800,8 +800,8 @@
     "municipio": "Santa Rosa de Lima",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 10.0,
-    "lat": -28.008072,
-    "lng": -49.178814
+    "lat": -28.019343,
+    "lng": -49.177828
   },
   {
     "id": "RPPN-68",
@@ -812,8 +812,8 @@
     "municipio": "São Bento do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 88.0,
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.322658,
+    "lng": -49.363688
   },
   {
     "id": "RPPN-69",
@@ -824,8 +824,8 @@
     "municipio": "São Bento do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 22.04,
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.294118,
+    "lng": -49.383847
   },
   {
     "id": "RPPN-70",
@@ -836,8 +836,8 @@
     "municipio": "São Francisco do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 7.0,
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -26.276061,
+    "lng": -48.638953
   },
   {
     "id": "RPPN-71",
@@ -848,8 +848,8 @@
     "municipio": "São Joaquim",
     "mesorregiao": "Serrana",
     "area_ha": 50.0,
-    "lat": -28.322881,
-    "lng": -50.039838
+    "lat": -28.334152,
+    "lng": -50.038852
   },
   {
     "id": "RPPN-72",
@@ -860,8 +860,8 @@
     "municipio": "São José",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 26.0,
-    "lat": -27.580488,
-    "lng": -48.660714
+    "lat": -27.583266,
+    "lng": -48.676471
   },
   {
     "id": "RPPN-73",
@@ -872,8 +872,8 @@
     "municipio": "São Pedro de Alcântara",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 19.99,
-    "lat": -27.57884,
-    "lng": -48.839173
+    "lat": -27.567847,
+    "lng": -48.830738
   },
   {
     "id": "RPPN-74",
@@ -884,8 +884,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 13.46,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.041882,
+    "lng": -49.543874
   },
   {
     "id": "RPPN-75",
@@ -896,8 +896,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 46.65,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.040437,
+    "lng": -49.58731
   },
   {
     "id": "RPPN-76",
@@ -908,8 +908,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 155.15,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.072549,
+    "lng": -49.554446
   },
   {
     "id": "RPPN-77",
@@ -920,8 +920,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 100.0,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.024316,
+    "lng": -49.557158
   },
   {
     "id": "RPPN-78",
@@ -932,8 +932,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 201.54,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.063477,
+    "lng": -49.589137
   },
   {
     "id": "RPPN-79",
@@ -944,8 +944,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 15.7,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.055864,
+    "lng": -49.536976
   },
   {
     "id": "RPPN-80",
@@ -956,8 +956,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 3.64,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.025101,
+    "lng": -49.582306
   },
   {
     "id": "RPPN-81",
@@ -968,8 +968,8 @@
     "municipio": "Urubici",
     "mesorregiao": "Serrana",
     "area_ha": 126.5,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.08034,
+    "lng": -49.569181
   },
   {
     "id": "RPPN-82",
@@ -980,8 +980,8 @@
     "municipio": "Urupema",
     "mesorregiao": "Serrana",
     "area_ha": 36.06,
-    "lat": -28.038162,
-    "lng": -49.908767
+    "lat": -28.049433,
+    "lng": -49.907781
   },
   {
     "id": "RPPN-83",
@@ -1004,8 +1004,8 @@
     "municipio": "Alfredo Wagner",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 10.57,
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.703143,
+    "lng": -49.314981
   },
   {
     "id": "RPPN-85",
@@ -1016,8 +1016,8 @@
     "municipio": "Anitápolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 10.73,
-    "lat": -27.864667,
-    "lng": -49.131779
+    "lat": -27.853674,
+    "lng": -49.123344
   },
   {
     "id": "RPPN-86",
@@ -1028,8 +1028,8 @@
     "municipio": "Anitápolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 15.0,
-    "lat": -27.864667,
-    "lng": -49.131779
+    "lat": -27.867445,
+    "lng": -49.147536
   },
   {
     "id": "RPPN-87",
@@ -1052,8 +1052,8 @@
     "municipio": "Bocaina do Sul",
     "mesorregiao": "Serrana",
     "area_ha": 4987.15,
-    "lat": -27.750436,
-    "lng": -49.910018
+    "lat": -27.761707,
+    "lng": -49.909032
   },
   {
     "id": "RPPN-89",
@@ -1064,8 +1064,8 @@
     "municipio": "Itajaí",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 15.82,
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.974749,
+    "lng": -48.765169
   },
   {
     "id": "RPPN-90",
@@ -1076,8 +1076,8 @@
     "municipio": "Jaraguá do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 130.47,
-    "lat": -26.44529,
-    "lng": -49.161167
+    "lat": -26.434297,
+    "lng": -49.152732
   },
   {
     "id": "RPPN-91",
@@ -1088,8 +1088,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 18.64,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.305226,
+    "lng": -48.992684
   },
   {
     "id": "RPPN-92",
@@ -1100,8 +1100,8 @@
     "municipio": "Laurentino",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 2.09,
-    "lat": -27.210108,
-    "lng": -49.738184
+    "lat": -27.199115,
+    "lng": -49.729749
   },
   {
     "id": "RPPN-93",
@@ -1112,8 +1112,8 @@
     "municipio": "Leoberto Leal",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 0.78,
-    "lat": -27.492724,
-    "lng": -49.252444
+    "lat": -27.503995,
+    "lng": -49.251458
   },
   {
     "id": "RPPN-94",
@@ -1124,8 +1124,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 12.87,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.286541,
+    "lng": -49.04425
   },
   {
     "id": "RPPN-95",
@@ -1136,8 +1136,8 @@
     "municipio": "Nova Trento",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 5.0,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.325702,
+    "lng": -49.076229
   },
   {
     "id": "RPPN-96",
@@ -1148,8 +1148,8 @@
     "municipio": "Paial",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 6.58,
-    "lat": -27.210987,
-    "lng": -52.485095
+    "lat": -27.222258,
+    "lng": -52.484109
   },
   {
     "id": "RPPN-97",
@@ -1160,8 +1160,8 @@
     "municipio": "Palhoça",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 1.57,
-    "lat": -27.773662,
-    "lng": -48.659754
+    "lat": -27.762669,
+    "lng": -48.651319
   },
   {
     "id": "RPPN-98",
@@ -1172,8 +1172,8 @@
     "municipio": "Palhoça/Paulo Lopes",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 0.0,
-    "lat": -27.773662,
-    "lng": -48.659754
+    "lat": -27.77644,
+    "lng": -48.675511
   },
   {
     "id": "RPPN-99",
@@ -1184,8 +1184,8 @@
     "municipio": "Porto Belo",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 0.7,
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.167999,
+    "lng": -48.563274
   },
   {
     "id": "RPPN-100",
@@ -1196,8 +1196,8 @@
     "municipio": "Santo Amaro da Imperatriz",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 935.0,
-    "lat": -27.758558,
-    "lng": -48.805088
+    "lat": -27.769829,
+    "lng": -48.804102
   },
   {
     "id": "RPPN-101",
@@ -1208,8 +1208,8 @@
     "municipio": "Porto Belo",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 5.06,
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.137236,
+    "lng": -48.608604
   },
   {
     "id": "RPPN-102",
@@ -1220,8 +1220,8 @@
     "municipio": "Porto União",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 12.0,
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.391682,
+    "lng": -50.983702
   },
   {
     "id": "RPPN-103",
@@ -1232,8 +1232,8 @@
     "municipio": "Porto União",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 18.36,
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.363142,
+    "lng": -51.003861
   },
   {
     "id": "RPPN-104",
@@ -1244,8 +1244,8 @@
     "municipio": "Rio do Sul",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 16.46,
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.202856,
+    "lng": -49.617116
   },
   {
     "id": "RPPN-105",
@@ -1256,8 +1256,8 @@
     "municipio": "Rio do Sul",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 6.61,
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.174316,
+    "lng": -49.637275
   },
   {
     "id": "RPPN-106",
@@ -1280,8 +1280,8 @@
     "municipio": "Rio Negrinho",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 35.04,
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.43051,
+    "lng": -49.574906
   },
   {
     "id": "RPPN-108",
@@ -1292,8 +1292,8 @@
     "municipio": "Vargem Bonita",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 2850.0,
-    "lat": -26.934734,
-    "lng": -51.747551
+    "lat": -26.946005,
+    "lng": -51.746565
   },
   {
     "id": "RPPN-109",
@@ -1304,8 +1304,8 @@
     "municipio": "Vargem Bonita",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 5.58,
-    "lat": -26.934734,
-    "lng": -51.747551
+    "lat": -26.923741,
+    "lng": -51.739116
   },
   {
     "id": "RPPN-110",
@@ -1316,8 +1316,8 @@
     "municipio": "Vidal Ramos",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 21.4,
-    "lat": -27.394875,
-    "lng": -49.336153
+    "lat": -27.383882,
+    "lng": -49.327718
   },
   {
     "id": "RPPN-111",
@@ -1328,8 +1328,8 @@
     "municipio": "Videira",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 16.83,
-    "lat": -27.002275,
-    "lng": -51.135876
+    "lat": -27.013546,
+    "lng": -51.13489
   },
   {
     "id": "RPPN-113",
@@ -1352,8 +1352,8 @@
     "municipio": "Balneário Camboriú",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 0.73,
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -26.980769,
+    "lng": -48.63111
   },
   {
     "id": "RPPN-115",
@@ -1364,8 +1364,8 @@
     "municipio": "Bombinhas",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 28.7,
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.15128,
+    "lng": -48.527325
   },
   {
     "id": "RPPN-116",
@@ -1376,8 +1376,8 @@
     "municipio": "Criciúma",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 17.0,
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.715482,
+    "lng": -49.392882
   },
   {
     "id": "RPPN-117",
@@ -1388,8 +1388,8 @@
     "municipio": "São Francisco do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 80.0,
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -26.313763,
+    "lng": -48.643654
   },
   {
     "id": "RPPN-118",
@@ -1400,8 +1400,8 @@
     "municipio": "Lebon Régis",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 24.81,
-    "lat": -26.884777,
-    "lng": -50.69837
+    "lat": -26.879372,
+    "lng": -50.704268
   },
   {
     "id": "RPPN-119",
@@ -1412,8 +1412,8 @@
     "municipio": "Imbituba",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 4.86,
-    "lat": -28.192912,
-    "lng": -48.705453
+    "lat": -28.204183,
+    "lng": -48.704467
   },
   {
     "id": "RPPN-120",
@@ -1424,8 +1424,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 1.94,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.253938,
+    "lng": -48.964127
   },
   {
     "id": "RPPN-121",
@@ -1436,8 +1436,8 @@
     "municipio": "Braço do Norte",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 0.0,
-    "lat": -28.244489,
-    "lng": -49.150991
+    "lat": -28.239084,
+    "lng": -49.156889
   },
   {
     "id": "RPPN-122",
@@ -1448,8 +1448,8 @@
     "municipio": "São Pedro de Alcântara",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 38.0,
-    "lat": -27.57884,
-    "lng": -48.839173
+    "lat": -27.581618,
+    "lng": -48.85493
   },
   {
     "id": "RPPN-123",
@@ -1460,8 +1460,8 @@
     "municipio": "Anitápolis",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 443.9,
-    "lat": -27.864667,
-    "lng": -49.131779
+    "lat": -27.874279,
+    "lng": -49.116692
   },
   {
     "id": "RPPN-124",
@@ -1472,8 +1472,8 @@
     "municipio": "Itajaí",
     "mesorregiao": "Vale do Itajaí",
     "area_ha": 27.6,
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.967136,
+    "lng": -48.713008
   },
   {
     "id": "RPPN-125",
@@ -1484,8 +1484,8 @@
     "municipio": "Santa Rosa de Lima",
     "mesorregiao": "Sul Catarinense",
     "area_ha": 0.0,
-    "lat": -28.008072,
-    "lng": -49.178814
+    "lat": -27.997079,
+    "lng": -49.170379
   },
   {
     "id": "RPPN-126",
@@ -1496,8 +1496,8 @@
     "municipio": "Mafra",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 32.0,
-    "lat": -26.199457,
-    "lng": -49.902828
+    "lat": -26.210728,
+    "lng": -49.901842
   },
   {
     "id": "RPPN-127",
@@ -1508,8 +1508,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 1.0,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.273068,
+    "lng": -49.021593
   },
   {
     "id": "RPPN-128",
@@ -1520,8 +1520,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 2.75,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.298507,
+    "lng": -48.96464
   },
   {
     "id": "RPPN-129",
@@ -1532,8 +1532,8 @@
     "municipio": "Caçador",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 1154.48,
-    "lat": -26.766774,
-    "lng": -51.107073
+    "lat": -26.769552,
+    "lng": -51.12283
   },
   {
     "id": "RPPN-130",
@@ -1544,8 +1544,8 @@
     "municipio": "ipumirim",
     "mesorregiao": "Oeste Catarinense",
     "area_ha": 6.2,
-    "lat": -27.051543,
-    "lng": -52.138125
+    "lat": -27.046138,
+    "lng": -52.144023
   },
   {
     "id": "RPPN-131",
@@ -1556,8 +1556,8 @@
     "municipio": "São Bento do Sul",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 800.0,
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.33182,
+    "lng": -49.388548
   },
   {
     "id": "RPPN-132",
@@ -1568,8 +1568,8 @@
     "municipio": "Joinville",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 1200.0,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.239669,
+    "lng": -48.990161
   },
   {
     "id": "RPPN-133",
@@ -1580,8 +1580,8 @@
     "municipio": "Araquari",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 88.0,
-    "lat": -26.450475,
-    "lng": -48.774444
+    "lat": -26.439482,
+    "lng": -48.766009
   },
   {
     "id": "RPPN-134",
@@ -1592,8 +1592,8 @@
     "municipio": "Governador Celso Ramos",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 6.73,
-    "lat": -27.375089,
-    "lng": -48.57515
+    "lat": -27.364096,
+    "lng": -48.566715
   },
   {
     "id": "RPPN-135",
@@ -1604,8 +1604,8 @@
     "municipio": "Rio Negrinho",
     "mesorregiao": "Norte Catarinense",
     "area_ha": 9.0,
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.429065,
+    "lng": -49.618342
   },
   {
     "id": "RPPN-136",
@@ -1616,7 +1616,7 @@
     "municipio": "Águas Mornas",
     "mesorregiao": "Grande Florianópolis",
     "area_ha": 60.0,
-    "lat": -27.745795,
-    "lng": -48.932467
+    "lat": -27.748573,
+    "lng": -48.948224
   }
 ]

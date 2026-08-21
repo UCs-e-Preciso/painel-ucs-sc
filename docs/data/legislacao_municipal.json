@@ -68,8 +68,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -26.577559,
-    "lng": -52.249928
+    "lat": -26.58883,
+    "lng": -52.248942
   },
   {
     "id": "MUN-3",
@@ -140,8 +140,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -27.322344,
-    "lng": -49.722411
+    "lat": -27.316939,
+    "lng": -49.728309
   },
   {
     "id": "MUN-5",
@@ -176,8 +176,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -26.80383,
-    "lng": -51.625416
+    "lat": -26.815101,
+    "lng": -51.62443
   },
   {
     "id": "MUN-6",
@@ -284,8 +284,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -27.745795,
-    "lng": -48.932467
+    "lat": -27.757066,
+    "lng": -48.931481
   },
   {
     "id": "MUN-9",
@@ -320,8 +320,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.687716,
+    "lng": -49.365315
   },
   {
     "id": "MUN-10",
@@ -500,8 +500,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -27.864667,
-    "lng": -49.131779
+    "lat": -27.875938,
+    "lng": -49.130793
   },
   {
     "id": "MUN-15",
@@ -536,8 +536,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.485529,
+    "lng": -48.818003
   },
   {
     "id": "MUN-16",
@@ -572,8 +572,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.120761,
-    "lng": -49.374059
+    "lat": -27.132032,
+    "lng": -49.373073
   },
   {
     "id": "MUN-17",
@@ -644,8 +644,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -26.450475,
-    "lng": -48.774444
+    "lat": -26.461746,
+    "lng": -48.773458
   },
   {
     "id": "MUN-19",
@@ -680,8 +680,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -28.939243,
-    "lng": -49.478424
+    "lat": -28.942021,
+    "lng": -49.494181
   },
   {
     "id": "MUN-20",
@@ -752,8 +752,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -26.920883,
-    "lng": -51.349262
+    "lat": -26.932154,
+    "lng": -51.348276
   },
   {
     "id": "MUN-22",
@@ -824,8 +824,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -26.973993,
-    "lng": -49.385885
+    "lat": -26.968588,
+    "lng": -49.391783
   },
   {
     "id": "MUN-24",
@@ -860,8 +860,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -27.440604,
-    "lng": -49.756826
+    "lat": -27.435199,
+    "lng": -49.762724
   },
   {
     "id": "MUN-25",
@@ -932,8 +932,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -29.011912,
-    "lng": -49.478324
+    "lat": -29.006507,
+    "lng": -49.484222
   },
   {
     "id": "MUN-27",
@@ -968,8 +968,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -27.002475,
+    "lng": -48.641795
   },
   {
     "id": "MUN-28",
@@ -1004,8 +1004,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -26.427492,
-    "lng": -48.649142
+    "lat": -26.43027,
+    "lng": -48.664899
   },
   {
     "id": "MUN-29",
@@ -1076,8 +1076,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.773332,
-    "lng": -53.655691
+    "lat": -26.767927,
+    "lng": -53.661589
   },
   {
     "id": "MUN-31",
@@ -1148,8 +1148,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -26.652792,
-    "lng": -48.735863
+    "lat": -26.647387,
+    "lng": -48.741761
   },
   {
     "id": "MUN-33",
@@ -1184,8 +1184,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.441602,
-    "lng": -50.48063
+    "lat": -26.452873,
+    "lng": -50.479644
   },
   {
     "id": "MUN-34",
@@ -1256,8 +1256,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -26.791174,
-    "lng": -49.437975
+    "lat": -26.785769,
+    "lng": -49.443873
   },
   {
     "id": "MUN-36",
@@ -1292,8 +1292,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -27.433124,
-    "lng": -48.689807
+    "lat": -27.444395,
+    "lng": -48.688821
   },
   {
     "id": "MUN-37",
@@ -1328,8 +1328,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.908674,
+    "lng": -49.102637
   },
   {
     "id": "MUN-38",
@@ -1364,8 +1364,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.750436,
-    "lng": -49.910018
+    "lat": -27.745031,
+    "lng": -49.915916
   },
   {
     "id": "MUN-39",
@@ -1400,8 +1400,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.17982,
+    "lng": -48.507166
   },
   {
     "id": "MUN-40",
@@ -1436,8 +1436,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.373147,
-    "lng": -49.659461
+    "lat": -28.367742,
+    "lng": -49.665359
   },
   {
     "id": "MUN-41",
@@ -1544,8 +1544,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.758908,
+    "lng": -49.595492
   },
   {
     "id": "MUN-44",
@@ -1580,8 +1580,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.211993,
-    "lng": -49.118388
+    "lat": -27.221605,
+    "lng": -49.103301
   },
   {
     "id": "MUN-45",
@@ -1724,8 +1724,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -27.124354,
-    "lng": -48.917244
+    "lat": -27.133966,
+    "lng": -48.902157
   },
   {
     "id": "MUN-49",
@@ -1760,8 +1760,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.766774,
-    "lng": -51.107073
+    "lat": -26.755781,
+    "lng": -51.098638
   },
   {
     "id": "MUN-50",
@@ -1868,8 +1868,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -27.076168,
-    "lng": -48.714835
+    "lat": -27.08578,
+    "lng": -48.699748
   },
   {
     "id": "MUN-53",
@@ -1940,8 +1940,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.100127,
-    "lng": -49.174831
+    "lat": -26.089134,
+    "lng": -49.166396
   },
   {
     "id": "MUN-55",
@@ -1976,8 +1976,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.836607,
-    "lng": -50.779166
+    "lat": -27.831202,
+    "lng": -50.785064
   },
   {
     "id": "MUN-56",
@@ -2012,8 +2012,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.451197,
-    "lng": -53.12122
+    "lat": -26.445792,
+    "lng": -53.127118
   },
   {
     "id": "MUN-57",
@@ -2048,8 +2048,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.388384,
-    "lng": -51.27491
+    "lat": -27.382979,
+    "lng": -51.280808
   },
   {
     "id": "MUN-58",
@@ -2084,8 +2084,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.244651,
-    "lng": -48.800877
+    "lat": -27.239246,
+    "lng": -48.806775
   },
   {
     "id": "MUN-59",
@@ -2264,8 +2264,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.152856,
-    "lng": -52.927835
+    "lat": -27.147451,
+    "lng": -52.933733
   },
   {
     "id": "MUN-64",
@@ -2408,8 +2408,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.128835,
-    "lng": -52.664208
+    "lat": -27.140106,
+    "lng": -52.663222
   },
   {
     "id": "MUN-68",
@@ -2444,8 +2444,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.598978,
-    "lng": -49.321511
+    "lat": -28.593573,
+    "lng": -49.327409
   },
   {
     "id": "MUN-69",
@@ -2480,8 +2480,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.242045,
-    "lng": -52.035855
+    "lat": -27.23664,
+    "lng": -52.041753
   },
   {
     "id": "MUN-70",
@@ -2624,8 +2624,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.417575,
-    "lng": -49.306519
+    "lat": -26.41217,
+    "lng": -49.312417
   },
   {
     "id": "MUN-74",
@@ -2696,8 +2696,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.676321,
+    "lng": -49.360903
   },
   {
     "id": "MUN-76",
@@ -2804,8 +2804,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.279534,
-    "lng": -50.630908
+    "lat": -27.274129,
+    "lng": -50.636806
   },
   {
     "id": "MUN-79",
@@ -2876,8 +2876,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.325023,
-    "lng": -53.5416
+    "lat": -26.319618,
+    "lng": -53.547498
   },
   {
     "id": "MUN-81",
@@ -2948,8 +2948,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.716192,
-    "lng": -49.556795
+    "lat": -26.710787,
+    "lng": -49.562693
   },
   {
     "id": "MUN-83",
@@ -3164,8 +3164,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.624579,
+    "lng": -48.533704
   },
   {
     "id": "MUN-89",
@@ -3236,8 +3236,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.788459,
-    "lng": -49.499792
+    "lat": -28.783054,
+    "lng": -49.50569
   },
   {
     "id": "MUN-91",
@@ -3308,8 +3308,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.218715,
-    "lng": -50.762983
+    "lat": -27.229986,
+    "lng": -50.761997
   },
   {
     "id": "MUN-93",
@@ -3344,8 +3344,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.449245,
-    "lng": -52.649814
+    "lat": -26.44384,
+    "lng": -52.655712
   },
   {
     "id": "MUN-94",
@@ -3416,8 +3416,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -26.051773,
-    "lng": -48.861496
+    "lat": -26.063044,
+    "lng": -48.86051
   },
   {
     "id": "MUN-96",
@@ -3452,8 +3452,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.929832,
-    "lng": -48.984956
+    "lat": -26.93261,
+    "lng": -49.000713
   },
   {
     "id": "MUN-97",
@@ -3488,8 +3488,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.375089,
-    "lng": -48.57515
+    "lat": -27.38636,
+    "lng": -48.574164
   },
   {
     "id": "MUN-98",
@@ -3524,8 +3524,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -28.138135,
-    "lng": -49.313657
+    "lat": -28.13273,
+    "lng": -49.319555
   },
   {
     "id": "MUN-99",
@@ -3596,8 +3596,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.107478,
-    "lng": -49.031629
+    "lat": -27.102073,
+    "lng": -49.037527
   },
   {
     "id": "MUN-101",
@@ -3668,8 +3668,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.478493,
-    "lng": -48.933138
+    "lat": -26.489764,
+    "lng": -48.932152
   },
   {
     "id": "MUN-103",
@@ -3704,8 +3704,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.411264,
-    "lng": -53.475448
+    "lat": -26.405859,
+    "lng": -53.481346
   },
   {
     "id": "MUN-104",
@@ -3812,8 +3812,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.209952,
-    "lng": -51.211973
+    "lat": -27.221223,
+    "lng": -51.210987
   },
   {
     "id": "MUN-107",
@@ -3920,8 +3920,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -28.73526,
-    "lng": -49.251411
+    "lat": -28.729855,
+    "lng": -49.257309
   },
   {
     "id": "MUN-110",
@@ -3956,8 +3956,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.864622,
-    "lng": -48.862393
+    "lat": -26.859217,
+    "lng": -48.868291
   },
   {
     "id": "MUN-111",
@@ -3992,8 +3992,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -28.224755,
-    "lng": -48.839578
+    "lat": -28.21935,
+    "lng": -48.845476
   },
   {
     "id": "MUN-112",
@@ -4028,8 +4028,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -28.192912,
-    "lng": -48.705453
+    "lat": -28.187507,
+    "lng": -48.711351
   },
   {
     "id": "MUN-113",
@@ -4064,8 +4064,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.518202,
-    "lng": -49.39182
+    "lat": -27.512797,
+    "lng": -49.397718
   },
   {
     "id": "MUN-114",
@@ -4424,8 +4424,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.335006,
-    "lng": -50.7877
+    "lat": -26.329601,
+    "lng": -50.793598
   },
   {
     "id": "MUN-124",
@@ -4496,8 +4496,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.473726,
+    "lng": -49.879496
   },
   {
     "id": "MUN-126",
@@ -4532,8 +4532,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 8,
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.983821,
+    "lng": -48.730478
   },
   {
     "id": "MUN-127",
@@ -4568,8 +4568,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -27.108328,
-    "lng": -48.629178
+    "lat": -27.102923,
+    "lng": -48.635076
   },
   {
     "id": "MUN-128",
@@ -4604,8 +4604,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.111077,
-    "lng": -53.711892
+    "lat": -27.113855,
+    "lng": -53.727649
   },
   {
     "id": "MUN-129",
@@ -4640,8 +4640,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.073027,
+    "lng": -48.670154
   },
   {
     "id": "MUN-130",
@@ -4676,8 +4676,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.477034,
-    "lng": -49.516588
+    "lat": -27.488305,
+    "lng": -49.515602
   },
   {
     "id": "MUN-131",
@@ -4712,8 +4712,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.134502,
-    "lng": -51.779598
+    "lat": -27.129097,
+    "lng": -51.785496
   },
   {
     "id": "MUN-132",
@@ -4748,8 +4748,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.99801,
-    "lng": -49.86411
+    "lat": -28.992605,
+    "lng": -49.870008
   },
   {
     "id": "MUN-133",
@@ -4820,8 +4820,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -26.44529,
-    "lng": -49.161167
+    "lat": -26.456561,
+    "lng": -49.160181
   },
   {
     "id": "MUN-135",
@@ -4892,8 +4892,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.151271,
-    "lng": -51.588144
+    "lat": -27.145866,
+    "lng": -51.594042
   },
   {
     "id": "MUN-137",
@@ -4928,8 +4928,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.28075,
+    "lng": -48.960479
   },
   {
     "id": "MUN-138",
@@ -5072,8 +5072,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.989963,
-    "lng": -50.359872
+    "lat": -27.97897,
+    "lng": -50.351437
   },
   {
     "id": "MUN-142",
@@ -5108,8 +5108,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.47636,
-    "lng": -48.827147
+    "lat": -28.465367,
+    "lng": -48.818712
   },
   {
     "id": "MUN-143",
@@ -5180,8 +5180,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.210108,
-    "lng": -49.738184
+    "lat": -27.221379,
+    "lng": -49.737198
   },
   {
     "id": "MUN-145",
@@ -5288,8 +5288,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.492724,
-    "lng": -49.252444
+    "lat": -27.487319,
+    "lng": -49.258342
   },
   {
     "id": "MUN-148",
@@ -5468,8 +5468,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.810027,
-    "lng": -51.349961
+    "lat": -26.804622,
+    "lng": -51.355859
   },
   {
     "id": "MUN-153",
@@ -5504,8 +5504,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.199457,
-    "lng": -49.902828
+    "lat": -26.194052,
+    "lng": -49.908726
   },
   {
     "id": "MUN-154",
@@ -5612,8 +5612,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -28.869256,
-    "lng": -49.474792
+    "lat": -28.880527,
+    "lng": -49.473806
   },
   {
     "id": "MUN-157",
@@ -6044,8 +6044,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.714576,
-    "lng": -49.746776
+    "lat": -28.709171,
+    "lng": -49.752674
   },
   {
     "id": "MUN-169",
@@ -6080,8 +6080,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.830377,
-    "lng": -48.725439
+    "lat": -26.824972,
+    "lng": -48.731337
   },
   {
     "id": "MUN-170",
@@ -6188,8 +6188,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.292918,
+    "lng": -49.057301
   },
   {
     "id": "MUN-173",
@@ -6224,8 +6224,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.709373,
-    "lng": -49.597893
+    "lat": -28.720644,
+    "lng": -49.596907
   },
   {
     "id": "MUN-174",
@@ -6440,8 +6440,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.210987,
-    "lng": -52.485095
+    "lat": -27.205582,
+    "lng": -52.490993
   },
   {
     "id": "MUN-180",
@@ -6512,8 +6512,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.773662,
-    "lng": -48.659754
+    "lat": -27.784933,
+    "lng": -48.658768
   },
   {
     "id": "MUN-182",
@@ -6620,8 +6620,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.090086,
-    "lng": -53.184338
+    "lat": -27.084681,
+    "lng": -53.190236
   },
   {
     "id": "MUN-185",
@@ -6764,8 +6764,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.705792,
-    "lng": -51.954782
+    "lat": -26.717063,
+    "lng": -51.953796
   },
   {
     "id": "MUN-189",
@@ -6800,8 +6800,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.942663,
+    "lng": -48.756958
   },
   {
     "id": "MUN-190",
@@ -6836,8 +6836,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.477511,
-    "lng": -49.212392
+    "lat": -28.472106,
+    "lng": -49.21829
   },
   {
     "id": "MUN-191",
@@ -6872,8 +6872,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -26.808566,
-    "lng": -48.648369
+    "lat": -26.803161,
+    "lng": -48.654267
   },
   {
     "id": "MUN-192",
@@ -7016,8 +7016,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -26.754894,
-    "lng": -48.745294
+    "lat": -26.749489,
+    "lng": -48.751192
   },
   {
     "id": "MUN-196",
@@ -7340,8 +7340,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 6,
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.136451,
+    "lng": -48.583456
   },
   {
     "id": "MUN-205",
@@ -7376,8 +7376,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.371077,
+    "lng": -50.990354
   },
   {
     "id": "MUN-206",
@@ -7448,8 +7448,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -29.210096,
-    "lng": -50.025593
+    "lat": -29.204691,
+    "lng": -50.031491
   },
   {
     "id": "MUN-208",
@@ -7664,8 +7664,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.685436,
-    "lng": -49.087466
+    "lat": -27.696707,
+    "lng": -49.08648
   },
   {
     "id": "MUN-214",
@@ -7844,8 +7844,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.196022,
+    "lng": -49.64796
   },
   {
     "id": "MUN-219",
@@ -7916,8 +7916,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.419321,
+    "lng": -49.601241
   },
   {
     "id": "MUN-221",
@@ -8168,8 +8168,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.896489,
-    "lng": -51.430761
+    "lat": -26.891084,
+    "lng": -51.436659
   },
   {
     "id": "MUN-228",
@@ -8312,8 +8312,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.008072,
-    "lng": -49.178814
+    "lat": -28.002667,
+    "lng": -49.184712
   },
   {
     "id": "MUN-232",
@@ -8492,8 +8492,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.758558,
-    "lng": -48.805088
+    "lat": -27.753153,
+    "lng": -48.810986
   },
   {
     "id": "MUN-237",
@@ -8564,8 +8564,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.315824,
+    "lng": -49.394532
   },
   {
     "id": "MUN-239",
@@ -8600,8 +8600,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.94813,
-    "lng": -48.931151
+    "lat": -27.959401,
+    "lng": -48.930165
   },
   {
     "id": "MUN-240",
@@ -8744,8 +8744,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -26.304601,
+    "lng": -48.618794
   },
   {
     "id": "MUN-244",
@@ -8816,8 +8816,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.326804,
-    "lng": -48.862167
+    "lat": -27.321399,
+    "lng": -48.868065
   },
   {
     "id": "MUN-246",
@@ -8924,8 +8924,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.322881,
-    "lng": -50.039838
+    "lat": -28.317476,
+    "lng": -50.045736
   },
   {
     "id": "MUN-249",
@@ -8960,8 +8960,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 7,
-    "lat": -27.580488,
-    "lng": -48.660714
+    "lat": -27.569495,
+    "lng": -48.652279
   },
   {
     "id": "MUN-250",
@@ -8996,8 +8996,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -26.485852,
-    "lng": -53.540852
+    "lat": -26.480447,
+    "lng": -53.54675
   },
   {
     "id": "MUN-251",
@@ -9032,8 +9032,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.588497,
-    "lng": -50.685699
+    "lat": -27.577504,
+    "lng": -50.677264
   },
   {
     "id": "MUN-252",
@@ -9212,8 +9212,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -26.727927,
-    "lng": -53.500489
+    "lat": -26.722522,
+    "lng": -53.506387
   },
   {
     "id": "MUN-257",
@@ -9248,8 +9248,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.57884,
-    "lng": -48.839173
+    "lat": -27.590111,
+    "lng": -48.838187
   },
   {
     "id": "MUN-258",
@@ -9320,8 +9320,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.350926,
-    "lng": -49.060543
+    "lat": -26.345521,
+    "lng": -49.066441
   },
   {
     "id": "MUN-260",
@@ -9428,8 +9428,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 4,
-    "lat": -28.567526,
-    "lng": -49.508694
+    "lat": -28.556533,
+    "lng": -49.500259
   },
   {
     "id": "MUN-263",
@@ -9716,8 +9716,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 5,
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.784455,
+    "lng": -49.276655
   },
   {
     "id": "MUN-271",
@@ -9788,8 +9788,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.161795,
-    "lng": -50.263941
+    "lat": -26.15639,
+    "lng": -50.269839
   },
   {
     "id": "MUN-273",
@@ -9824,8 +9824,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.500586,
-    "lng": -49.496078
+    "lat": -28.495181,
+    "lng": -49.501976
   },
   {
     "id": "MUN-274",
@@ -9896,8 +9896,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.954981,
-    "lng": -51.441564
+    "lat": -26.966252,
+    "lng": -51.440578
   },
   {
     "id": "MUN-276",
@@ -9968,8 +9968,8 @@
     "tem_fundo_ma": true,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 9,
-    "lat": -28.481598,
-    "lng": -49.044531
+    "lat": -28.476193,
+    "lng": -49.050429
   },
   {
     "id": "MUN-278",
@@ -10112,8 +10112,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.068395,
+    "lng": -49.57491
   },
   {
     "id": "MUN-282",
@@ -10148,8 +10148,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -28.038162,
-    "lng": -49.908767
+    "lat": -28.032757,
+    "lng": -49.914665
   },
   {
     "id": "MUN-283",
@@ -10184,8 +10184,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -28.491833,
-    "lng": -49.321586
+    "lat": -28.486428,
+    "lng": -49.327484
   },
   {
     "id": "MUN-284",
@@ -10292,8 +10292,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -26.934734,
-    "lng": -51.747551
+    "lat": -26.929329,
+    "lng": -51.753449
   },
   {
     "id": "MUN-287",
@@ -10328,8 +10328,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 1,
-    "lat": -27.394875,
-    "lng": -49.336153
+    "lat": -27.406146,
+    "lng": -49.335167
   },
   {
     "id": "MUN-288",
@@ -10364,8 +10364,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -27.002275,
-    "lng": -51.135876
+    "lat": -26.99687,
+    "lng": -51.141774
   },
   {
     "id": "MUN-289",
@@ -10400,8 +10400,8 @@
     "tem_fundo_ma": false,
     "tem_fundacao_secretaria": true,
     "indice_governanca": 3,
-    "lat": -26.831232,
-    "lng": -49.847849
+    "lat": -26.825827,
+    "lng": -49.853747
   },
   {
     "id": "MUN-290",

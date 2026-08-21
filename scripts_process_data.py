@@ -100,16 +100,45 @@ def process_all_data(xlsx_path, output_dir):
         k = name_key(meta['name'])
         muni_name_to_centroid[k] = meta
         
-    def find_coordinates(mun_str):
-        if not mun_str:
+    # Track count of UCs per municipality for slight spatial dispersion
+    mun_usage_counter = {}
+
+    def find_coordinates(mun_str, name_str=""):
+        combined = f"{mun_str} {name_str}"
+        if not mun_str and not name_str:
             return None, None, "", ""
+            
+        # Special fallback lookups
+        if 'campeche' in combined.lower():
+            mun_str = 'Florianópolis'
+        elif 'sumidouro' in combined.lower():
+            mun_str = 'São Francisco do Sul'
+        elif 'caminho das nascentes' in combined.lower() or 'nascentes' in combined.lower():
+            mun_str = 'Alfredo Wagner'
+        elif 'campos de palmas' in combined.lower():
+            mun_str = 'Passos Maia'
+            
         tokens = re.split(r'[/,;\-–\(\)]+', mun_str)
         for token in tokens:
             t_clean = token.strip()
             k = name_key(t_clean)
             if k in muni_name_to_centroid:
                 m = muni_name_to_centroid[k]
-                return m['lat'], m['lng'], m['name'], m['mesorregiao']
+                mun_name = m['name']
+                count = mun_usage_counter.get(mun_name, 0)
+                mun_usage_counter[mun_name] = count + 1
+                
+                # Apply slight deterministic radial offset if multiple UCs in same municipality
+                lat = m['lat']
+                lng = m['lng']
+                if count > 0:
+                    import math
+                    angle = (count * 137.5) * (math.pi / 180.0) # Golden angle
+                    radius = 0.008 * math.sqrt(count) # ~800m - 2km
+                    lat = round(lat + radius * math.sin(angle), 6)
+                    lng = round(lng + radius * math.cos(angle), 6)
+                
+                return lat, lng, m['name'], m['mesorregiao']
         return None, None, "", ""
 
     with zipfile.ZipFile(xlsx_path) as z:
@@ -174,7 +203,7 @@ def process_all_data(xlsx_path, output_dir):
                 has_cg = cg_raw in ['SIM', 'S', 'SIM ', 'POSSUI', 'TRUE', '1'] or ('SIM' in cg_raw and 'NÃO' not in cg_raw)
 
                 mun_abrang = rec.get('Municípios abrangidos', '').strip()
-                lat, lng, mun_nome, mesorregiao = find_coordinates(mun_abrang)
+                lat, lng, mun_nome, mesorregiao = find_coordinates(mun_abrang, nome_uc)
                 
                 categoria = rec.get('Categoria de Manejo', '').strip() or 'Outra'
                 esfera = rec.get('Esfera Administrativa', '').strip() or 'Municipal'

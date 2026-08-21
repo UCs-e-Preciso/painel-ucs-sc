@@ -8,8 +8,8 @@
     "area_ha": 7952.91,
     "edital_rtid_dou": "09 e 12/02/2007",
     "portaria_dou": "39804",
-    "lat": -27.592107,
-    "lng": -51.047724
+    "lat": -27.586702,
+    "lng": -51.053622
   },
   {
     "id": "QUILOMBO-2",
@@ -20,8 +20,8 @@
     "area_ha": 4658.87,
     "edital_rtid_dou": "30/11 e 03/12/2007",
     "portaria_dou": "43369",
-    "lat": -29.210096,
-    "lng": -50.025593
+    "lat": -29.221367,
+    "lng": -50.024607
   },
   {
     "id": "QUILOMBO-3",
@@ -32,8 +32,8 @@
     "area_ha": 30.87,
     "edital_rtid_dou": "21 e 26/12/2012",
     "portaria_dou": "41835",
-    "lat": -28.56505,
-    "lng": -49.147136
+    "lat": -28.559645,
+    "lng": -49.153034
   },
   {
     "id": "QUILOMBO-4",
@@ -44,8 +44,8 @@
     "area_ha": 542.41,
     "edital_rtid_dou": "16 e 17/08/2017",
     "portaria_dou": "44636",
-    "lat": -27.199431,
-    "lng": -50.913713
+    "lat": -27.194026,
+    "lng": -50.919611
   },
   {
     "id": "QUILOMBO-5",
@@ -56,8 +56,8 @@
     "area_ha": 10.11,
     "edital_rtid_dou": "28/06 e 02/07/2018",
     "portaria_dou": "45250",
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -27.018471,
+    "lng": -48.635811
   },
   {
     "id": "QUILOMBO-6",
@@ -68,8 +68,8 @@
     "area_ha": 961.29,
     "edital_rtid_dou": "10 e 11/02/2020 2",
     "portaria_dou": "44767",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.627016,
+    "lng": -48.457608
   },
   {
     "id": "QUILOMBO-7",
@@ -80,8 +80,8 @@
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -28.032381,
-    "lng": -48.654084
+    "lat": -28.026976,
+    "lng": -48.659982
   },
   {
     "id": "QUILOMBO-8",
@@ -92,8 +92,8 @@
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.97243,
+    "lng": -48.775166
   },
   {
     "id": "QUILOMBO-9",
@@ -104,7 +104,7 @@
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -28.032381,
-    "lng": -48.654084
+    "lat": -28.043652,
+    "lng": -48.653098
   }
 ]

@@ -458,8 +458,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.939243,
-    "lng": -49.478424
+    "lat": -28.933838,
+    "lng": -49.484322
   },
   {
     "id": "52",
@@ -524,8 +524,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.939243,
-    "lng": -49.478424
+    "lat": -28.950514,
+    "lng": -49.477438
   },
   {
     "id": "93",
@@ -590,8 +590,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.939243,
-    "lng": -49.478424
+    "lat": -28.92825,
+    "lng": -49.469989
   },
   {
     "id": "2927",
@@ -788,8 +788,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.491117,
+    "lng": -48.832336
   },
   {
     "id": "3159",
@@ -821,8 +821,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.591197,
+    "lng": -48.503142
   },
   {
     "id": "UC-SC-26",
@@ -854,8 +854,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.920883,
-    "lng": -51.349262
+    "lat": -26.915478,
+    "lng": -51.35516
   },
   {
     "id": "1",
@@ -986,8 +986,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.607873,
+    "lng": -48.496258
   },
   {
     "id": "UC-SC-31",
@@ -1118,8 +1118,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.87255,
+    "lng": -49.104491
   },
   {
     "id": "UC-SC-35",
@@ -1217,8 +1217,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.427492,
-    "lng": -48.649142
+    "lat": -26.422087,
+    "lng": -48.65504
   },
   {
     "id": "4583",
@@ -1250,8 +1250,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.164803,
+    "lng": -48.528151
   },
   {
     "id": "UC-SC-39",
@@ -1283,8 +1283,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -26.994292,
+    "lng": -48.631936
   },
   {
     "id": "UC-SC-40",
@@ -1349,8 +1349,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.889226,
+    "lng": -49.097607
   },
   {
     "id": "UC-SC-42",
@@ -1382,8 +1382,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.866962,
+    "lng": -49.090158
   },
   {
     "id": "UC-SC-43",
@@ -1415,8 +1415,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.880733,
+    "lng": -49.11435
   },
   {
     "id": "UC-SC-44",
@@ -1448,8 +1448,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.887567,
+    "lng": -49.083506
   },
   {
     "id": "UC-SC-45",
@@ -1481,8 +1481,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.859027,
+    "lng": -49.103665
   },
   {
     "id": "UC-SC-46",
@@ -1514,8 +1514,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.896729,
+    "lng": -49.108366
   },
   {
     "id": "UC-SC-47",
@@ -1531,8 +1531,8 @@
     "ato_criacao": "LM 4990/98",
     "outros_atos": "",
     "municipios": "BLUMENAU (SC)",
-    "municipio_principal": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "municipio_principal": "Alfredo Wagner",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 5296.16,
     "area_km2": 52.96,
     "bioma": "Mata Atlântica",
@@ -1547,8 +1547,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -27.6969,
+    "lng": -49.343142
   },
   {
     "id": "2923",
@@ -1580,8 +1580,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.269102,
+    "lng": -48.994538
   },
   {
     "id": "1089",
@@ -1679,8 +1679,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.870216,
+    "lng": -49.07733
   },
   {
     "id": "UC-SC-52",
@@ -1712,8 +1712,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.868771,
+    "lng": -49.120766
   },
   {
     "id": "UC-SC-53",
@@ -1745,8 +1745,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.900883,
+    "lng": -49.087902
   },
   {
     "id": "2945",
@@ -1844,8 +1844,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.432844,
+    "lng": -49.602067
   },
   {
     "id": "4310",
@@ -1910,8 +1910,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.496522,
-    "lng": -48.826438
+    "lat": -27.507793,
+    "lng": -48.825452
   },
   {
     "id": "UC-SC-59",
@@ -1943,8 +1943,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.877955,
-    "lng": -49.098593
+    "lat": -26.85265,
+    "lng": -49.090614
   },
   {
     "id": "UC-SC-60",
@@ -1976,8 +1976,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.181479,
+    "lng": -48.521267
   },
   {
     "id": "UC-SC-61",
@@ -2009,8 +2009,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.159215,
+    "lng": -48.513818
   },
   {
     "id": "UC-SC-62",
@@ -2042,8 +2042,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.211993,
-    "lng": -49.118388
+    "lat": -27.206588,
+    "lng": -49.124286
   },
   {
     "id": "UC-SC-63",
@@ -2075,8 +2075,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.211993,
-    "lng": -49.118388
+    "lat": -27.223264,
+    "lng": -49.117402
   },
   {
     "id": "1093",
@@ -2141,8 +2141,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.585609,
+    "lng": -48.488809
   },
   {
     "id": "1082",
@@ -2174,8 +2174,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -27.010968,
+    "lng": -48.625052
   },
   {
     "id": "1084",
@@ -2207,8 +2207,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.59938,
+    "lng": -48.513001
   },
   {
     "id": "UC-SC-68",
@@ -2339,8 +2339,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.606214,
+    "lng": -48.482157
   },
   {
     "id": "UC-SC-72",
@@ -2372,8 +2372,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.076168,
-    "lng": -48.714835
+    "lat": -27.070763,
+    "lng": -48.720733
   },
   {
     "id": "UC-SC-73",
@@ -2405,8 +2405,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.100127,
-    "lng": -49.174831
+    "lat": -26.094722,
+    "lng": -49.180729
   },
   {
     "id": "UC-SC-74",
@@ -2471,8 +2471,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.307641,
+    "lng": -49.384673
   },
   {
     "id": "1097",
@@ -2504,8 +2504,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.285778,
+    "lng": -48.987654
   },
   {
     "id": "1091",
@@ -2537,8 +2537,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.124354,
-    "lng": -48.917244
+    "lat": -27.118949,
+    "lng": -48.923142
   },
   {
     "id": "1100",
@@ -2669,8 +2669,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.128835,
-    "lng": -52.664208
+    "lat": -27.12343,
+    "lng": -52.670106
   },
   {
     "id": "UC-SC-82",
@@ -2768,8 +2768,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.124354,
-    "lng": -48.917244
+    "lat": -27.135625,
+    "lng": -48.916258
   },
   {
     "id": "1081",
@@ -2900,8 +2900,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.691495,
+    "lng": -49.34904
   },
   {
     "id": "UC-SC-89",
@@ -2933,8 +2933,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.696221,
+    "lng": -49.37478
   },
   {
     "id": "UC-SC-90",
@@ -2966,8 +2966,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.712897,
+    "lng": -49.367896
   },
   {
     "id": "UC-SC-91",
@@ -2999,8 +2999,8 @@
     "link_mapa": "SIM",
     "observacoes": "V. LM 7844/21",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.690633,
+    "lng": -49.360447
   },
   {
     "id": "788",
@@ -3098,8 +3098,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.263514,
+    "lng": -48.980205
   },
   {
     "id": "UC-SC-95",
@@ -3131,8 +3131,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.704404,
+    "lng": -49.384639
   },
   {
     "id": "UC-SC-96",
@@ -3164,8 +3164,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.711238,
+    "lng": -49.353795
   },
   {
     "id": "1101",
@@ -3230,8 +3230,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.120761,
-    "lng": -49.374059
+    "lat": -27.115356,
+    "lng": -49.379957
   },
   {
     "id": "787",
@@ -3296,8 +3296,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.277285,
+    "lng": -49.004397
   },
   {
     "id": "UC-SC-101",
@@ -3329,8 +3329,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.682698,
+    "lng": -49.373954
   },
   {
     "id": "2081",
@@ -3428,8 +3428,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.577559,
-    "lng": -52.249928
+    "lat": -26.572154,
+    "lng": -52.255826
   },
   {
     "id": "262",
@@ -3494,8 +3494,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -26.289584,
+    "lng": -48.639779
   },
   {
     "id": "UC-SC-107",
@@ -3527,8 +3527,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.7204,
+    "lng": -49.378655
   },
   {
     "id": "UC-SC-108",
@@ -3544,8 +3544,8 @@
     "ato_criacao": "DE 2367/22",
     "outros_atos": "",
     "municipios": "cumeada Serra Geral e Serra do Mar",
-    "municipio_principal": "",
-    "mesorregiao": "",
+    "municipio_principal": "Alfredo Wagner",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 171635.1,
     "area_km2": 1716.35,
     "bioma": "Mata Atlântica",
@@ -3560,8 +3560,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": null,
-    "lng": null
+    "lat": -27.708171,
+    "lng": -49.342156
   },
   {
     "id": "1866",
@@ -3593,8 +3593,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.955488,
+    "lng": -48.747067
   },
   {
     "id": "4195",
@@ -3692,8 +3692,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.577674,
+    "lng": -48.502316
   },
   {
     "id": "3688",
@@ -3758,8 +3758,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.972164,
+    "lng": -48.740183
   },
   {
     "id": "UC-SC-115",
@@ -3791,8 +3791,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.615376,
+    "lng": -48.507017
   },
   {
     "id": "4940",
@@ -3824,8 +3824,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.156351,
+    "lng": -48.597333
   },
   {
     "id": "2091",
@@ -3989,8 +3989,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.478493,
-    "lng": -48.933138
+    "lat": -26.473088,
+    "lng": -48.939036
   },
   {
     "id": "2229",
@@ -4022,8 +4022,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.685907,
+    "lng": -49.334707
   },
   {
     "id": "1913",
@@ -4055,8 +4055,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.701626,
-    "lng": -49.368882
+    "lat": -28.693887,
+    "lng": -49.347619
   },
   {
     "id": "UC-SC-124",
@@ -4187,8 +4187,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.772431,
+    "lng": -49.596318
   },
   {
     "id": "2089",
@@ -4220,8 +4220,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.789107,
+    "lng": -49.589434
   },
   {
     "id": "2090",
@@ -4253,8 +4253,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.766843,
+    "lng": -49.581985
   },
   {
     "id": "2112",
@@ -4286,8 +4286,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.80383,
-    "lng": -51.625416
+    "lat": -26.798425,
+    "lng": -51.631314
   },
   {
     "id": "2117",
@@ -4319,8 +4319,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.306441,
+    "lng": -49.058127
   },
   {
     "id": "2151",
@@ -4352,8 +4352,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.044216,
+    "lng": -49.571035
   },
   {
     "id": "2193",
@@ -4418,8 +4418,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.493626,
+    "lng": -49.893373
   },
   {
     "id": "UC-SC-135",
@@ -4451,8 +4451,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.929832,
-    "lng": -48.984956
+    "lat": -26.924427,
+    "lng": -48.990854
   },
   {
     "id": "3962",
@@ -4517,8 +4517,8 @@
     "link_mapa": "",
     "observacoes": "fonte: https://www.icmbio.gov.br/rebioarvoredo/images/stories/plano_manejo/REBIO_Arvoredo_Plano_Manejo_Encarte_1.pdf página  36 e https://repositorio.ufsc.br/bitstream/handle/123456789/87978/206046.pdf?sequence=1&isAllowed=y p. 12",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.588863,
+    "lng": -48.475981
   },
   {
     "id": "2154",
@@ -4534,8 +4534,8 @@
     "ato_criacao": "Portaria 09 - DOU 19 - 28/01/2010 - seção/pg. 01 - 68",
     "outros_atos": "Sem informação.",
     "municipios": "URUBICI (SC)",
-    "municipio_principal": "Urubici",
-    "mesorregiao": "Serrana",
+    "municipio_principal": "Alfredo Wagner",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 15.7,
     "area_km2": 0.16,
     "bioma": "Mata Atlântica",
@@ -4550,8 +4550,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -27.699678,
+    "lng": -49.358899
   },
   {
     "id": "2155",
@@ -4583,8 +4583,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.211993,
-    "lng": -49.118388
+    "lat": -27.201,
+    "lng": -49.109953
   },
   {
     "id": "2160",
@@ -4616,8 +4616,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.510302,
+    "lng": -49.886489
   },
   {
     "id": "2214",
@@ -4649,8 +4649,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.441602,
-    "lng": -50.48063
+    "lat": -26.436197,
+    "lng": -50.486528
   },
   {
     "id": "2218",
@@ -4682,8 +4682,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.488038,
+    "lng": -49.87904
   },
   {
     "id": "1865",
@@ -4699,8 +4699,8 @@
     "ato_criacao": "Dec. s/no de 03 de abr. de 2006",
     "outros_atos": "",
     "municipios": "General Carneiro/ Palmas",
-    "municipio_principal": "",
-    "mesorregiao": "",
+    "municipio_principal": "Passos Maia",
+    "mesorregiao": "Oeste Catarinense",
     "area_ha": 16594.17,
     "area_km2": 165.94,
     "bioma": "Mata Atlântica",
@@ -4715,8 +4715,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": null,
-    "lng": null
+    "lat": -26.700387,
+    "lng": -51.96068
   },
   {
     "id": "UC-SC-144",
@@ -4814,8 +4814,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.501809,
+    "lng": -49.903232
   },
   {
     "id": "2711",
@@ -4847,8 +4847,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.780614,
+    "lng": -49.606177
   },
   {
     "id": "2739",
@@ -4864,8 +4864,8 @@
     "ato_criacao": "Portaria 90 - DOU 217 - 11/11/2011 - seção/pg. 1 - 118",
     "outros_atos": "Sem informação.",
     "municipios": "URUBICI (SC)",
-    "municipio_principal": "Urubici",
-    "mesorregiao": "Serrana",
+    "municipio_principal": "Alfredo Wagner",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 3.64,
     "area_km2": 0.04,
     "bioma": "Mata Atlântica",
@@ -4880,8 +4880,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -27.706512,
+    "lng": -49.328055
   },
   {
     "id": "2876",
@@ -4946,8 +4946,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.048848,
+    "lng": -48.666279
   },
   {
     "id": "2359",
@@ -5111,8 +5111,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.284119,
+    "lng": -48.973553
   },
   {
     "id": "2715",
@@ -5144,8 +5144,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.508643,
+    "lng": -49.872388
   },
   {
     "id": "3103",
@@ -5177,8 +5177,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.060892,
+    "lng": -49.564151
   },
   {
     "id": "2719",
@@ -5210,8 +5210,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.038628,
+    "lng": -49.556702
   },
   {
     "id": "3101",
@@ -5243,8 +5243,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.480103,
+    "lng": -49.892547
   },
   {
     "id": "2716",
@@ -5276,8 +5276,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.948251,
+    "lng": -48.771291
   },
   {
     "id": "3102",
@@ -5309,8 +5309,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.052399,
+    "lng": -49.580894
   },
   {
     "id": "2714",
@@ -5342,8 +5342,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.517805,
+    "lng": -49.897248
   },
   {
     "id": "3210",
@@ -5375,8 +5375,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.677972,
+    "lng": -49.348214
   },
   {
     "id": "3212",
@@ -5474,8 +5474,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.745795,
-    "lng": -48.932467
+    "lat": -27.74039,
+    "lng": -48.938365
   },
   {
     "id": "3100",
@@ -5507,8 +5507,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.777836,
-    "lng": -49.59042
+    "lat": -27.787448,
+    "lng": -49.575333
   },
   {
     "id": "3099",
@@ -5540,8 +5540,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.6969,
-    "lng": -49.343142
+    "lat": -27.715674,
+    "lng": -49.352915
   },
   {
     "id": "3029",
@@ -5573,8 +5573,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.587418,
+    "lng": -48.519417
   },
   {
     "id": "4531",
@@ -5606,8 +5606,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.313046,
-    "lng": -49.378775
+    "lat": -26.324317,
+    "lng": -49.377789
   },
   {
     "id": "4524",
@@ -5639,8 +5639,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.323117,
+    "lng": -49.051243
   },
   {
     "id": "4482",
@@ -5738,8 +5738,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.394875,
-    "lng": -49.336153
+    "lat": -27.38947,
+    "lng": -49.342051
   },
   {
     "id": "UC-SC-175",
@@ -5804,8 +5804,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.100127,
-    "lng": -49.174831
+    "lat": -26.111398,
+    "lng": -49.173845
   },
   {
     "id": "3956",
@@ -5870,8 +5870,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.376665,
+    "lng": -51.004687
   },
   {
     "id": "3626",
@@ -5903,8 +5903,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.173027,
+    "lng": -48.590449
   },
   {
     "id": "3401",
@@ -5936,8 +5936,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.44529,
-    "lng": -49.161167
+    "lat": -26.439885,
+    "lng": -49.167065
   },
   {
     "id": "UC-SC-181",
@@ -6002,8 +6002,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.9499,
+    "lng": -48.732734
   },
   {
     "id": "UC-SC-183",
@@ -6035,8 +6035,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.963671,
+    "lng": -48.756926
   },
   {
     "id": "3670",
@@ -6068,8 +6068,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.300853,
+    "lng": -49.043794
   },
   {
     "id": "3672",
@@ -6101,8 +6101,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.491292,
+    "lng": -49.866212
   },
   {
     "id": "3683",
@@ -6134,8 +6134,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.61953,
+    "lng": -48.486553
   },
   {
     "id": "3958",
@@ -6200,8 +6200,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.571297,
+    "lng": -48.489265
   },
   {
     "id": "UC-SC-189",
@@ -6233,8 +6233,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.970505,
+    "lng": -48.726082
   },
   {
     "id": "UC-SC-190",
@@ -6266,8 +6266,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.941965,
+    "lng": -48.746241
   },
   {
     "id": "3673",
@@ -6299,8 +6299,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.953656,
-    "lng": -48.765393
+    "lat": -27.964927,
+    "lng": -48.764407
   },
   {
     "id": "3959",
@@ -6332,8 +6332,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.314624,
+    "lng": -49.067986
   },
   {
     "id": "3516",
@@ -6365,8 +6365,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.311846,
-    "lng": -49.052229
+    "lat": -27.321458,
+    "lng": -49.037142
   },
   {
     "id": "3536",
@@ -6431,8 +6431,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.065524,
+    "lng": -48.659395
   },
   {
     "id": "UC-SC-196",
@@ -6530,8 +6530,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.979667,
+    "lng": -48.750942
   },
   {
     "id": "3662",
@@ -6596,8 +6596,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.04326,
+    "lng": -48.651946
   },
   {
     "id": "3951",
@@ -6662,8 +6662,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.44952,
+    "lng": -49.595183
   },
   {
     "id": "3957",
@@ -6728,8 +6728,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.255579,
+    "lng": -48.993712
   },
   {
     "id": "4814",
@@ -6794,8 +6794,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.610458,
+    "lng": -48.521244
   },
   {
     "id": "3732",
@@ -6827,8 +6827,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.602845,
+    "lng": -48.469083
   },
   {
     "id": "1841",
@@ -6860,8 +6860,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.572082,
+    "lng": -48.514413
   },
   {
     "id": "UC-SC-209",
@@ -6893,8 +6893,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.293281,
+    "lng": -48.998413
   },
   {
     "id": "UC-SC-210",
@@ -6926,8 +6926,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.989963,
-    "lng": -50.359872
+    "lat": -27.984558,
+    "lng": -50.36577
   },
   {
     "id": "4099",
@@ -6992,8 +6992,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.627321,
+    "lng": -48.501288
   },
   {
     "id": "3953",
@@ -7025,8 +7025,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.960893,
-    "lng": -48.741169
+    "lat": -26.953154,
+    "lng": -48.719906
   },
   {
     "id": "3950",
@@ -7058,8 +7058,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.150763,
+    "lng": -48.583
   },
   {
     "id": "4468",
@@ -7091,8 +7091,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.489847,
+    "lng": -49.909648
   },
   {
     "id": "4148",
@@ -7322,8 +7322,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.47636,
-    "lng": -48.827147
+    "lat": -28.470955,
+    "lng": -48.833045
   },
   {
     "id": "UC-SC-223",
@@ -7355,8 +7355,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.709373,
-    "lng": -49.597893
+    "lat": -28.703968,
+    "lng": -49.603791
   },
   {
     "id": "4494",
@@ -7388,8 +7388,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.38207,
-    "lng": -50.998789
+    "lat": -26.393341,
+    "lng": -50.997803
   },
   {
     "id": "4532",
@@ -7487,8 +7487,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.773662,
-    "lng": -48.659754
+    "lat": -27.768257,
+    "lng": -48.665652
   },
   {
     "id": "UC-SC-228",
@@ -7586,8 +7586,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.576033,
+    "lng": -48.472731
   },
   {
     "id": "4316",
@@ -7619,8 +7619,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.595163,
+    "lng": -48.530197
   },
   {
     "id": "UC-SC-232",
@@ -7652,8 +7652,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.164534,
+    "lng": -48.607192
   },
   {
     "id": "4583",
@@ -7685,8 +7685,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.057031,
+    "lng": -48.676138
   },
   {
     "id": "UC-SC-234",
@@ -7718,8 +7718,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.171368,
+    "lng": -48.576348
   },
   {
     "id": "4548",
@@ -7751,8 +7751,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.427256,
+    "lng": -49.587734
   },
   {
     "id": "4578",
@@ -7784,8 +7784,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.274507,
-    "lng": -48.98864
+    "lat": -26.266768,
+    "lng": -48.967377
   },
   {
     "id": "4358",
@@ -7817,8 +7817,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.142828,
+    "lng": -48.596507
   },
   {
     "id": "4579",
@@ -7850,8 +7850,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.864667,
-    "lng": -49.131779
+    "lat": -27.859262,
+    "lng": -49.137677
   },
   {
     "id": "4359",
@@ -7949,8 +7949,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.187839,
+    "lng": -49.638101
   },
   {
     "id": "3063",
@@ -7982,8 +7982,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.620602,
+    "lng": -48.473244
   },
   {
     "id": "UC-SC-243",
@@ -8015,8 +8015,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.18053,
+    "lng": -48.601208
   },
   {
     "id": "UC-SC-244",
@@ -8048,8 +8048,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.154017,
+    "lng": -48.570172
   },
   {
     "id": "UC-SC-245",
@@ -8081,8 +8081,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.152572,
+    "lng": -48.613608
   },
   {
     "id": "UC-SC-246",
@@ -8114,8 +8114,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.438249,
-    "lng": -49.596169
+    "lat": -26.441027,
+    "lng": -49.611926
   },
   {
     "id": "UC-SC-247",
@@ -8197,8 +8197,8 @@
     "ato_criacao": "DM 3841/2022",
     "outros_atos": "Sem informação.",
     "municipios": "SÃO FRANCISCO DO SUL (SC)",
-    "municipio_principal": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "municipio_principal": "Alfredo Wagner",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 6707.0,
     "area_km2": 67.07,
     "bioma": "Mata Atlântica",
@@ -8213,8 +8213,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -27.689161,
+    "lng": -49.321879
   },
   {
     "id": "UC-SC-250",
@@ -8246,8 +8246,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.94813,
-    "lng": -48.931151
+    "lat": -27.942725,
+    "lng": -48.937049
   },
   {
     "id": "4659",
@@ -8279,8 +8279,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.433124,
-    "lng": -48.689807
+    "lat": -27.427719,
+    "lng": -48.695705
   },
   {
     "id": "UC-SC-252",
@@ -8312,8 +8312,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.580488,
-    "lng": -48.660714
+    "lat": -27.575083,
+    "lng": -48.666612
   },
   {
     "id": "UC-SC-253",
@@ -8378,8 +8378,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.999697,
-    "lng": -48.626038
+    "lat": -26.988704,
+    "lng": -48.617603
   },
   {
     "id": "UC-SC-255",
@@ -8411,8 +8411,8 @@
     "link_mapa": "",
     "observacoes": "https://www.statkraft.com.br/globalassets/0/.com.br/8-statkraft-brazil/relatorios-meio-ambiente/pch-canoas---eia-e-rima/estudo-de-impacto-ambiental/anexos-eia/anexo-15---consultas-a-intervenientes/statkraft---pch-canoas---resposta-ima-ucs.pdf",
     "encaminhamentos": "",
-    "lat": -27.588497,
-    "lng": -50.685699
+    "lat": -27.583092,
+    "lng": -50.691597
   },
   {
     "id": "UC-SC-256",
@@ -8444,8 +8444,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.580488,
-    "lng": -48.660714
+    "lat": -27.591759,
+    "lng": -48.659728
   },
   {
     "id": "UC-SC-257",
@@ -8477,8 +8477,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.57884,
-    "lng": -48.839173
+    "lat": -27.573435,
+    "lng": -48.845071
   },
   {
     "id": "UC-SC-258",
@@ -8543,8 +8543,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.567526,
-    "lng": -49.508694
+    "lat": -28.562121,
+    "lng": -49.514592
   },
   {
     "id": "UC-SC-260",
@@ -8576,8 +8576,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.567526,
-    "lng": -49.508694
+    "lat": -28.578797,
+    "lng": -49.507708
   },
   {
     "id": "4898",
@@ -8609,8 +8609,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.204515,
+    "lng": -49.631217
   },
   {
     "id": "4996",
@@ -8642,8 +8642,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.161756,
-    "lng": -48.591435
+    "lat": -27.184684,
+    "lng": -48.580744
   },
   {
     "id": "4897",
@@ -8675,8 +8675,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.375089,
-    "lng": -48.57515
+    "lat": -27.369684,
+    "lng": -48.581048
   },
   {
     "id": "4900",
@@ -8708,8 +8708,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.210108,
-    "lng": -49.738184
+    "lat": -27.204703,
+    "lng": -49.744082
   },
   {
     "id": "4899",
@@ -8774,8 +8774,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.063865,
+    "lng": -48.645294
   },
   {
     "id": "UC-SC-267",
@@ -8807,8 +8807,8 @@
     "link_mapa": "SIM",
     "observacoes": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/mata-atlantica/lista-de-ucs/parna-da-serra-geral/arquivos/DCOM_pm_Parna_de_Aparados_da_Serra_Encarte_1.pdf",
     "encaminhamentos": "",
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.797978,
+    "lng": -49.277481
   },
   {
     "id": "UC-SC-268",
@@ -8840,8 +8840,8 @@
     "link_mapa": "SIM",
     "observacoes": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/mata-atlantica/lista-de-ucs/parna-da-serra-geral/arquivos/DCOM_pm_Parna_de_Aparados_da_Serra_Encarte_1.pdf",
     "encaminhamentos": "",
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.814654,
+    "lng": -49.270597
   },
   {
     "id": "UC-SC-269",
@@ -8873,8 +8873,8 @@
     "link_mapa": "SIM",
     "observacoes": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/mata-atlantica/lista-de-ucs/parna-da-serra-geral/arquivos/DCOM_pm_Parna_de_Aparados_da_Serra_Encarte_1.pdf",
     "encaminhamentos": "",
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.79239,
+    "lng": -49.263148
   },
   {
     "id": "UC-SC-270",
@@ -8906,8 +8906,8 @@
     "link_mapa": "",
     "observacoes": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/mata-atlantica/lista-de-ucs/parna-da-serra-geral/arquivos/DCOM_pm_Parna_de_Aparados_da_Serra_Encarte_1.pdf",
     "encaminhamentos": "",
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.806161,
+    "lng": -49.28734
   },
   {
     "id": "UC-SC-271",
@@ -8939,8 +8939,8 @@
     "link_mapa": "",
     "observacoes": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/mata-atlantica/lista-de-ucs/parna-da-serra-geral/arquivos/DCOM_pm_Parna_de_Aparados_da_Serra_Encarte_1.pdf",
     "encaminhamentos": "",
-    "lat": -26.803383,
-    "lng": -49.271583
+    "lat": -26.812995,
+    "lng": -49.256496
   },
   {
     "id": "UC-SC-272",
@@ -9071,8 +9071,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.059233,
+    "lng": -49.55005
   },
   {
     "id": "UC-SC-276",
@@ -9104,8 +9104,8 @@
     "link_mapa": "Sim",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -28.049621,
-    "lng": -49.565137
+    "lat": -28.030693,
+    "lng": -49.570209
   },
   {
     "id": "UC-SC-277",
@@ -9154,8 +9154,8 @@
     "ato_criacao": "",
     "outros_atos": "",
     "municipios": "",
-    "municipio_principal": "",
-    "mesorregiao": "",
+    "municipio_principal": "Florianópolis",
+    "mesorregiao": "Grande Florianópolis",
     "area_ha": 0.0,
     "area_km2": 0.0,
     "bioma": "Mata Atlântica",
@@ -9170,8 +9170,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": null,
-    "lng": null
+    "lat": -27.561764,
+    "lng": -48.498765
   },
   {
     "id": "UC-SC-279",
@@ -9187,8 +9187,8 @@
     "ato_criacao": "",
     "outros_atos": "",
     "municipios": "",
-    "municipio_principal": "",
-    "mesorregiao": "",
+    "municipio_principal": "São Francisco do Sul",
+    "mesorregiao": "Norte Catarinense",
     "area_ha": 0.0,
     "area_km2": 0.0,
     "bioma": "Mata Atlântica",
@@ -9203,8 +9203,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": null,
-    "lng": null
+    "lat": -26.30626,
+    "lng": -48.632895
   },
   {
     "id": "UC-SC-280",
@@ -9236,8 +9236,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.596602,
-    "lng": -48.497244
+    "lat": -27.624009,
+    "lng": -48.520241
   },
   {
     "id": "UC-SC-281",
@@ -9269,8 +9269,8 @@
     "link_mapa": "SIM",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.294989,
-    "lng": -48.633881
+    "lat": -26.283996,
+    "lng": -48.625446
   },
   {
     "id": "UC-SC-282",
@@ -9302,8 +9302,8 @@
     "link_mapa": "NÃO",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.054253,
-    "lng": -48.660381
+    "lat": -26.035325,
+    "lng": -48.665453
   },
   {
     "id": "UC-SC-283",
@@ -9335,8 +9335,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.929832,
-    "lng": -48.984956
+    "lat": -26.941103,
+    "lng": -48.98397
   },
   {
     "id": "UC-SC-284",
@@ -9434,8 +9434,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.193244,
-    "lng": -49.632203
+    "lat": -27.182251,
+    "lng": -49.623768
   },
   {
     "id": "UC-SC-287",
@@ -9467,8 +9467,8 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -27.170208,
-    "lng": -48.522253
+    "lat": -27.172986,
+    "lng": -48.53801
   },
   {
     "id": "UC-SC-288",
@@ -9500,7 +9500,7 @@
     "link_mapa": "",
     "observacoes": "",
     "encaminhamentos": "",
-    "lat": -26.499031,
-    "lng": -49.887475
+    "lat": -26.521959,
+    "lng": -49.876784
   }
 ]
