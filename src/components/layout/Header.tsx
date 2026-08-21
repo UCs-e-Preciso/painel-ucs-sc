@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useData } from '../../context/DataContext';
 import { ActiveTab } from '../../types';
 import { GOOGLE_SHEETS_URL } from '../../services/dataService';
@@ -11,7 +11,6 @@ import {
   Search,
   PieChart,
   RefreshCw,
-  Upload,
   ExternalLink,
   Sun,
   Moon,
@@ -24,14 +23,11 @@ export const Header: React.FC = () => {
     data,
     syncing,
     syncLive,
-    handleFileUpload,
     activeTab,
     setActiveTab,
     darkMode,
     toggleDarkMode,
   } = useData();
-
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const navItems: { id: ActiveTab; label: string; icon: React.ReactNode }[] = [
     { id: 'visao-geral', label: 'Visão Geral', icon: <Trees className="w-4 h-4" /> },
@@ -42,13 +38,6 @@ export const Header: React.FC = () => {
     { id: 'explorador-ucs', label: 'Explorador de UCs', icon: <Search className="w-4 h-4" /> },
     { id: 'demografia-territorio', label: 'Demografia & Território', icon: <PieChart className="w-4 h-4" /> },
   ];
-
-  const onFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      handleFileUpload(file);
-    }
-  };
 
   return (
     <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-40 shadow-sm transition-colors">
@@ -92,28 +81,11 @@ export const Header: React.FC = () => {
             <button
               onClick={syncLive}
               disabled={syncing}
-              title="Sincronizar com a planilha do Google Sheets"
+              title="Sincronizar com a planilha oficial do Google Sheets"
               className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/50 dark:text-emerald-300 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 transition shadow-sm disabled:opacity-50"
             >
               <RefreshCw className={`w-3.5 h-3.5 mr-1.5 ${syncing ? 'animate-spin' : ''}`} />
-              {syncing ? 'Sincronizando...' : 'Sincronizar'}
-            </button>
-
-            {/* Upload XLSX Button */}
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={onFileChange}
-              accept=".xlsx,.xls"
-              className="hidden"
-            />
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              title="Carregar arquivo .xlsx do seu computador"
-              className="inline-flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition"
-            >
-              <Upload className="w-3.5 h-3.5 sm:mr-1" />
-              <span className="hidden sm:inline">Upload .xlsx</span>
+              {syncing ? 'Sincronizando...' : 'Sincronizar Dados'}
             </button>
 
             {/* Google Sheets Link */}
