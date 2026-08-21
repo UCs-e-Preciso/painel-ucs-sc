@@ -156,6 +156,7 @@ export const MapaInterativo: React.FC = () => {
         opacity: isMesoHovered ? 1 : isMesoSelected ? 0.85 : 0.25,
         color: isMesoHovered ? '#ffffff' : darkMode ? '#1e293b' : '#ffffff',
         fillOpacity: isMesoHovered ? 0.75 : isMesoSelected ? 0.42 : 0.08,
+        className: 'sc-municipality-polygon',
       };
     }
 
@@ -166,6 +167,7 @@ export const MapaInterativo: React.FC = () => {
         opacity: 0.8,
         color: isMesoHovered ? '#10b981' : darkMode ? '#334155' : '#cbd5e1',
         fillOpacity: isMesoHovered ? 0.6 : 0.15,
+        className: 'sc-municipality-polygon',
       };
     }
 
@@ -184,6 +186,7 @@ export const MapaInterativo: React.FC = () => {
       opacity: 0.8,
       color: isMesoHovered ? '#10b981' : darkMode ? '#334155' : '#cbd5e1',
       fillOpacity: isMesoHovered ? 0.85 : count > 0 ? 0.65 : 0.2,
+      className: 'sc-municipality-polygon',
     };
   };
 
