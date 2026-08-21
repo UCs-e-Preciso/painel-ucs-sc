@@ -9,6 +9,7 @@ import {
   Popup,
   Tooltip,
   useMap,
+  useMapEvents,
 } from 'react-leaflet';
 import L from 'leaflet';
 import {
@@ -75,6 +76,19 @@ const MapController: React.FC<{ targetBounds: L.LatLngBoundsExpression | null }>
       map.flyToBounds(targetBounds, { padding: [40, 40], maxZoom: 10, duration: 0.8 });
     }
   }, [targetBounds, map]);
+  return null;
+};
+
+// Map click and popup close listener to clear marker selection
+const MapEventsHandler: React.FC<{ onClearSelection: () => void }> = ({ onClearSelection }) => {
+  useMapEvents({
+    click: () => {
+      onClearSelection();
+    },
+    popupclose: () => {
+      onClearSelection();
+    },
+  });
   return null;
 };
 
@@ -360,6 +374,8 @@ export const MapaInterativo: React.FC = () => {
         if (typeof l.getBounds === 'function') {
           setMapTargetBounds(l.getBounds());
         }
+        setSelectedMarkerId(null);
+        setSelectedUc(null);
         setSelectedMunInfo({
           code: cod,
           name,
@@ -424,7 +440,14 @@ export const MapaInterativo: React.FC = () => {
     setActiveTab('explorador-ucs');
   };
 
+  const handleClearMarkerSelection = () => {
+    setSelectedMarkerId(null);
+    setSelectedUc(null);
+  };
+
   const handleSelectTerritorio = (nome: string) => {
+    setSelectedMarkerId(null);
+    setSelectedUc(null);
     if (selectedTerritorio === nome) {
       setSelectedTerritorio('');
       setMapTargetBounds([[-29.4, -53.9], [-25.9, -48.3]]);
@@ -980,6 +1003,7 @@ export const MapaInterativo: React.FC = () => {
             className="w-full h-full"
           >
             <MapController targetBounds={mapTargetBounds} />
+            <MapEventsHandler onClearSelection={handleClearMarkerSelection} />
 
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
