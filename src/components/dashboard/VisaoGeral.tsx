@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useData } from '../../context/DataContext';
 import {
   Trees,
@@ -19,6 +19,7 @@ import {
   PieChart,
   Pie,
   Cell,
+  Sector,
   BarChart,
   Bar,
   XAxis,
@@ -29,8 +30,32 @@ import {
   Area,
 } from 'recharts';
 
+const renderActiveShape = (props: any) => {
+  const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill } = props;
+  return (
+    <g style={{ outline: 'none' }}>
+      <Sector
+        cx={cx}
+        cy={cy}
+        innerRadius={innerRadius - 2}
+        outerRadius={outerRadius + 7}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        style={{
+          filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35))',
+          cursor: 'pointer',
+          outline: 'none',
+        }}
+      />
+    </g>
+  );
+};
+
 export const VisaoGeral: React.FC = () => {
   const { filteredUcs, data, setActiveTab } = useData();
+  const [activeEsferaIndex, setActiveEsferaIndex] = useState<number | undefined>(undefined);
+  const [activeGrupoIndex, setActiveGrupoIndex] = useState<number | undefined>(undefined);
 
   // Calculate dynamic KPIs from filteredUcs
   const stats = useMemo(() => {
@@ -106,7 +131,7 @@ export const VisaoGeral: React.FC = () => {
     });
     return Object.entries(map)
       .map(([name, val]) => ({
-        name: name.length > 28 ? name.substring(0, 26) + '...' : name,
+        name,
         fullName: name,
         count: val.count,
         area_ha: Math.round(val.area_ha),
@@ -296,11 +321,20 @@ export const VisaoGeral: React.FC = () => {
                   innerRadius={45}
                   outerRadius={75}
                   paddingAngle={4}
+                  activeIndex={activeEsferaIndex}
+                  activeShape={renderActiveShape}
+                  onMouseEnter={(_, index) => setActiveEsferaIndex(index)}
+                  onMouseLeave={() => setActiveEsferaIndex(undefined)}
                   labelLine={false}
                   label={({ percent }) => (percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : '')}
                 >
                   {esferaData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS_ESFERA[index % COLORS_ESFERA.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS_ESFERA[index % COLORS_ESFERA.length]}
+                      className="cursor-pointer transition-all duration-200"
+                      style={{ outline: 'none' }}
+                    />
                   ))}
                 </Pie>
                 <Tooltip
@@ -315,8 +349,18 @@ export const VisaoGeral: React.FC = () => {
           <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-3 gap-2 text-center text-xs">
             {esferaData.map((e, idx) => {
               const pct = stats.total ? Math.round((e.count / stats.total) * 100) : 0;
+              const isActive = activeEsferaIndex === idx;
               return (
-                <div key={e.name} className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80">
+                <div
+                  key={e.name}
+                  onMouseEnter={() => setActiveEsferaIndex(idx)}
+                  onMouseLeave={() => setActiveEsferaIndex(undefined)}
+                  className={`p-2 rounded-xl border transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-300 dark:border-emerald-700 scale-105 shadow-sm'
+                      : 'bg-slate-50 dark:bg-slate-800/60 border-slate-100 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                >
                   <div className="flex items-center justify-center gap-1.5 mb-1">
                     <span
                       className="w-2.5 h-2.5 rounded-full shrink-0"
@@ -359,11 +403,20 @@ export const VisaoGeral: React.FC = () => {
                   innerRadius={45}
                   outerRadius={75}
                   paddingAngle={4}
+                  activeIndex={activeGrupoIndex}
+                  activeShape={renderActiveShape}
+                  onMouseEnter={(_, index) => setActiveGrupoIndex(index)}
+                  onMouseLeave={() => setActiveGrupoIndex(undefined)}
                   labelLine={false}
                   label={({ percent }) => (percent > 0.05 ? `${(percent * 100).toFixed(0)}%` : '')}
                 >
                   {grupoData.map((entry, index) => (
-                    <Cell key={`cell-grp-${index}`} fill={COLORS_GRUPO[index % COLORS_GRUPO.length]} />
+                    <Cell
+                      key={`cell-grp-${index}`}
+                      fill={COLORS_GRUPO[index % COLORS_GRUPO.length]}
+                      className="cursor-pointer transition-all duration-200"
+                      style={{ outline: 'none' }}
+                    />
                   ))}
                 </Pie>
                 <Tooltip
@@ -378,8 +431,18 @@ export const VisaoGeral: React.FC = () => {
           <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-2 text-center text-xs">
             {grupoData.map((g, idx) => {
               const pct = stats.total ? Math.round((g.count / stats.total) * 100) : 0;
+              const isActive = activeGrupoIndex === idx;
               return (
-                <div key={g.name} className="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800/80">
+                <div
+                  key={g.name}
+                  onMouseEnter={() => setActiveGrupoIndex(idx)}
+                  onMouseLeave={() => setActiveGrupoIndex(undefined)}
+                  className={`p-2 rounded-xl border transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? 'bg-blue-50 dark:bg-blue-950/40 border-blue-300 dark:border-blue-700 scale-105 shadow-sm'
+                      : 'bg-slate-50 dark:bg-slate-800/60 border-slate-100 dark:border-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                >
                   <div className="flex items-center justify-center gap-1.5 mb-1">
                     <span
                       className="w-2.5 h-2.5 rounded-full shrink-0"
@@ -443,11 +506,11 @@ export const VisaoGeral: React.FC = () => {
             <p className="text-xs text-slate-500">Número de unidades por tipologia do SNUC</p>
           </div>
         </div>
-        <div className="h-72">
+        <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={categoriaData} layout="vertical" margin={{ left: 10, right: 30, top: 10, bottom: 10 }}>
               <XAxis type="number" tick={{ fontSize: 12 }} />
-              <YAxis dataKey="name" type="category" width={190} tick={{ fontSize: 12 }} />
+              <YAxis dataKey="name" type="category" width={270} tick={{ fontSize: 12 }} />
               <Tooltip
                 formatter={(val: any, name: any, item: any) => [
                   `${val} unidades (${item.payload.area_ha.toLocaleString('pt-BR')} ha)`,
