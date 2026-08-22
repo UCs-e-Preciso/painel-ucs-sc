@@ -12,6 +12,7 @@ import {
   Award,
   Sparkles,
 } from 'lucide-react';
+import { CustomSelect } from '../common/CustomSelect';
 
 export const GovernancaMunicipal: React.FC = () => {
   const { data } = useData();
@@ -140,18 +141,16 @@ export const GovernancaMunicipal: React.FC = () => {
           />
         </div>
 
-        <select
+        <CustomSelect
           value={selectedMeso}
-          onChange={(e) => setSelectedMeso(e.target.value)}
-          className="px-3 py-2 text-xs rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 focus:ring-1 focus:ring-blue-500 w-full sm:w-auto"
-        >
-          <option value="">Todas as Mesorregiões</option>
-          {mesorregioes.map((m) => (
-            <option key={m} value={m}>
-              {m}
-            </option>
-          ))}
-        </select>
+          onChange={(val) => setSelectedMeso(val)}
+          options={[
+            { value: '', label: 'Todas as Mesorregiões' },
+            ...mesorregioes.map((m) => ({ value: m, label: m })),
+          ]}
+          placeholder="Todas as Mesorregiões"
+          className="w-full sm:w-64"
+        />
       </div>
 
       {/* Municipalities Table */}

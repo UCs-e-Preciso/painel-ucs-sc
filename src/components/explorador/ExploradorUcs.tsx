@@ -16,6 +16,7 @@ import {
   Eye,
   Building,
 } from 'lucide-react';
+import { CustomSelect } from '../common/CustomSelect';
 
 export const ExploradorUcs: React.FC = () => {
   const { filteredUcs, setSelectedUc } = useData();
@@ -319,19 +320,20 @@ export const ExploradorUcs: React.FC = () => {
         <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <span>Linhas por página:</span>
-            <select
+            <CustomSelect
               value={pageSize}
-              onChange={(e) => {
-                setPageSize(Number(e.target.value));
+              onChange={(val) => {
+                setPageSize(Number(val));
                 setCurrentPage(1);
               }}
-              className="px-2 py-1 rounded bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200"
-            >
-              <option value={15}>15</option>
-              <option value={20}>20</option>
-              <option value={50}>50</option>
-              <option value={100}>100</option>
-            </select>
+              options={[
+                { value: 15, label: '15' },
+                { value: 20, label: '20' },
+                { value: 50, label: '50' },
+                { value: 100, label: '100' },
+              ]}
+              className="w-20"
+            />
             <span>
               Mostrando {(currentPage - 1) * pageSize + 1} a{' '}
               {Math.min(currentPage * pageSize, sortedUcs.length)} de {sortedUcs.length}
