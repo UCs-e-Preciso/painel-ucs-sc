@@ -39,7 +39,7 @@ export const GlobalFilters: React.FC = () => {
   }, [data]);
 
   return (
-    <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
+    <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors relative z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         {/* Top Row: Search + Quick Selects + Toggle */}
         <div className="flex flex-col md:flex-row items-center gap-3">
@@ -64,7 +64,7 @@ export const GlobalFilters: React.FC = () => {
           </div>
 
           {/* Quick Selects */}
-          <div className="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+          <div className="flex flex-wrap md:flex-nowrap items-center gap-2 w-full md:w-auto">
             {/* Esfera */}
             <CustomSelect
               value={filters.esfera}

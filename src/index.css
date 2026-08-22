@@ -59,6 +59,22 @@
   transform-origin: top center;
 }
 
+@keyframes dropdownOpenUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dropdownOpenUp {
+  animation: dropdownOpenUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: bottom center;
+}
+
 /* Leaflet Popup Fixes */
 .leaflet-popup-content-wrapper {
   border-radius: 1rem !important;

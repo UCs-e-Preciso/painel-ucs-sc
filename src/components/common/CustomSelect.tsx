@@ -21,6 +21,7 @@ interface CustomSelectProps {
   disabled?: boolean;
   size?: 'sm' | 'md';
   align?: 'left' | 'right';
+  direction?: 'auto' | 'down' | 'up';
   showClear?: boolean;
   prefix?: React.ReactNode;
 }
@@ -37,10 +38,12 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   disabled = false,
   size = 'sm',
   align = 'left',
+  direction = 'auto',
   showClear = false,
   prefix,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openUpward, setOpenUpward] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Normalize options to SelectOption objects
@@ -72,6 +75,20 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
     };
 
     if (isOpen) {
+      if (direction === 'up') {
+        setOpenUpward(true);
+      } else if (direction === 'down') {
+        setOpenUpward(false);
+      } else if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        const spaceBelow = window.innerHeight - rect.bottom;
+        if (spaceBelow < 220 && rect.top > 220) {
+          setOpenUpward(true);
+        } else {
+          setOpenUpward(false);
+        }
+      }
+
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('keydown', handleKeyDown);
     }
@@ -80,7 +97,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen]);
+  }, [isOpen, direction]);
 
   const handleSelect = (val: string | number) => {
     onChange(val);
@@ -99,7 +116,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   const fontSize = size === 'sm' ? 'text-xs' : 'text-xs sm:text-sm';
 
   return (
-    <div className={`relative ${className}`} ref={containerRef}>
+    <div className={`relative ${isOpen ? 'z-[60]' : 'z-10'} ${className}`} ref={containerRef}>
       {label && (
         <label className="block text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
           {label}
@@ -155,13 +172,15 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         </div>
       </button>
 
-      {/* Floating Menu with Glassmorphism and Smooth Slide-in Animation */}
+      {/* Floating Menu with Smooth Slide-in Animation */}
       {isOpen && (
         <div
           role="listbox"
-          className={`absolute z-50 mt-1.5 max-h-64 w-full min-w-[190px] overflow-y-auto rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200/90 dark:border-slate-700/90 p-1 shadow-2xl ring-1 ring-black/5 animate-dropdownOpen ${
-            align === 'right' ? 'right-0' : 'left-0'
-          } ${menuClassName}`}
+          className={`absolute z-[100] max-h-64 w-full min-w-[190px] overflow-y-auto rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1 shadow-2xl ring-1 ring-black/10 ${
+            openUpward
+              ? 'bottom-full mb-1.5 animate-dropdownOpenUp origin-bottom'
+              : 'top-full mt-1.5 animate-dropdownOpen origin-top'
+          } ${align === 'right' ? 'right-0' : 'left-0'} ${menuClassName}`}
         >
           {normalizedOptions.length === 0 ? (
             <div className="py-2.5 px-3 text-xs text-slate-400 text-center">Nenhuma opção</div>

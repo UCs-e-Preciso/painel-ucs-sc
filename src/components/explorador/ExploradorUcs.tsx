@@ -317,11 +317,12 @@ export const ExploradorUcs: React.FC = () => {
         </div>
 
         {/* Pagination Bar */}
-        <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500 relative z-30">
           <div className="flex items-center gap-2">
             <span>Linhas por página:</span>
             <CustomSelect
               value={pageSize}
+              direction="up"
               onChange={(val) => {
                 setPageSize(Number(val));
                 setCurrentPage(1);
