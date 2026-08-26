@@ -20,7 +20,7 @@ export const UcDetailModal: React.FC = () => {
   if (!selectedUc) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs animate-fadeIn">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-xs animate-fadeIn">
       <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-800 space-y-6 max-h-[90vh] overflow-y-auto">
         {/* Modal Header */}
         <div className="flex justify-between items-start border-b border-slate-100 dark:border-slate-800 pb-4">
