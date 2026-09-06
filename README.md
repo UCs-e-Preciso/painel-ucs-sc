@@ -124,6 +124,21 @@ Os arquivos JSON normalizados são gravados em `public/data/` e `data_processed/
 
 ---
 
+## 🔄 Sincronização Diária (SharePoint / GitHub Actions)
+
+O projeto possui um fluxo automatizado (via GitHub Actions) para baixar a planilha atualizada diretamente do SharePoint e convertê-la em um JSON estático, resolvendo questões de CORS e autenticação. A rotina roda todos os dias às 03:00 UTC.
+
+Para configurar essa automação no seu repositório:
+1. Vá até a aba **Settings** > **Secrets and variables** > **Actions**.
+2. Adicione os seguintes *Repository secrets*:
+   - `MS_TENANT_ID`: ID do seu diretório Entra ID.
+   - `MS_CLIENT_ID`: ID do aplicativo registrado.
+   - `MS_CLIENT_SECRET`: Segredo do aplicativo.
+   - `MS_SHAREPOINT_HOSTNAME`: Domínio do SharePoint (ex: *universidade.sharepoint.com*).
+*(Consulte o arquivo `.env.example` para detalhes adicionais de configuração e personalização).*
+
+---
+
 ## 🚀 Publicação no GitHub Pages
 
 O projeto está configurado para publicar **exclusivamente os arquivos estáticos puros (HTML/CSS/JS)**:

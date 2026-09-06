@@ -1,0 +1,36 @@
+name: Processar Planilha do SharePoint
+
+on:
+  push:
+    paths:
+      - 'data_raw/*.xlsx' # Dispara automaticamente quando você faz push/upload da planilha atualizada
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Conversion Script
+        run: node scripts/sync-sharepoint.js
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/dados.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): Atualiza JSON com base na planilha mais recente" && git push)

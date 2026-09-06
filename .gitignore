@@ -33,3 +33,11 @@ excel_summary.json
 sc_municipios_centroids.json
 ibge_municipios_sc.json
 downloaded_from_gsheets.xlsx
+
+# Segredos e Configurações Locais
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários e de sincronização
+# (Removido o *.xlsx global para permitir que o Power Automate envie para data_raw)
