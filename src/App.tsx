@@ -10,7 +10,6 @@ import { MosaicoSocioambiental } from './components/mosaico/MosaicoSocioambienta
 import { ExploradorUcs } from './components/explorador/ExploradorUcs';
 import { DemografiaTerritorio } from './components/demografia/DemografiaTerritorio';
 import { UcDetailModal } from './components/modals/UcDetailModal';
-import { GOOGLE_SHEETS_URL } from './services/dataService';
 import { ShieldCheck, RefreshCw, AlertCircle, ExternalLink, Heart } from 'lucide-react';
 
 export const AppContent: React.FC = () => {
@@ -83,15 +82,6 @@ export const AppContent: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-4 text-xs">
-            <a
-              href={GOOGLE_SHEETS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center hover:text-emerald-600 dark:hover:text-emerald-400 transition"
-            >
-              <span>Fonte: Planilha Google Sheets</span>
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </a>
             <a
               href="https://cnuc.mma.gov.br/powerbi"
               target="_blank"
