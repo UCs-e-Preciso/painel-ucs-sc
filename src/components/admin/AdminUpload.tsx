@@ -51,7 +51,7 @@ export const AdminUpload: React.FC = () => {
       return;
     }
 
-    if (!file.name.endsWith('.xlsx')) {
+    if (!file.name.toLowerCase().endsWith('.xlsx')) {
       setStatus({ type: 'error', message: 'O arquivo precisa ter a extensão .xlsx' });
       return;
     }
@@ -65,25 +65,24 @@ export const AdminUpload: React.FC = () => {
 
       // 2. Get current file SHA to update it (if it exists)
       let sha = '';
-      try {
-        const getFileResponse = await fetch(
-          `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${encodeURIComponent(filePath)}?ref=${branchName}`,
-          {
-            headers: {
-              Authorization: `token ${token}`,
-              Accept: 'application/vnd.github.v3+json',
-            },
-          }
-        );
-
-        if (getFileResponse.ok) {
-          const fileData = await getFileResponse.json();
-          sha = fileData.sha;
-        } else if (getFileResponse.status !== 404) {
-          throw new Error('Falha ao verificar arquivo existente.');
+      const getFileResponse = await fetch(
+        `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${encodeURIComponent(filePath)}?ref=${branchName}`,
+        {
+          headers: {
+            Authorization: `token ${token}`,
+            Accept: 'application/vnd.github.v3+json',
+          },
         }
-      } catch (err) {
-        console.warn('Arquivo não encontrado no repositório, será criado um novo.', err);
+      );
+
+      if (getFileResponse.status === 404) {
+        sha = '';
+      } else if (!getFileResponse.ok) {
+        const errorData = await getFileResponse.json();
+        throw new Error(errorData.message || 'Falha ao verificar arquivo existente.');
+      } else {
+        const fileData = await getFileResponse.json();
+        sha = fileData.sha;
       }
 
       // 3. Upload/Update file via GitHub API
@@ -118,9 +117,12 @@ export const AdminUpload: React.FC = () => {
         const errorData = await uploadResponse.json();
         throw new Error(errorData.message || 'Erro ao fazer upload no GitHub');
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
-      setStatus({ type: 'error', message: error.message || 'Ocorreu um erro desconhecido.' });
+      setStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Ocorreu um erro desconhecido.',
+      });
     } finally {
       setIsUploading(false);
     }
@@ -159,7 +161,7 @@ export const AdminUpload: React.FC = () => {
                 </div>
                 <input
                   type="file"
-                  className="hidden"
+                  className="sr-only"
                   accept=".xlsx"
                   onChange={handleFileChange}
                   ref={fileInputRef}
@@ -182,26 +184,28 @@ export const AdminUpload: React.FC = () => {
 
           {/* GitHub Token */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+            <label htmlFor="github-token" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
               <Key className="w-4 h-4 text-amber-500" />
               Token de Acesso do GitHub (PAT)
             </label>
             <input
+              id="github-token"
               type="password"
               value={token}
               onChange={(e) => setToken(e.target.value)}
-              placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+              placeholder="github_pat_xxxxxxxxxxxxxxxxxxxx"
               className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 transition font-mono"
               disabled={isUploading}
             />
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
-              Você precisa de um token com permissão de <code className="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded">repo</code> para atualizar arquivos. Esse token não é salvo em nenhum lugar.
+              Use um token fine-grained restrito a este repositório, com permissão de <code className="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded">Contents: Read and write</code>. Esse token não é salvo em nenhum lugar.
             </p>
           </div>
 
           {/* Status Message */}
           {status.type && (
             <div
+              role="alert"
               className={`p-4 rounded-xl flex items-start gap-3 border ${
                 status.type === 'error'
                   ? 'bg-rose-50 border-rose-200 text-rose-800 dark:bg-rose-950/30 dark:border-rose-900 dark:text-rose-300'

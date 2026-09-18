@@ -16,6 +16,16 @@ import { ShieldCheck, RefreshCw, AlertCircle, ExternalLink, Database } from 'luc
 export const AppContent: React.FC = () => {
   const { activeTab, loading, error, syncLive, data } = useData();
 
+  if (activeTab === 'admin') {
+    return (
+      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors">
+        <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <AdminUpload />
+        </div>
+      </div>
+    );
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 p-4">
@@ -48,16 +58,6 @@ export const AppContent: React.FC = () => {
             <RefreshCw className="w-4 h-4 mr-2" />
             Tentar Novamente
           </button>
-        </div>
-      </div>
-    );
-  }
-
-  if (activeTab === 'admin') {
-    return (
-      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors">
-        <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <AdminUpload />
         </div>
       </div>
     );
