@@ -59,7 +59,9 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [loading, setLoading] = useState<boolean>(true);
   const [syncing, setSyncing] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<ActiveTab>('visao-geral');
+  const [activeTab, setActiveTab] = useState<ActiveTab>(() => {
+    return window.location.hash === '#admin' ? 'admin' : 'visao-geral';
+  });
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [selectedUc, setSelectedUc] = useState<UC | null>(null);
   const [selectedMunicipio, setSelectedMunicipio] = useState<MunicipioLegislacao | null>(null);
@@ -79,6 +81,32 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
+
+  // Sync hash with activeTab
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#admin') {
+        setActiveTab('admin');
+      } else if (activeTab === 'admin') {
+        setActiveTab('visao-geral'); // fallback when hash is removed
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [activeTab]);
+
+  useEffect(() => {
+    if (activeTab === 'admin') {
+      if (window.location.hash !== '#admin') {
+        window.history.pushState(null, '', '#admin');
+      }
+    } else {
+      if (window.location.hash === '#admin') {
+        window.history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    }
+  }, [activeTab]);
 
   useEffect(() => {
     const init = async () => {

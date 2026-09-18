@@ -10,10 +10,21 @@ import { MosaicoSocioambiental } from './components/mosaico/MosaicoSocioambienta
 import { ExploradorUcs } from './components/explorador/ExploradorUcs';
 import { DemografiaTerritorio } from './components/demografia/DemografiaTerritorio';
 import { UcDetailModal } from './components/modals/UcDetailModal';
-import { ShieldCheck, RefreshCw, AlertCircle, ExternalLink, Heart } from 'lucide-react';
+import { AdminUpload } from './components/admin/AdminUpload';
+import { ShieldCheck, RefreshCw, AlertCircle, ExternalLink, Database } from 'lucide-react';
 
 export const AppContent: React.FC = () => {
   const { activeTab, loading, error, syncLive, data } = useData();
+
+  if (activeTab === 'admin') {
+    return (
+      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 transition-colors">
+        <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <AdminUpload />
+        </div>
+      </div>
+    );
+  }
 
   if (loading) {
     return (
