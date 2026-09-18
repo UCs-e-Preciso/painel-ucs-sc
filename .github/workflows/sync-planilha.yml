@@ -25,12 +25,14 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Run Conversion Script
-        run: node scripts/sync-sharepoint.js
+      - name: Regenerate data and docs
+        run: |
+          npm run sync-data
+          npm run build:docs
 
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/dados.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): Atualiza JSON com base na planilha mais recente" && git push)
+          git add public/data data_processed docs
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): atualiza dados e docs com base na planilha mais recente" && git push)
