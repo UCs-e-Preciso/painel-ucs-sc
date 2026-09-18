@@ -191,6 +191,7 @@ export const AdminUpload: React.FC = () => {
             <input
               id="github-token"
               type="password"
+              aria-label="Token de Acesso do GitHub (PAT)"
               value={token}
               onChange={(e) => setToken(e.target.value)}
               placeholder="github_pat_xxxxxxxxxxxxxxxxxxxx"
