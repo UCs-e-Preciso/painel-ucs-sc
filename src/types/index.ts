@@ -203,4 +203,5 @@ export type ActiveTab =
   | 'governanca-municipal' 
   | 'mosaico-socioambiental' 
   | 'explorador-ucs' 
-  | 'demografia-territorio';
+  | 'demografia-territorio'
+  | 'admin';
