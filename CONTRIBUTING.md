@@ -68,6 +68,7 @@ Se você adicionar novas linhas na planilha do Excel (`data_raw/UCs de SC-comple
    * `feat: adiciona filtro por bacia hidrografica`
    * `fix: corrige calculo de area protegida da APA do Rio Vermelho`
    * `docs: atualiza dicionario de dados`
+   > O versionamento automático na `main` usa esses tipos para definir o bump de versão e atualizar o changelog.
 3. Execute o build para garantir que não há erros de tipagem:
    ```bash
    npm run build:docs

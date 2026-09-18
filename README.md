@@ -29,6 +29,7 @@
 - [Instalação e Execução Local](#-instalação-e-execução-local)
 - [Pipeline de Dados (ETL)](#-pipeline-de-dados-etl)
 - [Publicação no GitHub Pages](#-publicação-no-github-pages)
+- [Versionamento Automático](#-versionamento-automático)
 - [Documentação Detalhada](#-documentação-detalhada)
 - [Licença](#-licença)
 
@@ -153,6 +154,18 @@ git commit -m "update: atualizacao do painel"
 git push origin main
 git subtree push --prefix docs origin gh-pages
 ```
+
+---
+
+## 🔖 Versionamento Automático
+
+O versionamento agora é feito com base na branch **`main`** via GitHub Actions (`.github/workflows/release-please.yml`), seguindo **Semantic Versioning** e **Conventional Commits**:
+
+- `feat:` → incrementa versão **minor**
+- `fix:` → incrementa versão **patch**
+- `feat!` ou `BREAKING CHANGE` → incrementa versão **major**
+
+O fluxo cria PR/release automaticamente e mantém `CHANGELOG.md` e `package.json` alinhados com a versão publicada.
 
 ---
 
