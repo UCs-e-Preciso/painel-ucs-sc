@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { Upload, Key, Save, AlertCircle, CheckCircle, Github } from 'lucide-react';
+import { Upload, Key, Save, AlertCircle, CheckCircle, Github, ArrowLeft, Sun, Moon, Database } from 'lucide-react';
+import { useData } from '../../context/DataContext';
 
 export const AdminUpload: React.FC = () => {
+  const { setActiveTab, darkMode, toggleDarkMode } = useData();
   const [token, setToken] = useState('');
   const [file, setFile] = useState<File | null>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -11,11 +13,16 @@ export const AdminUpload: React.FC = () => {
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // You can customize the repo details here or even make them configurable
-  const repoOwner = 'rafaelst97';
+  // Repositório oficial do Observatório de UCs de Santa Catarina
+  const repoOwner = 'UCs-e-Preciso';
   const repoName = 'painel-ucs-sc';
   const filePath = 'data_raw/UCs de SC-completo.xlsx';
   const branchName = 'main';
+
+  const handleReturnToDashboard = () => {
+    window.location.hash = '';
+    setActiveTab('visao-geral');
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -42,7 +49,8 @@ export const AdminUpload: React.FC = () => {
   };
 
   const handleUpload = async () => {
-    if (!token) {
+    const cleanToken = token.trim();
+    if (!cleanToken) {
       setStatus({ type: 'error', message: 'Por favor, insira o Token do GitHub.' });
       return;
     }
@@ -69,7 +77,7 @@ export const AdminUpload: React.FC = () => {
         `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${encodeURIComponent(filePath)}?ref=${branchName}`,
         {
           headers: {
-            Authorization: `token ${token}`,
+            Authorization: `token ${cleanToken}`,
             Accept: 'application/vnd.github.v3+json',
           },
         }
@@ -91,7 +99,7 @@ export const AdminUpload: React.FC = () => {
         {
           method: 'PUT',
           headers: {
-            Authorization: `token ${token}`,
+            Authorization: `token ${cleanToken}`,
             Accept: 'application/vnd.github.v3+json',
             'Content-Type': 'application/json',
           },
@@ -107,7 +115,7 @@ export const AdminUpload: React.FC = () => {
       if (uploadResponse.ok) {
         setStatus({
           type: 'success',
-          message: 'Planilha atualizada com sucesso no GitHub! As alterações aparecerão no painel em alguns minutos (após a conclusão do GitHub Actions).',
+          message: 'Planilha atualizada com sucesso no repositório GitHub! As alterações serão processadas e o painel será atualizado automaticamente pelo GitHub Actions em instantes.',
         });
         setFile(null);
         if (fileInputRef.current) {
@@ -115,7 +123,7 @@ export const AdminUpload: React.FC = () => {
         }
       } else {
         const errorData = await uploadResponse.json();
-        throw new Error(errorData.message || 'Erro ao fazer upload no GitHub');
+        throw new Error(errorData.message || 'Erro ao fazer upload no GitHub.');
       }
     } catch (error: unknown) {
       console.error(error);
@@ -129,7 +137,35 @@ export const AdminUpload: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 sm:p-12 animate-fadeIn max-w-2xl mx-auto">
+    <div className="flex flex-col items-center justify-center p-4 sm:p-8 animate-fadeIn max-w-2xl mx-auto">
+      {/* Barra de Navegação Superior */}
+      <div className="w-full flex items-center justify-between mb-6">
+        <button
+          type="button"
+          onClick={handleReturnToDashboard}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow transition"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Voltar ao Painel</span>
+        </button>
+
+        <div className="flex items-center gap-2">
+          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+            <Database className="w-3.5 h-3.5" />
+            <span>UCs-e-Preciso / painel-ucs-sc</span>
+          </div>
+
+          <button
+            type="button"
+            onClick={toggleDarkMode}
+            className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm transition"
+            aria-label="Alternar tema claro/escuro"
+          >
+            {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-500" />}
+          </button>
+        </div>
+      </div>
+
       <div className="w-full bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden">
         <div className="p-8 border-b border-slate-100 dark:border-slate-800 text-center">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-700 flex items-center justify-center text-white shadow-xl shadow-indigo-500/20 mx-auto mb-4">

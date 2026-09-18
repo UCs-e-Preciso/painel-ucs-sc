@@ -14,9 +14,11 @@
 
 ## 🌐 Acesso Rápido
 
-* 🚀 **Dashboard Online no GitHub Pages**: [https://rafaelst97.github.io/painel-ucs-sc/](https://rafaelst97.github.io/painel-ucs-sc/)
-* 📁 **Repositório GitHub**: [https://github.com/rafaelst97/painel-ucs-sc](https://github.com/rafaelst97/painel-ucs-sc)
+* 🚀 **Dashboard Online no GitHub Pages**: [https://ucs-e-preciso.github.io/painel-ucs-sc/](https://ucs-e-preciso.github.io/painel-ucs-sc/)
+* ⚙️ **Painel Administrativo (Upload de Planilha)**: [https://ucs-e-preciso.github.io/painel-ucs-sc/#admin](https://ucs-e-preciso.github.io/painel-ucs-sc/#admin)
+* 📁 **Repositório GitHub**: [https://github.com/UCs-e-Preciso/painel-ucs-sc](https://github.com/UCs-e-Preciso/painel-ucs-sc)
 * 📊 **Planilha Fonte (Google Sheets)**: [Acessar Google Docs](https://docs.google.com/spreadsheets/d/1nCkAPo3RVINOzlyTt0pBBoAZ_P84becD/edit?usp=sharing)
+
 
 ---
 
