@@ -5,10 +5,10 @@
     "ato_criacao_status": "Regularizada",
     "area_ha": 165.0,
     "localizacao": "Major Gercino",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.424731,
-    "lng": -49.069808
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-2",
@@ -16,10 +16,10 @@
     "ato_criacao_status": "SEM PROVIDÊNCIA",
     "area_ha": 0.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.422131,
-    "lng": -48.681372
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-3",
@@ -27,10 +27,10 @@
     "ato_criacao_status": "regularizada",
     "area_ha": 501.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.435902,
-    "lng": -48.705564
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-4",
@@ -38,10 +38,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ 790/07",
     "area_ha": 2.0,
     "localizacao": "Saudades",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.88362,
-    "lng": -53.045031
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-5",
@@ -60,10 +60,10 @@
     "ato_criacao_status": "regularizada",
     "area_ha": 80.0,
     "localizacao": "Imaruí",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -28.236026,
-    "lng": -48.838592
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-7",
@@ -71,10 +71,10 @@
     "ato_criacao_status": "EM IDENTIFICAÇÃO - Portaria No\n798/PRES/ de 25 de maio de 2011",
     "area_ha": 0.0,
     "localizacao": "Palhoça",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.783274,
-    "lng": -48.644667
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-8",
@@ -82,10 +82,10 @@
     "ato_criacao_status": "regularizada",
     "area_ha": 207.0,
     "localizacao": "Canelinha",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.255922,
-    "lng": -48.799891
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-9",
@@ -93,10 +93,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ 1128/03",
     "area_ha": 23024.0,
     "localizacao": "Doutor Pedrinho/ José Boiteux/ Victor Meirelles",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.727463,
-    "lng": -49.555809
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-10",
@@ -104,10 +104,10 @@
     "ato_criacao_status": "em Estudo Prévio",
     "area_ha": 0.0,
     "localizacao": "Fraiburgo",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.05157,
-    "lng": -50.865974
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-11",
@@ -126,10 +126,10 @@
     "ato_criacao_status": "REGISTRADA SPU/CRI_x000D_",
     "area_ha": 37018.0,
     "localizacao": "Doutor Pedrinho/ Itaiópolis/José Boiteux/ Victor Meirelles",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.705199,
-    "lng": -49.54836
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-13",
@@ -137,10 +137,10 @@
     "ato_criacao_status": "RESERVA - 2008_x000D_",
     "area_ha": 216.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.442736,
-    "lng": -48.67472
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-14",
@@ -148,10 +148,10 @@
     "ato_criacao_status": "GT 1998 -  falta adquirir 200 ha, já identificados",
     "area_ha": 2300.0,
     "localizacao": "Chapecó",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.117842,
-    "lng": -52.655773
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-15",
@@ -159,10 +159,10 @@
     "ato_criacao_status": "RESERVA_x000D_",
     "area_ha": 67.0,
     "localizacao": "Imaruí",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -28.213762,
-    "lng": -48.831143
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-16",
@@ -170,10 +170,10 @@
     "ato_criacao_status": "EM IDENTIFICAÇÃO - Portaria No\n798/PRES/ de 25 de maio de 2011",
     "area_ha": 0.0,
     "localizacao": "Palhoça",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.754734,
-    "lng": -48.664826
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-17",
@@ -181,10 +181,10 @@
     "ato_criacao_status": "",
     "area_ha": 0.0,
     "localizacao": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.28725,
-    "lng": -48.612618
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-18",
@@ -192,10 +192,10 @@
     "ato_criacao_status": "REGISTRADA SPI/CRI_x000D_",
     "area_ha": 59.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.414196,
-    "lng": -48.694879
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-19",
@@ -203,10 +203,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ\n2.813/09*",
     "area_ha": 893.0,
     "localizacao": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.285805,
-    "lng": -48.656054
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-20",
@@ -214,10 +214,10 @@
     "ato_criacao_status": "Regularizada",
     "area_ha": 240.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.451898,
-    "lng": -48.69958
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-21",
@@ -225,10 +225,10 @@
     "ato_criacao_status": "DEMARCADA/2010",
     "area_ha": 1988.0,
     "localizacao": "Palhoça",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.792436,
-    "lng": -48.669527
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-22",
@@ -236,10 +236,10 @@
     "ato_criacao_status": "RESERVA - 2008_x000D_",
     "area_ha": 509.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.425385,
-    "lng": -48.668544
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-23",
@@ -258,10 +258,10 @@
     "ato_criacao_status": "DECLARADA. Portaria MJ953/10",
     "area_ha": 3294.0,
     "localizacao": "Biguaçu",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.42394,
-    "lng": -48.71198
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-25",
@@ -280,10 +280,10 @@
     "ato_criacao_status": "DECLARADA. Portaria MJ2907/09",
     "area_ha": 3017.0,
     "localizacao": "Araquari",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.453253,
-    "lng": -48.790201
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-27",
@@ -291,10 +291,10 @@
     "ato_criacao_status": "?",
     "area_ha": 0.0,
     "localizacao": "Palhoça",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.765923,
-    "lng": -48.638491
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-28",
@@ -302,10 +302,10 @@
     "ato_criacao_status": "?",
     "area_ha": 0.0,
     "localizacao": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.317917,
-    "lng": -48.62319
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-29",
@@ -313,10 +313,10 @@
     "ato_criacao_status": "?",
     "area_ha": 0.0,
     "localizacao": "Garuva",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.04078,
-    "lng": -48.853061
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-30",
@@ -324,10 +324,10 @@
     "ato_criacao_status": "?",
     "area_ha": 0.0,
     "localizacao": "Canelinha",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.233658,
-    "lng": -48.792442
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-31",
@@ -335,10 +335,10 @@
     "ato_criacao_status": "REGISTRADA SPU/CRI_x000D_",
     "area_ha": 758.0,
     "localizacao": "Porto União",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.400844,
-    "lng": -51.008562
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-32",
@@ -346,10 +346,10 @@
     "ato_criacao_status": "RESERVA - 2008_x000D_",
     "area_ha": 0.0,
     "localizacao": "Canelinha",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.247429,
-    "lng": -48.816634
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-33",
@@ -357,10 +357,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ 2747/09",
     "area_ha": 2172.0,
     "localizacao": "Araquari/Balneário Barra do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.460087,
-    "lng": -48.759357
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-34",
@@ -368,10 +368,10 @@
     "ato_criacao_status": "RESERVA - 2009",
     "area_ha": 104.0,
     "localizacao": "Major Gercino",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.441407,
-    "lng": -49.062924
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-35",
@@ -379,10 +379,10 @@
     "ato_criacao_status": "REGISTRADA SPU/CRI_x000D_",
     "area_ha": 988.0,
     "localizacao": "Chapecó",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.131613,
-    "lng": -52.679965
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-36",
@@ -390,10 +390,10 @@
     "ato_criacao_status": "REGISTRADA SPU/CRI_x000D_",
     "area_ha": 975.0,
     "localizacao": "Chapecó",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.138447,
-    "lng": -52.649121
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-37",
@@ -401,10 +401,10 @@
     "ato_criacao_status": "Portaria MJ no \n793/07",
     "area_ha": 1965.0,
     "localizacao": "Abelardo Luz",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.566566,
-    "lng": -52.241493
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-38",
@@ -412,10 +412,10 @@
     "ato_criacao_status": "REGISTRADA SPU/CRI",
     "area_ha": 4846.0,
     "localizacao": "Seara",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.138699,
-    "lng": -52.354981
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-39",
@@ -423,10 +423,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ 795/07*",
     "area_ha": 3966.0,
     "localizacao": "Seara",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -27.155375,
-    "lng": -52.348097
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-40",
@@ -434,10 +434,10 @@
     "ato_criacao_status": "HOMOLOGADA 1991_x000D_",
     "area_ha": 15623.0,
     "localizacao": "Entre Rios/Ipuaçu/Xanxerê",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.732109,
-    "lng": -52.598659
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-41",
@@ -445,10 +445,10 @@
     "ato_criacao_status": "DECLARADA Portaria MJ 792/07",
     "area_ha": 660.0,
     "localizacao": "Entre Rios/Ipuaçu/Xanxerê",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.748785,
-    "lng": -52.591775
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-42",
@@ -456,10 +456,10 @@
     "ato_criacao_status": "SEM PROVIDÊNCIA",
     "area_ha": 0.0,
     "localizacao": "Garuva",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.054551,
-    "lng": -48.877253
+    "lat": null,
+    "lng": null
   },
   {
     "id": "TI-43",
@@ -467,9 +467,9 @@
     "ato_criacao_status": "SEM PROVIDÊNCIA",
     "area_ha": 0.0,
     "localizacao": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "observacoes": "",
-    "lat": -26.269684,
-    "lng": -48.625902
+    "lat": null,
+    "lng": null
   }
 ]

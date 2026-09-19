@@ -6,14 +6,14 @@
     "ano_criacao": null,
     "ato_criacao": "não encontrada",
     "municipio": "Caxambu do Sul",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "Contato realizado em 19.04.26 com a  Fundação de Meio Ambiente ( 48) 3435-8986 (Vinicius). famsidvinicius@sirewropolis.sc.gov.br . De fato, não há lomites definidos, não houve interesse de todas as gestoes em instituir os limites e fazer os planos de manejo.",
     "encaminhamentos": "Kati enviar carta de apresentação ao Vinicius para disenpensa de licitação.",
-    "lat": -27.152856,
-    "lng": -52.927835
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-2",
@@ -22,14 +22,14 @@
     "ano_criacao": 1993,
     "ato_criacao": "Dec 13/93, 35/93",
     "municipio": "Balneário Barra do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.87,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.438763,
-    "lng": -48.648156
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-3",
@@ -38,14 +38,14 @@
     "ano_criacao": 1997,
     "ato_criacao": "Dec 125/97",
     "municipio": "Balneário Barra do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.416499,
-    "lng": -48.640707
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-4",
@@ -54,14 +54,14 @@
     "ano_criacao": 1995,
     "ato_criacao": "LM 2.193/95",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 150.0,
     "plano_manejo": "",
     "mapa": "SIM",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.591817,
-    "lng": -48.460897
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-5",
@@ -70,14 +70,14 @@
     "ano_criacao": 1995,
     "ato_criacao": "LM 2.193/95",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 52.2,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.57508,
-    "lng": -48.527981
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-6",
@@ -86,14 +86,14 @@
     "ano_criacao": 1997,
     "ato_criacao": "LM 5091/97",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 15.64,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.634059,
-    "lng": -48.48894
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-7",
@@ -102,14 +102,14 @@
     "ano_criacao": null,
     "ato_criacao": "não encontrada",
     "municipio": "Ibiam",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 2.42,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.209952,
-    "lng": -51.211973
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-8",
@@ -118,14 +118,14 @@
     "ano_criacao": 2004,
     "ato_criacao": "LM 2168/2004",
     "municipio": "Itapiranga",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.41,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.105672,
-    "lng": -53.71779
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-9",
@@ -134,14 +134,14 @@
     "ano_criacao": 2004,
     "ato_criacao": "LM 2168/2004; LM 3106/2017",
     "municipio": "Itapiranga",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.27,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.122348,
-    "lng": -53.710906
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-10",
@@ -150,14 +150,14 @@
     "ano_criacao": 1975,
     "ato_criacao": "LM 1410/75",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 7.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.265323,
-    "lng": -49.010813
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-11",
@@ -166,14 +166,14 @@
     "ano_criacao": 2019,
     "ato_criacao": "DM 13824/2019",
     "municipio": "Rio Negrinho",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.447861,
-    "lng": -49.581082
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-12",
@@ -182,14 +182,14 @@
     "ano_criacao": 1986,
     "ato_criacao": "Dec 247/1986",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 967.5,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.562661,
-    "lng": -48.477648
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-13",
@@ -198,14 +198,14 @@
     "ano_criacao": 1985,
     "ato_criacao": "Dec 216/1985",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 21.5,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.60863,
-    "lng": -48.535393
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-14",
@@ -214,14 +214,14 @@
     "ano_criacao": 1985,
     "ato_criacao": "Dec 216/1985",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 1.3,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.613842,
-    "lng": -48.460274
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-15",
@@ -230,14 +230,14 @@
     "ano_criacao": 1985,
     "ato_criacao": "LM 2348/85",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 170.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.558197,
-    "lng": -48.513152
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-16",
@@ -246,14 +246,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Brusque",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 10.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.113361,
-    "lng": -48.908809
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-17",
@@ -262,14 +262,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Doutor Pedrinho",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 17.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.716192,
-    "lng": -49.556795
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-18",
@@ -278,14 +278,14 @@
     "ano_criacao": 1997,
     "ato_criacao": "P. 78/1997",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 3.74,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.636381,
-    "lng": -48.511722
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-19",
@@ -294,14 +294,14 @@
     "ano_criacao": null,
     "ato_criacao": "não encontrada",
     "municipio": "Frei Rogério",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "SIM",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.218715,
-    "lng": -50.762983
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-20",
@@ -310,14 +310,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Itajaí",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 5.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.951709,
-    "lng": -48.763342
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-21",
@@ -326,14 +326,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Itapiranga",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.100084,
-    "lng": -53.703457
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-22",
@@ -342,14 +342,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Palmitos",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 2.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.090086,
-    "lng": -53.184338
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-23",
@@ -358,14 +358,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "São Bento do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.9,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.302053,
-    "lng": -49.37034
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-24",
@@ -374,14 +374,14 @@
     "ano_criacao": 2002,
     "ato_criacao": "de 28/05/2002 (n achei a lei, só data)",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 100.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.297435,
-    "lng": -48.977949
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-25",
@@ -390,14 +390,14 @@
     "ano_criacao": 1980,
     "ato_criacao": "P 143/80",
     "municipio": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 5296.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.891811,
-    "lng": -49.122593
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-26",
@@ -406,14 +406,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 500.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.884198,
-    "lng": -49.070432
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-27",
@@ -422,14 +422,14 @@
     "ano_criacao": null,
     "ato_criacao": "LM 3.086/2018 (n é de criação )",
     "municipio": "Camboriú",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.087439,
-    "lng": -48.713849
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-28",
@@ -438,14 +438,14 @@
     "ano_criacao": 1993,
     "ato_criacao": "LM 2856/93",
     "municipio": "Criciúma",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 7.7,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.724554,
-    "lng": -49.358191
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-29",
@@ -454,14 +454,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 22.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.576709,
-    "lng": -48.45903
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-30",
@@ -470,14 +470,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 21.48,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.585261,
-    "lng": -48.539569
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-31",
@@ -486,14 +486,14 @@
     "ano_criacao": 1993,
     "ato_criacao": "LM 209/1993; LM 530/1999",
     "municipio": "Forquilhinha",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 7.97,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.788459,
-    "lng": -49.499792
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-32",
@@ -502,14 +502,14 @@
     "ano_criacao": 2010,
     "ato_criacao": "LO 2295/2010",
     "municipio": "Ituporanga",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 3.3,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.471629,
-    "lng": -49.522486
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-33",
@@ -518,14 +518,14 @@
     "ano_criacao": 1992,
     "ato_criacao": "DM 6959/92",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1630.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.249202,
-    "lng": -48.980661
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-34",
@@ -534,14 +534,14 @@
     "ano_criacao": null,
     "ato_criacao": "LM 828/2016 (denominação)",
     "municipio": "Macieira",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.810027,
-    "lng": -51.349961
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-35",
@@ -550,14 +550,14 @@
     "ano_criacao": 1990,
     "ato_criacao": "Dec 010/90; 020/99; Lei 224/90; LM 1373/2023",
     "municipio": "Maracajá",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 112.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.863851,
-    "lng": -49.48069
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-36",
@@ -566,14 +566,14 @@
     "ano_criacao": 2013,
     "ato_criacao": "DM 1962/2013",
     "municipio": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.64,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.297767,
-    "lng": -48.649638
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-37",
@@ -582,14 +582,14 @@
     "ano_criacao": 2016,
     "ato_criacao": "LM 7354/2016",
     "municipio": "São Miguel do Oeste",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.64,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.727927,
-    "lng": -53.500489
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-38",
@@ -598,14 +598,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Brusque",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 467.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.127132,
-    "lng": -48.933001
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-39",
@@ -614,14 +614,14 @@
     "ano_criacao": 1962,
     "ato_criacao": "Dec 2006/62; 10056/74; 994/74",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 1297.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.634168,
-    "lng": -48.473312
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-40",
@@ -630,14 +630,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Gaspar",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 220.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.918839,
-    "lng": -48.976521
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-41",
@@ -646,14 +646,14 @@
     "ano_criacao": null,
     "ato_criacao": "Dec 3.848/2022",
     "municipio": "Ibiam",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.204547,
-    "lng": -51.217871
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-43",
@@ -662,14 +662,14 @@
     "ano_criacao": 2017,
     "ato_criacao": "DM 29791/17",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 525.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.288363,
-    "lng": -49.01264
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-44",
@@ -678,14 +678,14 @@
     "ano_criacao": 2014,
     "ato_criacao": "LM 1741/14",
     "municipio": "Laguna",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 26.01,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.487631,
-    "lng": -48.826161
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-45",
@@ -694,14 +694,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "São João Batista",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 3.2,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.326804,
-    "lng": -48.862167
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-46",
@@ -710,14 +710,14 @@
     "ano_criacao": null,
     "ato_criacao": "não encontrada",
     "municipio": "Camboriú",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 2.5,
     "plano_manejo": "",
     "mapa": "SIM",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.065175,
-    "lng": -48.7064
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-47",
@@ -726,14 +726,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Araquari",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1000.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.450475,
-    "lng": -48.774444
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-48",
@@ -742,14 +742,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Imaruí",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 900.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.224755,
-    "lng": -48.839578
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-49",
@@ -758,14 +758,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Araquari",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 270.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.44507,
-    "lng": -48.780342
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-50",
@@ -774,14 +774,14 @@
     "ano_criacao": 1989,
     "ato_criacao": "LO 526/89",
     "municipio": "Botuverá",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.214771,
-    "lng": -49.134145
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-51",
@@ -790,14 +790,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "São José do Cerrito",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 278.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.599768,
-    "lng": -50.684713
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-52",
@@ -806,14 +806,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Ascurra",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 1800.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.973993,
-    "lng": -49.385885
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-53",
@@ -822,14 +822,14 @@
     "ano_criacao": 1975,
     "ato_criacao": "LM 6766/75",
     "municipio": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 453.5,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.853435,
-    "lng": -49.115762
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-54",
@@ -838,14 +838,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Frei Rogério",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 12.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.21331,
-    "lng": -50.768881
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-55",
@@ -854,14 +854,14 @@
     "ano_criacao": 1970,
     "ato_criacao": "?",
     "municipio": "Treze Tílias",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 18.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.949576,
-    "lng": -51.447462
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-56",
@@ -870,14 +870,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Caçador",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 1157.48,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.761369,
-    "lng": -51.112971
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-57",
@@ -886,14 +886,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Garuva",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 13186.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.046368,
-    "lng": -48.867394
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-58",
@@ -902,14 +902,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Rancho Queimado",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 7.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.680031,
-    "lng": -49.093364
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-59",
@@ -918,14 +918,14 @@
     "ano_criacao": null,
     "ato_criacao": "?",
     "municipio": "Camboriú",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 300.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.078946,
-    "lng": -48.730592
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-60",
@@ -934,14 +934,14 @@
     "ano_criacao": null,
     "ato_criacao": "",
     "municipio": "Caçador",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -26.778045,
-    "lng": -51.106087
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-61",
@@ -950,14 +950,14 @@
     "ano_criacao": 1985,
     "ato_criacao": "LM 2193/85",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 491.5,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -27.552035,
-    "lng": -48.489386
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-62",
@@ -966,14 +966,14 @@
     "ano_criacao": 2000,
     "ato_criacao": "LC 130/2000; LC 306/2007",
     "municipio": "Lages",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 32.15,
     "plano_manejo": "",
     "mapa": "",
     "observacao": "",
     "encaminhamentos": "Segue não cadastrada",
-    "lat": -28.001234,
-    "lng": -50.358886
+    "lat": null,
+    "lng": null
   },
   {
     "id": "NSNUC-64",

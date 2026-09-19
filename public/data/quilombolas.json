@@ -4,107 +4,107 @@
     "processo_incra": "",
     "comunidade": "Invernada dos Negros",
     "localizacao": "Abdon Batista/Campos Novos",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 7952.91,
     "edital_rtid_dou": "09 e 12/02/2007",
     "portaria_dou": "39804",
-    "lat": -27.586702,
-    "lng": -51.053622
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-2",
     "processo_incra": "",
     "comunidade": "São Roque",
     "localizacao": "Praia Grande (SC) e Mampituba(RS)",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 4658.87,
     "edital_rtid_dou": "30/11 e 03/12/2007",
     "portaria_dou": "43369",
-    "lat": -29.221367,
-    "lng": -50.024607
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-3",
     "processo_incra": "",
     "comunidade": "Família Thomaz",
     "localizacao": "Treze de Maio",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 30.87,
     "edital_rtid_dou": "21 e 26/12/2012",
     "portaria_dou": "41835",
-    "lat": -28.559645,
-    "lng": -49.153034
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-4",
     "processo_incra": "",
     "comunidade": "Campo dos Polí",
     "localizacao": "Monte Carlo",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 542.41,
     "edital_rtid_dou": "16 e 17/08/2017",
     "portaria_dou": "44636",
-    "lat": -27.194026,
-    "lng": -50.919611
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-5",
     "processo_incra": "",
     "comunidade": "Morro do Boi",
     "localizacao": "Balneário Camboriu",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 10.11,
     "edital_rtid_dou": "28/06 e 02/07/2018",
     "portaria_dou": "45250",
-    "lat": -27.018471,
-    "lng": -48.635811
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-6",
     "processo_incra": "",
     "comunidade": "Vidal Martins",
     "localizacao": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 961.29,
     "edital_rtid_dou": "10 e 11/02/2020 2",
     "portaria_dou": "44767",
-    "lat": -27.627016,
-    "lng": -48.457608
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-7",
     "processo_incra": "",
     "comunidade": "Morro do Fortunato",
     "localizacao": "Garopaba",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -28.026976,
-    "lng": -48.659982
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-8",
     "processo_incra": "",
     "comunidade": "Toca/Santa Cruz",
     "localizacao": "Paulo Lopes",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -27.97243,
-    "lng": -48.775166
+    "lat": null,
+    "lng": null
   },
   {
     "id": "QUILOMBO-9",
     "processo_incra": "",
     "comunidade": "Aldeia",
     "localizacao": "Garopaba/Imbituba",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
     "edital_rtid_dou": "Em Elaboração",
     "portaria_dou": "",
-    "lat": -28.043652,
-    "lng": -48.653098
+    "lat": null,
+    "lng": null
   }
 ]

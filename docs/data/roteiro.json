@@ -5,14 +5,14 @@
     "categoria": "Parque",
     "esfera": "Municipal",
     "municipio": "Criciúma",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "ato_criacao": "LM 2856/93",
     "motivo_fora_cnuc": "Foi destituído há três anos",
     "limites_definidos": "",
     "plano_manejo": "",
     "conselho_gestor": "",
     "data_contato": "46204",
-    "lat": -28.692442,
-    "lng": -49.391055
+    "lat": null,
+    "lng": null
   }
 ]

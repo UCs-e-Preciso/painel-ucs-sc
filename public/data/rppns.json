@@ -6,10 +6,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 19 - DOU 58 - 26/03/2009 - seção/pg. 01 - 58",
     "municipio": "Água Doce",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 60.0,
-    "lat": -26.792837,
-    "lng": -51.616981
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-2",
@@ -18,10 +18,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 27 - DOU 82-E - 28/04/2001 - seção/pg. 01 - 83",
     "municipio": "Água Doce",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 49.0,
-    "lat": -26.806608,
-    "lng": -51.641173
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-3",
@@ -30,10 +30,10 @@
     "ano": 2013,
     "ato_legislativo": "Portaria 218 - DOU 152 - 08/08/2013 - seção/pg. 1 - 73",
     "municipio": "Águas Mornas",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 13.5,
-    "lat": -27.734802,
-    "lng": -48.924032
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-4",
@@ -42,10 +42,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 61 - DOU 75 - 19/04/2002 - seção/pg. 01 - 140",
     "municipio": "Alfredo Wagner",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 10.0,
-    "lat": -27.719828,
-    "lng": -49.332451
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-5",
@@ -54,10 +54,10 @@
     "ano": 2013,
     "ato_legislativo": "Portaria 168 - DOU 47 - 11/03/2013 - seção/pg. 1 - 95",
     "municipio": "Alfredo Wagner",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 43.5,
-    "lat": -27.671595,
-    "lng": -49.335163
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-6",
@@ -66,10 +66,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 92 - DOU 227 - 21/11/2008 - seção/pg. 01 - 114",
     "municipio": "Alfredo Wagner",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 33.58,
-    "lat": -27.710756,
-    "lng": -49.367142
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-7",
@@ -78,10 +78,10 @@
     "ano": 1990,
     "ato_legislativo": "Portaria 645 - DOU 87 - 08/05/1990 - seção/pg. 1/8634",
     "municipio": "Antônio Carlos",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 1854.0,
-    "lat": -27.4993,
-    "lng": -48.842195
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-8",
@@ -90,10 +90,10 @@
     "ano": 1998,
     "ato_legislativo": "Portaria 01/98-N - DOU S/N - 09/01/1998 - seção/pg. 01 - 167",
     "municipio": "Antônio Carlos",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 900.39,
-    "lat": -27.506134,
-    "lng": -48.811351
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-9",
@@ -102,10 +102,10 @@
     "ano": 1998,
     "ato_legislativo": "Portaria Retificação - DOU 113 - 17/06/1998 - seção/pg. 1/71",
     "municipio": "Antônio Carlos",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 558.86,
-    "lat": -27.477594,
-    "lng": -48.83151
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-10",
@@ -114,10 +114,10 @@
     "ano": 1997,
     "ato_legislativo": "Portaria 040/97-N de 30/04/1997",
     "municipio": "Atalanta",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 3.0,
-    "lat": -27.451875,
-    "lng": -49.75584
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-11",
@@ -138,10 +138,10 @@
     "ano": 1999,
     "ato_legislativo": "Portaria 57-N/1999 - DOU 131-E - 12/07/1999 - seção/pg. 1-17",
     "municipio": "Balneário Camboriú",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 38.2,
-    "lat": -27.009309,
-    "lng": -48.610951
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-13",
@@ -150,10 +150,10 @@
     "ano": 2010,
     "ato_legislativo": "Portaria 72 - DOU 167 - 31/08/2010 - seção/pg. 1/137",
     "municipio": "Bela Vista do Toldo",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 316.05,
-    "lat": -26.430609,
-    "lng": -50.472195
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-14",
@@ -162,10 +162,10 @@
     "ano": 1993,
     "ato_legislativo": "Portaria 143-N - DOU 4 - 07/01/1993 - seção/pg. 1/177",
     "municipio": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 5296.16,
-    "lat": -26.857386,
-    "lng": -49.07408
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-15",
@@ -174,10 +174,10 @@
     "ano": 1993,
     "ato_legislativo": "Portaria 148 - DOU 04 - 07/01/1993 - seção/pg. 01 - 178",
     "municipio": "Blumenau",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 82.7,
-    "lat": -26.876516,
-    "lng": -49.131546
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-16",
@@ -186,10 +186,10 @@
     "ano": 2013,
     "ato_legislativo": "Portaria 149 - DOU 34 - 20/02/2013 - seção/pg. 1 - 97",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 45.5,
-    "lat": -27.79661,
-    "lng": -49.600193
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-17",
@@ -198,10 +198,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 14/2009 - DOU 53 - 19/03/2009 - seção/pg. 01 - 65",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 32.08,
-    "lat": -27.770097,
-    "lng": -49.569157
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-18",
@@ -210,10 +210,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 12 - DOU 53 - 19/03/2009 - seção/pg. 1 - 65",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 24.44,
-    "lat": -27.768652,
-    "lng": -49.612593
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-19",
@@ -222,10 +222,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 15 - DOU 53 - 19/03/2009 - seção/pg. 01 - 66",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 78.6,
-    "lat": -27.800764,
-    "lng": -49.579729
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-20",
@@ -234,10 +234,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 25 - DOU 86 - 07/05/2008 - seção/pg. 01 - 75",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 59.46,
-    "lat": -27.752531,
-    "lng": -49.582441
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-21",
@@ -246,10 +246,10 @@
     "ano": 2011,
     "ato_legislativo": "Portaria 78 - DOU 188 - 29/09/2011 - seção/pg. 01 - 100",
     "municipio": "Bom Retiro",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 4018.77,
-    "lat": -27.791692,
-    "lng": -49.61442
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-22",
@@ -258,10 +258,10 @@
     "ano": 2010,
     "ato_legislativo": "Portaria 73 - DOU 167 - 31/08/2010 - seção/pg. 1/137",
     "municipio": "Botuverá",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 45.0,
-    "lat": -27.193065,
-    "lng": -49.12346
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-23",
@@ -270,10 +270,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 19 - DOU 26 - 06/02/2002 - seção/pg. 01 - 67",
     "municipio": "Brusque",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 102.96,
-    "lat": -27.105426,
-    "lng": -48.922316
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-24",
@@ -282,10 +282,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 158 - DOU 205 - 25/10/2001 - seção/pg. 1/122",
     "municipio": "Brusque",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 415.79,
-    "lat": -27.143128,
-    "lng": -48.927017
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-25",
@@ -294,10 +294,10 @@
     "ano": 2015,
     "ato_legislativo": "Portaria 55 - DOU 241 - 17/12/2015 - seção/pg. 1 - 61",
     "municipio": "Campo Alegre",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 85.2,
-    "lat": -26.102905,
-    "lng": -49.190588
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-26",
@@ -306,10 +306,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 74 - DOU 176 - 11/09/2008 - seção/pg. 01 - 101",
     "municipio": "Campo Belo do Sul",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 6328.6,
-    "lat": -27.847878,
-    "lng": -50.77818
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-27",
@@ -318,10 +318,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 50 - DOU 132 - 13/07/2010 - seção/pg. 1/97 e Portaria 53 - DOU 75 - 19/04/2002 - seção/pg. 1/139",
     "municipio": "Corupá",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1156.33,
-    "lat": -26.428846,
-    "lng": -49.305533
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-28",
@@ -330,10 +330,10 @@
     "ano": 2021,
     "ato_legislativo": "Portaria 1021 - DOU 240 - 22/12/2021 - seção/pg. 1/282",
     "municipio": "Curitibanos",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 10.64,
-    "lat": -27.290805,
-    "lng": -50.629922
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-29",
@@ -342,10 +342,10 @@
     "ano": 1998,
     "ato_legislativo": "Portaria 0813/98-41",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 441.6,
-    "lat": -27.600668,
-    "lng": -48.450774
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-30",
@@ -354,10 +354,10 @@
     "ano": 1999,
     "ato_legislativo": "Portaria 85/99 de 06/10/1999",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 17.0,
-    "lat": -27.561708,
-    "lng": -48.529219
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-31",
@@ -366,10 +366,10 @@
     "ano": 1999,
     "ato_legislativo": "Portaria 43 - DOU 89 - 12/05/1999 - seção/pg. 1/85-86",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 44.16,
-    "lat": -27.644602,
-    "lng": -48.497244
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-32",
@@ -378,10 +378,10 @@
     "ano": 1999,
     "ato_legislativo": "Portaria 85 - DOU 193-E - 07/10/1999 - seção/pg. 01 - 39",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 16.0,
-    "lat": -27.560725,
-    "lng": -48.464368
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-33",
@@ -390,10 +390,10 @@
     "ano": 2016,
     "ato_legislativo": "Portaria 52 - DOU 99 - 25/05/2016 - seção/pg. 1 - 48",
     "municipio": "Florianópolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 74.05,
-    "lat": -27.6009,
-    "lng": -48.546372
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-34",
@@ -402,10 +402,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 19/20002 de 05/02/2002",
     "municipio": "Guabiruba",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 102.96,
-    "lat": -27.118749,
-    "lng": -49.030643
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-35",
@@ -414,10 +414,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 02 - DOU 24 - 06/02/2008 - seção/pg. 01 - 62 e 63",
     "municipio": "Guaramirim",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.89,
-    "lat": -26.4675,
-    "lng": -48.924703
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-36",
@@ -426,10 +426,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 16 - DOU 54 - 19/03/2008 - seção/pg. 1 - 144",
     "municipio": "Guaramirim",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 2.75,
-    "lat": -26.481271,
-    "lng": -48.948895
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-37",
@@ -438,10 +438,10 @@
     "ano": 2014,
     "ato_legislativo": "Portaria 96 - DOU 177 - 15/09/2014 - seção/pg. 1 - pg 153",
     "municipio": "Guarujá do Sul",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 4.6,
-    "lat": -26.422535,
-    "lng": -53.474462
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-38",
@@ -450,10 +450,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 77/2009 - DOU 170 - 04/09/2009 - seção/pg. 01 - 235",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 332.92,
-    "lat": -26.512887,
-    "lng": -49.911475
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-39",
@@ -462,10 +462,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 78 - DOU 129 - 05/07/2012 - seção/pg. 1 - 96",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 79.05,
-    "lat": -26.505274,
-    "lng": -49.859314
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-40",
@@ -474,10 +474,10 @@
     "ano": 2011,
     "ato_legislativo": "Portaria 17 - DOU 40 - 25/02/2011 - seção/pg. 01 - 84",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 55.73,
-    "lat": -26.474511,
-    "lng": -49.904644
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-41",
@@ -486,10 +486,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 103 - DOU 179 - 14/09/2012 - seção/pg. 01 - 102",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 212.07,
-    "lat": -26.52975,
-    "lng": -49.891519
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-42",
@@ -498,10 +498,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 77 - DOU 123 - 27/07/2012 - seção/pg. 1 - 60",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 54.34,
-    "lat": -26.478462,
-    "lng": -49.862962
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-43",
@@ -510,10 +510,10 @@
     "ano": 2016,
     "ato_legislativo": "Portaria 27 - DOU 75 - 20/04/2016 - seção/pg. 1 - 67 e\nPortaria 27 - DOU 75 - 20/04/2016 - seção/pg. 1 - 68",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 28.64,
-    "lat": -26.497592,
-    "lng": -49.920428
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-44",
@@ -522,10 +522,10 @@
     "ano": 2016,
     "ato_legislativo": "Portaria 27 - DOU 75 - 20/04/2016 - seção/pg. 1 - 68",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 28.64,
-    "lat": -26.523031,
-    "lng": -49.863475
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-45",
@@ -534,10 +534,10 @@
     "ano": 2010,
     "ato_legislativo": "Portaria 60 - DOU 144 - 29/07/2010 - seção/pg. 01 - 60",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 31.86,
-    "lat": -26.464193,
-    "lng": -49.888996
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-46",
@@ -546,10 +546,10 @@
     "ano": 2009,
     "ato_legislativo": "retiro",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 23.12,
-    "lat": -26.526438,
-    "lng": -49.910472
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-47",
@@ -558,10 +558,10 @@
     "ano": 2010,
     "ato_legislativo": "Portaria 56 - DOU 142 - 27/07/2010 - seção/pg. 01 - 60",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 36.3,
-    "lat": -26.494246,
-    "lng": -49.851128
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-48",
@@ -570,10 +570,10 @@
     "ano": 2020,
     "ato_legislativo": "Portaria 641 - DOU 109 - 09/06/2020 - seção/pg. 01",
     "municipio": "Itaiópolis",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 98.83,
-    "lat": -26.477509,
-    "lng": -49.918212
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-49",
@@ -582,10 +582,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria 276 - DOU 66 - 06/04/2018 - seção/pg. 1 - 174",
     "municipio": "Itajaí",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 5.2,
-    "lat": -26.935588,
-    "lng": -48.73319
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-50",
@@ -594,10 +594,10 @@
     "ano": 1992,
     "ato_legislativo": "Portaria 070/92-N de 25/06/1992",
     "municipio": "Itapoá",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 590.6,
-    "lat": -26.046514,
-    "lng": -48.639118
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-51",
@@ -606,10 +606,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria 82 - DOU 23 - 31/01/2018 - seção/pg. 1 - 45",
     "municipio": "Itapoá",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 285.23,
-    "lat": -26.045069,
-    "lng": -48.682554
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-52",
@@ -618,10 +618,10 @@
     "ano": 1997,
     "ato_legislativo": "Portaria 040 - DOU 82 - 02/05/1997 - seção/pg. 01 - 8848",
     "municipio": "Ituporanga",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 3.0,
-    "lat": -27.466041,
-    "lng": -49.508153
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-53",
@@ -630,10 +630,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 168/2001",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 4613.8,
-    "lat": -26.249987,
-    "lng": -49.005809
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-54",
@@ -642,10 +642,10 @@
     "ano": 2023,
     "ato_legislativo": "Portaria 1.908 - DOU 106 - 05/06/2023 - seção/pg. 1/244",
     "municipio": "Laguna",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 14.25,
-    "lat": -28.479138,
-    "lng": -48.842904
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-55",
@@ -654,10 +654,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 05/2009 - DOU 31 - 13/02/2009 - seção/pg. 01 - 72",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 5.99,
-    "lat": -27.33062,
-    "lng": -49.062002
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-56",
@@ -666,10 +666,10 @@
     "ano": 2016,
     "ato_legislativo": "Portaria 54 - DOU 99 - 25/05/2016 - seção/pg. 1 - 48",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 1.79,
-    "lat": -27.304107,
-    "lng": -49.030966
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-57",
@@ -678,10 +678,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 100 - DOU 120 - 13/09/2001 - seção/pg. 01 - 68",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 100.0,
-    "lat": -27.302662,
-    "lng": -49.074402
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-58",
@@ -690,10 +690,10 @@
     "ano": 2014,
     "ato_legislativo": "Portaria 88 - DOU 160 - 21/08/2014 - seção/pg. 1 - 52",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 70.0,
-    "lat": -27.334774,
-    "lng": -49.041538
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-59",
@@ -702,10 +702,10 @@
     "ano": 2017,
     "ato_legislativo": "Portaria 497 - DOU 144 - 28/07/2017 - seção/pg. 1 - 78",
     "municipio": "Paulo Lopes",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 6.14,
-    "lat": -27.956434,
-    "lng": -48.78115
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-60",
@@ -714,10 +714,10 @@
     "ano": 2004,
     "ato_legislativo": "Portaria 21/2004-N - DOU 45 - 05/03/2004 - seção/pg. 01 - 62",
     "municipio": "Paulo Lopes",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 226.47,
-    "lat": -27.963268,
-    "lng": -48.750306
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-61",
@@ -726,10 +726,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 6 - DOU 10 - 13/01/2012 - seção/pg. 1 - 55",
     "municipio": "Paulo Lopes",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 66.7,
-    "lat": -27.934728,
-    "lng": -48.770465
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-62",
@@ -738,10 +738,10 @@
     "ano": 2023,
     "ato_legislativo": "Portaria 1.837 - DOU 110 - 13/06/2023 - seção/pg. 1/41",
     "municipio": "Pedras Grandes",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 8.74,
-    "lat": -28.488782,
-    "lng": -49.211406
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-63",
@@ -750,10 +750,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 119 - DOU 176 - 11/09/2002 - seção/pg. 1 - 176 e\nPortaria Retificação - DOU 211 - 30/10/2002 - seção/pg. 1 - 138 e\nPortaria Retificação - DOU 77 - 26/04/2022 - seção/pg. 1 - 63",
     "municipio": "Porto Belo",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 45.9,
-    "lat": -27.175612,
-    "lng": -48.615435
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-64",
@@ -762,10 +762,10 @@
     "ano": 2021,
     "ato_legislativo": "Portaria 675 - DOU 204 - 28/10/2021 - seção/pg. 1/66",
     "municipio": "Porto União",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 67.33,
-    "lat": -26.384848,
-    "lng": -51.014546
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-65",
@@ -774,10 +774,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 44 - DOU 106 - 05/06/2009 - seção/pg. 01 - 165",
     "municipio": "Rancho Queimado",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 4.95,
-    "lat": -27.674443,
-    "lng": -49.079031
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-66",
@@ -786,10 +786,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria 359 - DOU 87 - 10/05/2022 - seção/pg. 1/98",
     "municipio": "Rio Negrinho",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 9.05,
-    "lat": -26.457023,
-    "lng": -49.605942
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-67",
@@ -798,10 +798,10 @@
     "ano": 1999,
     "ato_legislativo": "Portaria 23 - DOU Sem informação - 24/02/1999 - seção/pg. 01 - 148",
     "municipio": "Santa Rosa de Lima",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 10.0,
-    "lat": -28.019343,
-    "lng": -49.177828
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-68",
@@ -810,10 +810,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 167 - DOU 219 - 16/11/2001 - seção/pg. 01 - 91\nPropriedade",
     "municipio": "São Bento do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 88.0,
-    "lat": -26.322658,
-    "lng": -49.363688
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-69",
@@ -822,10 +822,10 @@
     "ano": 2014,
     "ato_legislativo": "Portaria 95 - DOU 177 - 15/09/2014 - seção/pg. 1 - pg 01",
     "municipio": "São Bento do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 22.04,
-    "lat": -26.294118,
-    "lng": -49.383847
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-70",
@@ -834,10 +834,10 @@
     "ano": 2002,
     "ato_legislativo": "Portaria 62 - DOU 75 - 19/04/2002 - seção/pg. 01 - 140",
     "municipio": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 7.0,
-    "lat": -26.276061,
-    "lng": -48.638953
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-71",
@@ -846,10 +846,10 @@
     "ano": 2000,
     "ato_legislativo": "Portaria 41 - DOU 154-E - 10/08/2000 - seção/pg. 01 - 81",
     "municipio": "São Joaquim",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 50.0,
-    "lat": -28.334152,
-    "lng": -50.038852
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-72",
@@ -858,10 +858,10 @@
     "ano": 2001,
     "ato_legislativo": "Portaria 66 - DOU 107-E - 04/06/2001 - seção/pg. 01 - 392",
     "municipio": "São José",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 26.0,
-    "lat": -27.583266,
-    "lng": -48.676471
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-73",
@@ -870,10 +870,10 @@
     "ano": 2005,
     "ato_legislativo": "Portaria 34/2005 - DOU 84 - 04/05/2005 - seção/pg. 01 - 65 e\nPortaria 40/2009 - DOU 92 - 18/05/2009 - seção/pg. 01 - 108",
     "municipio": "São Pedro de Alcântara",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 19.99,
-    "lat": -27.567847,
-    "lng": -48.830738
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-74",
@@ -882,10 +882,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 120 - DOU 217 - 09/11/2012 - seção/pg. 1 - 82",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 13.46,
-    "lat": -28.041882,
-    "lng": -49.543874
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-75",
@@ -894,10 +894,10 @@
     "ano": 2024,
     "ato_legislativo": "Portaria 2.567 - DOU 168 - 30/08/2024 - seção/pg. 1/291",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 46.65,
-    "lat": -28.040437,
-    "lng": -49.58731
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-76",
@@ -906,10 +906,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 79 - DOU 130 - 06/07/2012 - seção/pg. 01 - 87 e\nPortaria 79 - DOU 130 - 06/07/2012 - seção/pg. 01 - 88 e\nPortaria 79 - DOU 130 - 06/07/2012 - seção/pg. 01 - 89 e",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 155.15,
-    "lat": -28.072549,
-    "lng": -49.554446
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-77",
@@ -918,10 +918,10 @@
     "ano": 2009,
     "ato_legislativo": "Portaria 23 - DOU 80 - 29/04/2009 - seção/pg. 01 - 83",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 100.0,
-    "lat": -28.024316,
-    "lng": -49.557158
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-78",
@@ -930,10 +930,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria 98 - DOU 175 - 10/09/2012 - seção/pg. 01 - 71",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 201.54,
-    "lat": -28.063477,
-    "lng": -49.589137
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-79",
@@ -942,10 +942,10 @@
     "ano": 2010,
     "ato_legislativo": "Portaria 09 - DOU 19 - 28/01/2010 - seção/pg. 01 - 68",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 15.7,
-    "lat": -28.055864,
-    "lng": -49.536976
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-80",
@@ -954,10 +954,10 @@
     "ano": 2011,
     "ato_legislativo": "Portaria 90 - DOU 217 - 11/11/2011 - seção/pg. 1 - 118",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 3.64,
-    "lat": -28.025101,
-    "lng": -49.582306
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-81",
@@ -966,10 +966,10 @@
     "ano": 2008,
     "ato_legislativo": "Portaria 34 - DOU 97 - 23/05/2008 - seção/pg. 01 126 e\nPortaria 34 - DOU 97 - 23/05/2008 - seção/pg. 01 - 126",
     "municipio": "Urubici",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 126.5,
-    "lat": -28.08034,
-    "lng": -49.569181
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-82",
@@ -978,10 +978,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria 148 - DOU 37 - 23/02/2018 - seção/pg. 1 - 86",
     "municipio": "Urupema",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 36.06,
-    "lat": -28.049433,
-    "lng": -49.907781
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-83",
@@ -1002,10 +1002,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria IMA 179/2012",
     "municipio": "Alfredo Wagner",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 10.57,
-    "lat": -27.703143,
-    "lng": -49.314981
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-85",
@@ -1014,10 +1014,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 192/2022",
     "municipio": "Anitápolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 10.73,
-    "lat": -27.853674,
-    "lng": -49.123344
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-86",
@@ -1026,10 +1026,10 @@
     "ano": 2011,
     "ato_legislativo": "Portaria IMA 237/2011",
     "municipio": "Anitápolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 15.0,
-    "lat": -27.867445,
-    "lng": -49.147536
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-87",
@@ -1050,10 +1050,10 @@
     "ano": 2014,
     "ato_legislativo": "Portaria IMA 026/2014",
     "municipio": "Bocaina do Sul",
-    "mesorregiao": "Serrana",
+    "mesorregiao": "",
     "area_ha": 4987.15,
-    "lat": -27.761707,
-    "lng": -49.909032
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-89",
@@ -1062,10 +1062,10 @@
     "ano": 2019,
     "ato_legislativo": "Portaria IMA 052/2019",
     "municipio": "Itajaí",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 15.82,
-    "lat": -26.974749,
-    "lng": -48.765169
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-90",
@@ -1074,10 +1074,10 @@
     "ano": 2012,
     "ato_legislativo": "Portaria IMA 88/2012",
     "municipio": "Jaraguá do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 130.47,
-    "lat": -26.434297,
-    "lng": -49.152732
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-91",
@@ -1086,10 +1086,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 158/2022",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 18.64,
-    "lat": -26.305226,
-    "lng": -48.992684
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-92",
@@ -1098,10 +1098,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 88/2022",
     "municipio": "Laurentino",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 2.09,
-    "lat": -27.199115,
-    "lng": -49.729749
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-93",
@@ -1110,10 +1110,10 @@
     "ano": 2016,
     "ato_legislativo": "Portaria IMA 264/2016",
     "municipio": "Leoberto Leal",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 0.78,
-    "lat": -27.503995,
-    "lng": -49.251458
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-94",
@@ -1122,10 +1122,10 @@
     "ano": 2017,
     "ato_legislativo": "Portaria IMA 109/2012",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 12.87,
-    "lat": -27.286541,
-    "lng": -49.04425
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-95",
@@ -1134,10 +1134,10 @@
     "ano": 2019,
     "ato_legislativo": "Portaria IMA 069/2017",
     "municipio": "Nova Trento",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 5.0,
-    "lat": -27.325702,
-    "lng": -49.076229
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-96",
@@ -1146,10 +1146,10 @@
     "ano": 2020,
     "ato_legislativo": "Portaria IMA 138/2020",
     "municipio": "Paial",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 6.58,
-    "lat": -27.222258,
-    "lng": -52.484109
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-97",
@@ -1158,10 +1158,10 @@
     "ano": 2020,
     "ato_legislativo": "Portaria IMA 31/2020",
     "municipio": "Palhoça",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 1.57,
-    "lat": -27.762669,
-    "lng": -48.651319
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-98",
@@ -1170,10 +1170,10 @@
     "ano": 2019,
     "ato_legislativo": "Dec 179/2019",
     "municipio": "Palhoça/Paulo Lopes",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 0.0,
-    "lat": -27.77644,
-    "lng": -48.675511
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-99",
@@ -1182,10 +1182,10 @@
     "ano": 2019,
     "ato_legislativo": "Portaria IMA 40/2019",
     "municipio": "Porto Belo",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 0.7,
-    "lat": -27.167999,
-    "lng": -48.563274
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-100",
@@ -1194,10 +1194,10 @@
     "ano": 2019,
     "ato_legislativo": "Dec 3504/2010",
     "municipio": "Santo Amaro da Imperatriz",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 935.0,
-    "lat": -27.769829,
-    "lng": -48.804102
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-101",
@@ -1206,10 +1206,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 87/2022",
     "municipio": "Porto Belo",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 5.06,
-    "lat": -27.137236,
-    "lng": -48.608604
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-102",
@@ -1218,10 +1218,10 @@
     "ano": 2015,
     "ato_legislativo": "Portaria IMA 326/2015",
     "municipio": "Porto União",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 12.0,
-    "lat": -26.391682,
-    "lng": -50.983702
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-103",
@@ -1230,10 +1230,10 @@
     "ano": 2015,
     "ato_legislativo": "Portaria IMA 232/2015",
     "municipio": "Porto União",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 18.36,
-    "lat": -26.363142,
-    "lng": -51.003861
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-104",
@@ -1242,10 +1242,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 103/2022",
     "municipio": "Rio do Sul",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 16.46,
-    "lat": -27.202856,
-    "lng": -49.617116
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-105",
@@ -1254,10 +1254,10 @@
     "ano": 2022,
     "ato_legislativo": "Portaria IMA 104/2022",
     "municipio": "Rio do Sul",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 6.61,
-    "lat": -27.174316,
-    "lng": -49.637275
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-106",
@@ -1278,10 +1278,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria IMA 178/2018",
     "municipio": "Rio Negrinho",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 35.04,
-    "lat": -26.43051,
-    "lng": -49.574906
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-108",
@@ -1290,10 +1290,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria IMA 83/2018",
     "municipio": "Vargem Bonita",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 2850.0,
-    "lat": -26.946005,
-    "lng": -51.746565
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-109",
@@ -1302,10 +1302,10 @@
     "ano": 2018,
     "ato_legislativo": "Portaria IMA 167/2018",
     "municipio": "Vargem Bonita",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 5.58,
-    "lat": -26.923741,
-    "lng": -51.739116
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-110",
@@ -1314,10 +1314,10 @@
     "ano": 2014,
     "ato_legislativo": "Portaria IMA 137/2014",
     "municipio": "Vidal Ramos",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 21.4,
-    "lat": -27.383882,
-    "lng": -49.327718
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-111",
@@ -1326,10 +1326,10 @@
     "ano": 2020,
     "ato_legislativo": "Portaria IMA 196/2020",
     "municipio": "Videira",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 16.83,
-    "lat": -27.013546,
-    "lng": -51.13489
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-113",
@@ -1350,10 +1350,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.003518/98-38",
     "municipio": "Balneário Camboriú",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 0.73,
-    "lat": -26.980769,
-    "lng": -48.63111
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-115",
@@ -1362,10 +1362,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.004021/99-36",
     "municipio": "Bombinhas",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 28.7,
-    "lat": -27.15128,
-    "lng": -48.527325
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-116",
@@ -1374,10 +1374,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.002084/99-02",
     "municipio": "Criciúma",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 17.0,
-    "lat": -28.715482,
-    "lng": -49.392882
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-117",
@@ -1386,10 +1386,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026. 003406/01-81",
     "municipio": "São Francisco do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 80.0,
-    "lat": -26.313763,
-    "lng": -48.643654
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-118",
@@ -1398,10 +1398,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.003762/02-77",
     "municipio": "Lebon Régis",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 24.81,
-    "lat": -26.879372,
-    "lng": -50.704268
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-119",
@@ -1410,10 +1410,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.002209/99-59",
     "municipio": "Imbituba",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 4.86,
-    "lat": -28.204183,
-    "lng": -48.704467
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-120",
@@ -1422,10 +1422,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.004204/02-83",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.94,
-    "lat": -26.253938,
-    "lng": -48.964127
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-121",
@@ -1434,10 +1434,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.000692/98-29",
     "municipio": "Braço do Norte",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
-    "lat": -28.239084,
-    "lng": -49.156889
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-122",
@@ -1446,10 +1446,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 3300/96-11",
     "municipio": "São Pedro de Alcântara",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 38.0,
-    "lat": -27.581618,
-    "lng": -48.85493
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-123",
@@ -1458,10 +1458,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 1694/97-17",
     "municipio": "Anitápolis",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 443.9,
-    "lat": -27.874279,
-    "lng": -49.116692
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-124",
@@ -1470,10 +1470,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.000286/98-48",
     "municipio": "Itajaí",
-    "mesorregiao": "Vale do Itajaí",
+    "mesorregiao": "",
     "area_ha": 27.6,
-    "lat": -26.967136,
-    "lng": -48.713008
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-125",
@@ -1482,10 +1482,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 0082/98-06",
     "municipio": "Santa Rosa de Lima",
-    "mesorregiao": "Sul Catarinense",
+    "mesorregiao": "",
     "area_ha": 0.0,
-    "lat": -27.997079,
-    "lng": -49.170379
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-126",
@@ -1494,10 +1494,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.003420/98-35",
     "municipio": "Mafra",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 32.0,
-    "lat": -26.210728,
-    "lng": -49.901842
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-127",
@@ -1506,10 +1506,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.000133/99-18",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1.0,
-    "lat": -26.273068,
-    "lng": -49.021593
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-128",
@@ -1518,10 +1518,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.005215/99-60",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 2.75,
-    "lat": -26.298507,
-    "lng": -48.96464
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-129",
@@ -1530,10 +1530,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "Caçador",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 1154.48,
-    "lat": -26.769552,
-    "lng": -51.12283
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-130",
@@ -1542,10 +1542,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "ipumirim",
-    "mesorregiao": "Oeste Catarinense",
+    "mesorregiao": "",
     "area_ha": 6.2,
-    "lat": -27.046138,
-    "lng": -52.144023
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-131",
@@ -1554,10 +1554,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "São Bento do Sul",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 800.0,
-    "lat": -26.33182,
-    "lng": -49.388548
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-132",
@@ -1566,10 +1566,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "Joinville",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 1200.0,
-    "lat": -26.239669,
-    "lng": -48.990161
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-133",
@@ -1578,10 +1578,10 @@
     "ano": null,
     "ato_legislativo": "s/info",
     "municipio": "Araquari",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 88.0,
-    "lat": -26.439482,
-    "lng": -48.766009
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-134",
@@ -1590,10 +1590,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "Governador Celso Ramos",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 6.73,
-    "lat": -27.364096,
-    "lng": -48.566715
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-135",
@@ -1602,10 +1602,10 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "Rio Negrinho",
-    "mesorregiao": "Norte Catarinense",
+    "mesorregiao": "",
     "area_ha": 9.0,
-    "lat": -26.429065,
-    "lng": -49.618342
+    "lat": null,
+    "lng": null
   },
   {
     "id": "RPPN-136",
@@ -1614,9 +1614,9 @@
     "ano": null,
     "ato_legislativo": "PROC N 02026.",
     "municipio": "Águas Mornas",
-    "mesorregiao": "Grande Florianópolis",
+    "mesorregiao": "",
     "area_ha": 60.0,
-    "lat": -27.748573,
-    "lng": -48.948224
+    "lat": null,
+    "lng": null
   }
 ]
